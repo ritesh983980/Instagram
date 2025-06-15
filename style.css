@@ -1,0 +1,332 @@
+body {
+  margin: 0px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  position: relative;
+  scroll-padding-top: 50px;
+}
+
+.header {
+  background: linear-gradient(to right, #ff009c, #8a2be2); /* Purple to slightly lighter purple */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 16px; /* Adjust value as needed */
+  border-bottom-right-radius: 16px; /* Adjust value as needed */
+}
+
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { top: 16px; }
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  flex-direction: column;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.content-section {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 20px;
+  background-color: #fff;
+  scroll-margin-top:60px;
+  border-radius: 0px;
+  box-shadow: 0 2px 0px rgba(0,0,0,0.05);
+}
+
+.content-section h1 {
+  color: #8A2BE2;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content-section p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.bio-categories {
+  margin-top: 20px;
+}
+
+.category-item {
+  background-color: #f3e5f5;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.plus-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 24px;
+  color: #8A2BE2;
+}
+
+.bio-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.bio-content.active {
+  max-height: 500px; /* Increased max-height to better accommodate multi-line bios */
+  opacity: 1;
+}
+
+.bio-content .bio-text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  background-color: #fff0f5;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.bio-content p.bio-text {
+    margin: 0;
+    flex-grow: 1; /* Allow text to take up space */
+    word-break: break-word; /* Break long words */
+}
+
+.bio-text-centered {
+  text-align: center;
+  flex-direction: column; /* Center button below text for centered bios */
+}
+
+.copy-btn {
+  background-color: #8A2BE2;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  flex-shrink: 0;
+  margin-top: 5px; /* Added for spacing in centered layout */
+}
+
+.bio-text-centered .copy-btn {
+    margin-left: 0; /* No left margin when centered */
+}
+
+.copy-btn:hover {
+  background-color: #7a1fd1;
+}
+
+.copy-btn.copied {
+  background-color: #28a745;
+}
+
+.bio-section {
+  display: none;
+}
+
+.bio-section.active {
+  display: block;
+}
+
+.username-table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.username-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.username-table th, .username-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.username-table th {
+  background-color: #8A2BE2;
+  color: white;
+  font-weight: bold;
+}
+
+.username-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.username-table tr:hover {
+  background-color: #ddd;
+}
+
+.username-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for long usernames */
+}
+
+.username-text {
+  flex-grow: 1;
+  white-space: normal; /* Allow text to wrap within the cell */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Still use ellipsis if it overflows after wrapping */
+  padding-right: 10px;
+}
+.username-cell .copy-btn {
+    margin-top: 0; /* Reset margin-top for table copy button */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ff4081;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer a:nth-of-type(2) {
+  color: #1da1f2;
+}
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #8A2BE2;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, opacity 0.3s;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-to-top:hover {
+  background-color: #7a1fd1;
+}
+
+@media(min-width: 768px){
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    width: auto;
+  }
+  .nav-menu a {
+    border: none;
+  }
+  .hamburger {
+    display: none;
+  }
+}
