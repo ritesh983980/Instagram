@@ -1,332 +1,687 @@
+
+/* General Body and Reset Styles */
 body {
-  margin: 0px;
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  position: relative;
-  scroll-padding-top: 50px;
+    margin: 0;
+    font-family: serif;
+    background-color: #f8f8f8;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
 }
 
+/* HEADER SECTION */
 .header {
-  background: linear-gradient(to right, #ff009c, #8a2be2); /* Purple to slightly lighter purple */
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom-left-radius: 16px; /* Adjust value as needed */
-  border-bottom-right-radius: 16px; /* Adjust value as needed */
+    /* **यह वाली लाइन हटाई गई है, क्योंकि नीचे Default styles ब्लॉक इसे हैंडल करता है।** */
+    /* background: linear-gradient(to right, #8a2be2, #ff009c); */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    color: white; /* यह सफेद रंग Default styles ब्लॉक में भी है, लेकिन यहां रहना ठीक है */
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 
-.logo {
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: bold;
+.header .logo {
+    height: 35px;
+    width: auto;
+    display: block;
 }
 
 .hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  width: 30px;
-  height: 20px;
-  position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 2px;
-  position: absolute;
-  left: 0;
-  transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
-
-.hamburger span:nth-child(1) { top: 0; }
-.hamburger span:nth-child(2) { top: 8px; }
-.hamburger span:nth-child(3) { top: 16px; }
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 8px;
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 8px;
-}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg); top: 8px; }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg); top: 8px; }
 
 .nav-menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #fff;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 999;
-  flex-direction: column;
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
 }
 
-.nav-menu.active {
-  display: flex;
-}
+.nav-menu.active { display: flex; }
 
 .nav-menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 15px 20px;
-  border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+.nav-menu a:last-child { border-bottom: none; }
+.nav-menu a:hover { background-color: #f5f5f5; }
+
+
+/* MAIN CONTENT SECTION */
+.main-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-.nav-menu a:hover {
-  background-color: #f0f0f0;
+.page-title {
+    color: #8a2be2; /* This will be overridden by category-specific styles or default var */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.content-section {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 20px;
-  background-color: #fff;
-  scroll-margin-top:60px;
-  border-radius: 0px;
-  box-shadow: 0 2px 0px rgba(0,0,0,0.05);
+.page-description, .page-explanation {
+    text-align: center;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.content-section h1 {
-  color: #8A2BE2;
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 10px;
+.content-image-container {
+    text-align: center;
+    margin: 30px 0;
 }
 
-.content-section p {
-  text-align: center;
-  color: #555;
-  margin-bottom: 30px;
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.bio-categories {
-  margin-top: 20px;
+.spacer {
+    margin-top: 40px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 40px;
 }
 
-.category-item {
-  background-color: #f3e5f5;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  font-size: 18px;
-  color: #333;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  position: relative;
+.sub-section-title {
+    color: #ff009c; /* This will be overridden by category-specific styles or default var */
+    font-size: 24px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
-.plus-icon {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-  font-size: 24px;
-  color: #8A2BE2;
+/* Category Demo Grid for index.html */
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px;
+    padding-bottom: 40px;
 }
 
-.bio-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
-  opacity: 0;
-  margin-top: 10px;
+.category-demo-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none; /* Remove underline from link */
+    color: #333; /* Default text color */
+    position: relative; /* For the overlay link */
+    overflow: hidden; /* Ensure gradient fits */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+    min-height: 160px; /* Ensure consistent card height */
 }
 
-.bio-content.active {
-  max-height: 500px; /* Increased max-height to better accommodate multi-line bios */
-  opacity: 1;
+.category-demo-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
 }
 
-.bio-content .bio-text-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0 0 0;
-  padding: 10px;
-  background-color: #fff0f5;
-  border-radius: 8px;
-  font-size: 16px;
-  color: #333;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+/* Gradient backgrounds for category demo cards */
+.category-demo-card.gradient-bg-1 { background: linear-gradient(to top right, #fbc2eb, #a6c1ee); } /* Pink/Purple */
+.category-demo-card.gradient-bg-2 { background: linear-gradient(to top right, #a1c4fd, #c2e9fb); } /* Light blue */
+.category-demo-card.gradient-bg-3 { background: linear-gradient(to top right, #92fe9d, #00c9ff); } /* Green/Blue */
+.category-demo-card.gradient-bg-4 { background: linear-gradient(to top right, #ff9a9e, #fad0c4); } /* Soft pink/orange */
+/* For readability on gradients */
+.category-demo-card.gradient-bg-1, .category-demo-card.gradient-bg-2,
+.category-demo-card.gradient-bg-3, .category-demo-card.gradient-bg-4 {
+    color: #222; /* Darker text for readability on light gradients */
 }
 
-.bio-content p.bio-text {
-    margin: 0;
-    flex-grow: 1; /* Allow text to take up space */
-    word-break: break-word; /* Break long words */
+
+/* Define global custom properties for colors */
+:root {
+    --primary-purple: #8a2be2;
+    --primary-pink: #ff009c;
+    --text-dark: #333;
+    --text-medium: #555;
+    --text-light: #444;
+    --bg-light: #f8f8f8;
+    --card-bg-light: white;
+
+    /* Category Specific Gradients & Colors */
+    --gradient-vip-start: #8a2be2; /* Purple */
+    --gradient-vip-end: #ff009c;   /* Pink */
+    --color-vip-dark: #8a2be2;     /* For titles, etc. */
+
+    --gradient-attitude-start: #FF4E50; /* Red-Orange */
+    --gradient-attitude-end: #F9D423;   /* Yellow */
+    --color-attitude-dark: #FF4E50;
+    --gradient-common-start: #6a11cb; /* Purple */
+    --gradient-common-end: #2575fc;   /* Blue */
+    --color-common-dark: #6a11cb;     /* For titles, buttons, etc. */
+
+    --gradient-love-start: #EB3349; /* Red */
+    --gradient-love-end: #F45C43;   /* Orange-Red */
+    --color-love-dark: #EB3349;
+
+    --gradient-sad-start: #4B79A1; /* Dark Blue */
+    --gradient-sad-end: #283E51;   /* Darker Blue */
+    --color-sad-dark: #4B79A1;
+
+    --gradient-funny-start: #FDC830; /* Orange-Yellow */
+    --gradient-funny-end: #F37335;   /* Orange */
+    --color-funny-dark: #F37335;
+
+    --gradient-cool-start: #2193b0; /* Light Blue */
+    --gradient-cool-end: #6dd5ed;   /* Cyan */
+    --color-cool-dark: #2193b0;
+
+    --gradient-stylish-start: #aa4b6b; /* Dark Rose */
+    --gradient-stylish-end: #6b6b83;   /* Grey-Blue */
+    --color-stylish-dark: #aa4b6b;
+
+    /* ... Add more for Friends, Single, Punjabi ... */
+    --gradient-friends-start: #56ab2f; /* Green */
+    --gradient-friends-end: #a8e063;   /* Light Green */
+    --color-friends-dark: #56ab2f;
+
+    --gradient-single-start: #a770ef; /* Light Purple */
+    --gradient-single-end: #cf8bf3;   /* Pink-Purple */
+    --color-single-dark: #a770ef;
+
+    --gradient-punjabi-start: #f7bb97; /* Light Orange */
+    --gradient-punjabi-end: #dd5e89;   /* Pink */
+    --color-punjabi-dark: #dd5e89;
 }
 
-.bio-text-centered {
-  text-align: center;
-  flex-direction: column; /* Center button below text for centered bios */
+/* Default styles (if no specific category class is applied) */
+/* HEADER का डिफ़ॉल्ट बैकग्राउंड अब यहीं से आ रहा है */
+.header {
+    background: linear-gradient(to right, var(--primary-purple), var(--primary-pink));
+    color: white;
+}
+.page-title {
+    color: var(--primary-purple);
+}
+.sub-section-title {
+    color: var(--primary-pink);
+}
+.copy-btn, .scroll-to-top {
+    background-color: var(--primary-purple);
+}
+.copy-btn:hover { background-color: #7a1fd1; } /* Darker shade of primary-purple */
+
+
+/* Category specific overrides - apply these classes to the <body> tag of each HTML page */
+
+/* VIP Category */
+body.category-vip .header {
+    background: linear-gradient(to right, var(--gradient-vip-start), var(--gradient-vip-end));
+}
+body.category-vip .page-title {
+    color: var(--color-vip-dark);
+}
+body.category-vip .sub-section-title {
+    color: var(--color-vip-dark); /* Use same for consistency or a related shade */
+}
+body.category-vip .copy-btn,
+body.category-vip .scroll-to-top {
+    background-color: var(--color-vip-dark);
+}
+body.category-vip .copy-btn:hover { background-color: #6d1eaf; } /* Darker shade */
+
+
+/* Common Category */
+body.category-common .header {
+    background: linear-gradient(to right, var(--gradient-common-start), var(--gradient-common-end));
+}
+body.category-common .page-title {
+    color: var(--color-common-dark);
+}
+body.category-common .sub-section-title {
+    color: var(--color-common-dark);
+}
+body.category-common .copy-btn,
+body.category-common .scroll-to-top {
+    background-color: var(--color-common-dark);
+}
+body.category-common .copy-btn:hover {
+    background-color: #5a0ebc; /* 'var(--color-common-dark)' का थोड़ा गहरा शेड */
+}
+
+
+
+/* Attitude Category */
+body.category-attitude .header {
+    background: linear-gradient(to right, var(--gradient-attitude-start), var(--gradient-attitude-end));
+}
+body.category-attitude .page-title {
+    color: var(--color-attitude-dark);
+}
+body.category-attitude .sub-section-title {
+    color: var(--color-attitude-dark);
+}
+body.category-attitude .copy-btn,
+body.category-attitude .scroll-to-top {
+    background-color: var(--color-attitude-dark);
+}
+body.category-attitude .copy-btn:hover { background-color: #cc3e40; }
+
+
+/* Love Category */
+body.category-love .header {
+    background: linear-gradient(to right, var(--gradient-love-start), var(--gradient-love-end));
+}
+body.category-love .page-title {
+    color: var(--color-love-dark);
+}
+body.category-love .sub-section-title {
+    color: var(--color-love-dark);
+}
+body.category-love .copy-btn,
+body.category-love .scroll-to-top {
+    background-color: var(--color-love-dark);
+}
+body.category-love .copy-btn:hover { background-color: #d12e40; }
+
+/* ... Repeat for all other categories (Sad, Funny, Cool, Stylish, Friends, Single, Punjabi) ... */
+/* Sad Category */
+body.category-sad .header {
+    background: linear-gradient(to right, var(--gradient-sad-start), var(--gradient-sad-end));
+}
+body.category-sad .page-title {
+    color: var(--color-sad-dark);
+}
+body.category-sad .sub-section-title {
+    color: var(--color-sad-dark);
+}
+body.category-sad .copy-btn,
+body.category-sad .scroll-to-top {
+    background-color: var(--color-sad-dark);
+}
+body.category-sad .copy-btn:hover { background-color: #3b6183; }
+
+/* Funny Category */
+body.category-funny .header {
+    background: linear-gradient(to right, var(--gradient-funny-start), var(--gradient-funny-end));
+}
+body.category-funny .page-title {
+    color: var(--color-funny-dark);
+}
+body.category-funny .sub-section-title {
+    color: var(--color-funny-dark);
+}
+body.category-funny .copy-btn,
+body.category-funny .scroll-to-top {
+    background-color: var(--color-funny-dark);
+}
+body.category-funny .copy-btn:hover { background-color: #d1612e; }
+
+/* Cool Category */
+body.category-cool .header {
+    background: linear-gradient(to right, var(--gradient-cool-start), var(--gradient-cool-end));
+}
+body.category-cool .page-title {
+    color: var(--color-cool-dark);
+}
+body.category-cool .sub-section-title {
+    color: var(--color-cool-dark);
+}
+body.category-cool .copy-btn,
+body.category-cool .scroll-to-top {
+    background-color: var(--color-cool-dark);
+}
+body.category-cool .copy-btn:hover { background-color: #1a7b93; }
+
+/* Stylish Category */
+body.category-stylish .header {
+    background: linear-gradient(to right, var(--gradient-stylish-start), var(--gradient-stylish-end));
+}
+body.category-stylish .page-title {
+    color: var(--color-stylish-dark);
+}
+body.category-stylish .sub-section-title {
+    color: var(--color-stylish-dark);
+}
+body.category-stylish .copy-btn,
+body.category-stylish .scroll-to-top {
+    background-color: var(--color-stylish-dark);
+}
+body.category-stylish .copy-btn:hover { background-color: #8c3b58; }
+
+/* Friends Category */
+body.category-friends .header {
+    background: linear-gradient(to right, var(--gradient-friends-start), var(--gradient-friends-end));
+}
+body.category-friends .page-title {
+    color: var(--color-friends-dark);
+}
+body.category-friends .sub-section-title {
+    color: var(--color-friends-dark);
+}
+body.category-friends .copy-btn,
+body.category-friends .scroll-to-top {
+    background-color: var(--color-friends-dark);
+}
+body.category-friends .copy-btn:hover { background-color: #488d26; }
+
+/* Single Category */
+body.category-single .header {
+    background: linear-gradient(to right, var(--gradient-single-start), var(--gradient-single-end));
+}
+body.category-single .page-title {
+    color: var(--color-single-dark);
+}
+body.category-single .sub-section-title {
+    color: var(--color-single-dark);
+}
+body.category-single .copy-btn,
+body.category-single .scroll-to-top {
+    background-color: var(--color-single-dark);
+}
+body.category-single .copy-btn:hover { background-color: #8c5dca; }
+
+/* Punjabi Category */
+body.category-punjabi .header {
+    background: linear-gradient(to right, var(--gradient-punjabi-start), var(--gradient-punjabi-end));
+}
+body.category-punjabi .page-title {
+    color: var(--color-punjabi-dark);
+}
+body.category-punjabi .sub-section-title {
+    color: var(--color-punjabi-dark);
+}
+body.category-punjabi .copy-btn,
+body.category-punjabi .scroll-to-top {
+    background-color: var(--color-punjabi-dark);
+}
+body.category-punjabi .copy-btn:hover { background-color: #c04e76; }
+
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-icon .material-icons {
+    font-size: 30px;
+    color: #8a2be2; /* Default icon color */
+}
+
+/* Optional: Make icon color match card gradient a bit */
+.category-demo-card.gradient-bg-1 .card-icon .material-icons { color: #d670c7; }
+.category-demo-card.gradient-bg-2 .card-icon .material-icons { color: #6aa9e0; }
+.category-demo-card.gradient-bg-3 .card-icon .material-icons { color: #00a0be; }
+.category-demo-card.gradient-bg-4 .card-icon .material-icons { color: #ff5f78; }
+
+
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: inherit; /* Inherit color from card */
+}
+
+.card-demo-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes link overlay to bottom */
+}
+
+.card-link-overlay {
+    background-color: rgba(138, 43, 226, 0.8); /* Semi-transparent purple */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    align-self: flex-end; /* Align to bottom right */
+    transition: background-color 0.3s ease;
+}
+
+.card-link-overlay .material-icons {
+    font-size: 18px;
+    color: white;
+}
+
+.card-link-overlay:hover {
+    background-color: #ff009c; /* Change to pink on hover */
+}
+
+
+/* Bio Listing Section (for category pages like vip-bios.html) */
+.bio-list-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.bio-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 120px;
+    justify-content: space-between;
+}
+
+/* Gradient backgrounds for bio cards */
+.bio-card.gradient-bg-1 { background: linear-gradient(to top right, #ff9a9e, #fad0c4); }
+.bio-card.gradient-bg-2 { background: linear-gradient(to top right, #a1c4fd, #c2e9fb); }
+.bio-card.gradient-bg-3 { background: linear-gradient(to top right, #92fe9d, #00c9ff); }
+.bio-card.gradient-bg-4 { background: linear-gradient(to top right, #fbc2eb, #a6c1ee); }
+.bio-card.gradient-bg-1, .bio-card.gradient-bg-2,
+.bio-card.gradient-bg-3, .bio-card.gradient-bg-4 { color: #333; }
+
+
+.bio-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    margin: 0 0 15px 0;
+    word-wrap: break-word;
+    flex-grow: 1;
 }
 
 .copy-btn {
-  background-color: #8A2BE2;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-  margin-left: 10px;
-  flex-shrink: 0;
-  margin-top: 5px; /* Added for spacing in centered layout */
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    align-self: flex-end;
+    min-width: 100px;
+    text-align: center;
 }
 
-.bio-text-centered .copy-btn {
-    margin-left: 0; /* No left margin when centered */
+.copy-btn:hover { background-color: #7a1fd1; transform: translateY(-1px); }
+.copy-btn.copied { background-color: #28a745; pointer-events: none; }
+
+.no-bios-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    grid-column: 1 / -1; /* Center message across grid columns */
+    padding: 20px;
+    border: 1px dashed #eee;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
-.copy-btn:hover {
-  background-color: #7a1fd1;
-}
-
-.copy-btn.copied {
-  background-color: #28a745;
-}
-
-.bio-section {
-  display: none;
-}
-
-.bio-section.active {
-  display: block;
-}
-
-.username-table-container {
-  margin-top: 20px;
-  overflow-x: auto;
-}
-
-.username-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.username-table th, .username-table td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.username-table th {
-  background-color: #8A2BE2;
-  color: white;
-  font-weight: bold;
-}
-
-.username-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.username-table tr:hover {
-  background-color: #ddd;
-}
-
-.username-cell {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Allow wrapping for long usernames */
-}
-
-.username-text {
-  flex-grow: 1;
-  white-space: normal; /* Allow text to wrap within the cell */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Still use ellipsis if it overflows after wrapping */
-  padding-right: 10px;
-}
-.username-cell .copy-btn {
-    margin-top: 0; /* Reset margin-top for table copy button */
-}
-
+/* FOOTER SECTION */
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #121212;
-  color: white;
-  margin-top: 40px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #1a1a1a;
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
 }
 
 footer a {
-  color: #ff4081;
-  text-decoration: none;
-  margin: 0 5px;
-  transition: color 0.3s ease;
+    color: #ff80ed;
+    text-decoration: none;
+    margin: 0 4px;
+    transition: color 0.3s ease;
 }
+footer a:hover { color: #fff; }
 
-footer a:hover {
-  color: #fff;
-}
 
-footer a:nth-of-type(2) {
-  color: #1da1f2;
-}
-
+/* SCROLL TO TOP BUTTON */
 .scroll-to-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #8A2BE2;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 24px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  transition: background-color 0.3s, opacity 0.3s;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #8A2BE2;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, opacity 0.3s;
+    width: 55px;
+    height: 55px;
+    display: flex; /* Ensure it's flex when 'show' class is added */
+    justify-content: center;
+    align-items: center;
 }
 
-.scroll-to-top:hover {
-  background-color: #7a1fd1;
+.scroll-to-top:hover { background-color: #7a1fd1; }
+
+/* New CSS for scroll-to-top button show/hide */
+.scroll-to-top.show {
+    display: flex; /* Display when .show class is added by JS */
 }
 
-@media(min-width: 768px){
-  .nav-menu {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    box-shadow: none;
-    width: auto;
-  }
-  .nav-menu a {
-    border: none;
-  }
-  .hamburger {
-    display: none;
-  }
+
+/* DESKTOP VIEW ADJUSTMENTS (Media Queries) */
+@media (min-width: 768px) {
+    .hamburger { display: none; }
+
+    .nav-menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        box-shadow: none;
+        width: auto;
+        top: auto;
+        right: auto;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .nav-menu a {
+        border-bottom: none;
+        padding: 10px 15px;
+        color: white;
+    }
+    .nav-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+
+    .main-content {
+        margin: 40px auto;
+        padding: 30px;
+    }
+
+    .page-title { font-size: 38px; }
+    .page-description, .page-explanation { font-size: 17px; }
+
+    /* For index.html category grid */
+    .category-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+    }
+
+    /* For category pages bio list */
+    .bio-list-section {
+        grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+    }
+
+    .scroll-to-top { bottom: 20px; }
 }
+
+@media (min-width: 1024px) {
+    /* For index.html category grid */
+    .category-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
+    }
+    /* For category pages bio list */
+    .bio-list-section {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
+    }
+}
+
