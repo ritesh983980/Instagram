@@ -1,4 +1,3 @@
-
 /* General Body and Reset Styles */
 body {
     margin: 0;
@@ -12,8 +11,6 @@ body {
 
 /* HEADER SECTION */
 .header {
-    /* **यह वाली लाइन हटाई गई है, क्योंकि नीचे Default styles ब्लॉक इसे हैंडल करता है।** */
-    /* background: linear-gradient(to right, #8a2be2, #ff009c); */
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -24,19 +21,32 @@ body {
     z-index: 1000;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    color: white; /* यह सफेद रंग Default styles ब्लॉक में भी है, लेकिन यहां रहना ठीक है */
+    /* 'color: white;' अब Default styles ब्लॉक में हैंडल किया जाएगा */
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    height: 100%;
+/* लोगो कंटेनर के लिए नया स्टाइल */
+.logo-container {
+    display: flex; /* लोगो इमेज और टेक्स्ट को एक पंक्ति में रखता है */
+    align-items: center; /* उन्हें लंबवत रूप से बीच में संरेखित करता है */
+    text-decoration: none; /* लिंक से अंडरलाइन हटाता है */
+    color: white; /* टेक्स्ट का रंग सेट करता है */
+    gap: 8px; /* लोगो इमेज और टेक्स्ट के बीच थोड़ी जगह देता है */
+    height: 100%; /* यह हेडर की ऊंचाई के साथ संरेखित होने में मदद करेगा */
 }
 
-.header .logo {
-    height: 35px;
+/* लोगो इमेज के लिए नया स्टाइल (पहले `.header .logo` था) */
+.logo-image {
+    height: 35px; /* लोगो की ऊंचाई */
     width: auto;
     display: block;
+}
+
+/* लोगो टेक्स्ट के लिए नया स्टाइल */
+.logo-text {
+    font-size: 22px; /* टेक्स्ट का फ़ॉन्ट साइज़ */
+    font-weight: 700; /* टेक्स्ट को बोल्ड बनाता है */
+    color: white; /* हेडर के साथ मैच करने के लिए सफेद रंग */
+    /* आप यहां 'font-family: 'Poppins', sans-serif;' भी जोड़ सकते हैं यदि आप Poppins का उपयोग करना चाहते हैं */
 }
 
 .hamburger {
@@ -250,7 +260,7 @@ body {
 /* HEADER का डिफ़ॉल्ट बैकग्राउंड अब यहीं से आ रहा है */
 .header {
     background: linear-gradient(to right, var(--primary-purple), var(--primary-pink));
-    color: white;
+    /* 'color: white;' यहां से हटा दिया गया है क्योंकि यह अब 'logo-container' और 'nav-menu a' में सेट होगा */
 }
 .page-title {
     color: var(--primary-purple);
@@ -649,7 +659,7 @@ footer a:hover { color: #fff; }
     .nav-menu a {
         border-bottom: none;
         padding: 10px 15px;
-        color: white;
+        color: white; /* डेस्कटॉप पर मेनू लिंक सफेद होने चाहिए */
     }
     .nav-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
 
@@ -684,4 +694,3 @@ footer a:hover { color: #fff; }
         grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
     }
 }
-
