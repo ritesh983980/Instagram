@@ -1,0 +1,787 @@
+{
+  "vip": {
+    "boys": [
+      {
+        "id": "vip-b1",
+        "text": "👑 Royalty in my veins.\n🔥 Attitude in my style.\nBorn to lead, not to **follow**."
+      },
+      {
+        "id": "vip-b2",
+        "text": "😎 King is here to rule your feed.\nBorn to express, not to impress.\nVIP mode always on. 🔥"
+      },
+      {
+        "id": "vip-b3",
+        "text": "🔥 Silent power\nloud success.\nMy vibe is exclusive.\nKing on my own **throne**. 🔥"
+      },
+      {
+        "id": "vip-b4",
+        "text": "Silent moves, loud wins. 🤫\nThe best revenge is massive **success**."
+      },
+      {
+        "id": "vip-b5",
+        "text": "🌟 Not just a name, it's a brand.\nLuxury is my lifestyle.\nUnapologetically me."
+      },
+      {
+        "id": "vip-b6",
+        "text": "👑 My empire, my rules.\nElevated mindset, exclusive vibe.\nWatch me shine. ✨"
+      },
+      {
+        "id": "vip-b7",
+        "text": "😎 Born to stand out.\nNot to fit in. My **legacy** begins now.\nOnly king matters. 🚀"
+      },
+      {
+        "id": "vip-b8",
+        "text": "🎩 Class apart.\nMindset of a billionaire.\nWatch me rise."
+      },
+      {
+        "id": "vip-b9",
+        "text": "My life, my rules, my attitude.\nCrown on, game strong. ✨"
+      },
+      {
+        "id": "vip-b10",
+        "text": "🖤🎯 Simple outside\nBillionaire mindset 💸\nSilent moves 🤫\nLoud results 🔥\nFocused on my own race 🏁"
+      },
+      {
+        "id": "vip-b11",
+        "text": "Just a boy with a dream and a hustle.\nSuccess is my only option. 🚀"
+      }
+    ],
+    "girls": [
+      {
+        "id": "vip-g1",
+        "text": "Queen of my own little world.\nSlaying since day one. 👑💖"
+      },
+      {
+        "id": "vip-g2",
+        "text": "👸 Queen of my own world.\nSparkle and shine.\nBorn to be admired, not ordinary."
+      },
+      {
+        "id": "vip-g3",
+        "text": "Elegance with a touch of rebellion.\nUnapologetically me. ✨"
+      },
+      {
+        "id": "vip-g4",
+        "text": "Born to stand out, not to fit in.\nMy vibe speaks volumes. 💫"
+      }
+    ]
+  },
+
+
+ 
+  "attitude": {
+    "boys": [
+      {
+        "id": "att-b1",
+        "text": "▶️My attitude is a reflection of\n▶️my inner **self**.\n▶️Beware! 😈\n▶️Don't test **my limits**.🚧"
+      },
+      {
+        "id": "att-b2",
+        "text": "♐I'm not rude,\n♐I'm honest.\n♐That's not my problem\n♐if you don't like **truth**. 😏"
+      },
+      {
+        "id": "att-b3",
+        "text": "😈 My Attitude Is My New Black.\n🤫 Less Talk, More Action.\n🔥 Challenge **Accepted**.\n🚫 No Time For Fake **People**."
+      },
+      {
+        "id": "att-b4",
+        "text": "😔आग लगाना मेरी फितरत में नहीं है\n🔥 मेरी सादगी से लोग जलें\n🙂 तो मेरा क्या कसूर...!!!😎\n**My existence is my rebellion**."
+      },
+      {
+        "id": "att-b5",
+        "text": "जैसा भी हूँ, सिर्फ अपने लिए हूं 👑\nऔरों की नज़र से खुद को नहीं देखता 😎\n**My life, my rules, my journey**."
+      },
+      {
+        "id": "att-b6",
+        "text": "My identity is defined by one thing:\nI don't walk on common roads. 🛤️\nCreating my **own** way, **always**. 💪"
+      },
+      {
+        "id": "att-b7",
+        "text": "▶️नवाबों जैसी **Lifestyle** 👑\n▶️Attitude तो बनता है 🔥\n▶️King of My Own World.\n▶️जलने वाले जलते रहेंगे। 😈"
+      },
+      {
+        "id": "att-b8",
+        "text": "हमारी फितरत थोड़ी अलग है 🚀\nअगर बिगड़ जाएं तो फिर कौन क्या कहता है,\nफर्क नहीं पड़ता 🔥\nवैसे दिल के साफ और सीधे हैं हम 💯\nसमझना है तो समझो, वरना दूर रहो। 🤫\n**Jai shree Ram**"
+      },
+      {
+        "id": "att-b9",
+        "text": "Being silent is my style 😌\nDon't take it as my weakness.\nI observe more, speak less, and plan better. 🎯\nMy mind is my strongest weapon. 🧠"
+      },
+      {
+        "id": "att-b10",
+        "text": "Don't judge **my choices**\nif you don't understand **my reasons**. 🤷‍♂️"
+      },
+      {
+        "id": "att-b11",
+        "text": "Fouji mindset. 🇮🇳\nDiscipline in my blood, fire in my soul.\nNo retreat, no surrender. ⚔️"
+      },
+      {
+        "id": "att-b12",
+        "text": "😎 Attitude on point.\nFuture so bright, I need shades. ✨\nLiving life on my terms."
+      },
+      {
+        "id": "att-b13",
+        "text": "शौक नवाबों वाले,\nतेवर तूफान वाले। 👑🌪️\nऔकात देखकर बात करना। 😏"
+      },
+      {
+        "id": "att-b14",
+        "text": "My game, my rules. 🎲\nLevel up, everyday. 🚀\nCan't stop, won't stop."
+      },
+      {
+        "id": "att-b15",
+        "text": "Silence is my loudest reply. 🤫\nSuccess is my only noise. 💯\nWatch me work."
+      },
+      {
+        "id": "att-b16",
+        "text": "मैं बुरा हूँ, मान लिया,\nपर मैं वो नहीं जो डबल फेस दिखाऊँ। 🎭\nReal over fake, always. 🔥"
+      },
+      {
+        "id": "att-b17",
+        "text": "Only a king can understand a king. 🤴\nMy crown is earned, not given.\nBorn to conquer. 🌍"
+      },
+      {
+        "id": "att-b18",
+        "text": "Army ka banda. 💂‍♂️\nStrength in mind, power in action.\nFearless, focused, phenomenal. 🎯"
+      },
+      {
+        "id": "att-b19",
+        "text": "Dil ka Nawab, Style ka King.\nAttitude is inherited, not learned. 🔥\nNo competition, only domination."
+      },
+      {
+        "id": "att-b20",
+        "text": "खुद की पहचान बनाने वाला बंदा। 🚀\nNobody compares to my grind.\nBuilding an empire, one step at a time. 💼"
+      },
+      {
+        "id": "att-b21",
+        "text": "Straight outta limits. 🚧\nMy actions speak louder than your opinions.\nUnstoppable force. 💪"
+      },
+      {
+        "id": "att-b22",
+        "text": "I am not an option, I am a priority. 👑\nKnow your worth, then add tax. 💸\nPeriod."
+      },
+      {
+        "id": "att-b23",
+        "text": "Log jalte hain meri hasi se,\nKyuki main khush rehta hu apni marzi se. 😊\nMy happiness, my choice."
+      },
+      {
+        "id": "att-b24",
+        "text": "If you don't like my attitude,\nBlame yourself, not me. 🤷‍♂️\nI don't sugarcoat the truth."
+      },
+      {
+        "id": "att-b25",
+        "text": "My passion for success is my biggest attitude. 🔥\nDream big, hustle harder.\nFuture CEO in the making. 💼"
+      },
+      {
+        "id": "att-b26",
+        "text": "Winning is my habit. 🏆\nBorn to excel, destined to lead.\nAlpha male. 🐺"
+      },
+      {
+        "id": "att-b27",
+        "text": "Rules are for fools.\nI make my own way. 🛤️\nUnpredictable, unstoppable."
+      },
+      {
+        "id": "att-b28",
+        "text": "Don't mistake my kindness for weakness. 😇\nMy patience has limits.\nCross me, and find out. 😈"
+      },
+      {
+        "id": "att-b29",
+        "text": "The harder you work, the luckier you get. ✨\nGrind now, shine later. 💎\nSuccess is my only agenda."
+      },
+      {
+        "id": "att-b30",
+        "text": "मेरे खिलाफ आवाज़ उठाने से पहले,\nअपनी औकात चेक कर लेना। 😏\nKing of my own destiny. 👑"
+      }
+    ],
+    "girls": [
+      {
+        "id": "att-g1",
+        "text": "▶️Hate? Only for those who earn it. 🔥\n▶️Love is a distant dream.\n▶️My standards are **high**,\n▶️ in every **aspect**. 💯"
+      },
+      {
+        "id": "att-g2",
+        "text": "दुनिया को जलाने के लिए,\nमेरी एक हंसी काफी है 😉\nमुझे औरों की राय की जरूरत नहीं 💯\n**Self-made, self-loved, self-defined**."
+      },
+      {
+        "id": "att-g3",
+        "text": "🚫 No Filter Needed For My Personality.\n😏 I Am Who I Am, Your Approval Isn't Needed.\n💫 Living **My Best Life**, Unbothered."
+      },
+      {
+        "id": "att-g4",
+        "text": "▶️Walk like a **queen**, and don't look back. 👑\n▶️My attitude is my crown. 🔥\n▶️Unapologetically myself, fiercely **independent**.\n▶️My power comes from within. 💎"
+      },
+      {
+        "id": "att-g5",
+        "text": "🔻नखरे मेरे, Attitude मेरा 😎\n🔻No Compromise On My Dreams 🚀\n🔻Unstoppable **Force**."
+      },
+      {
+        "id": "att-g6",
+        "text": "🖤दिल की रानी, Attitude की शेरनी 🦁\n🖤My Vibe Is My Signature.\n🖤 Queen of My Own **Empire**."
+      },
+      {
+        "id": "att-g7",
+        "text": "💄 Flawsome & Fabulous.\n💯 My Own Kind of **Beautiful**.\n💖 Living Life On **My Own Terms**."
+      },
+      {
+        "id": "att-g8",
+        "text": "▶️सर झुकाने की आदत नहीं है 👑\n▶️आँसू बहाने की आदत नहीं है 💧\n▶️हम खो गए तो पछताओगे बहुत,\n▶️क्युकी हमारी लौट के आने की आदत नहीं है...!!! ✨"
+      },
+      {
+        "id": "att-g9",
+        "text": "🤔लोग मुझे जज करते हैं अपनी काबिलियत से...\n😏और मैं उन्हें हर बार **गलत साबित** करती हूँ।\n🏆**My success is my answer**."
+      },
+      {
+        "id": "att-g10",
+        "text": "Sassy, a little bit classy,\nand a whole lot bad-assy. 😉"
+      },
+      {
+        "id": "att-g11",
+        "text": "I'm not a princess, I'm a warrior. ⚔️\nMy crown isn't just for show.\nFierce and unstoppable. 🔥"
+      },
+      {
+        "id": "att-g12",
+        "text": "My kindness is my strength,\nMy attitude is my shield. 🛡️\nDon't underestimate me."
+      },
+      {
+        "id": "att-g13",
+        "text": "Born to shine, not to blend in. ✨\nMaking my own path, leaving a trail of glitter. 💫\nUnforgettable."
+      },
+      {
+        "id": "att-g14",
+        "text": "मैं बदलती नहीं, निखरती हूँ। 🦋\nMy evolution is my revenge.\nStronger, wiser, bolder."
+      },
+      {
+        "id": "att-g15",
+        "text": "Queen of my thoughts, master of my fate. 👑\nNo one defines me but myself.\nEmpowered and elegant."
+      },
+      {
+        "id": "att-g16",
+        "text": "Don't mess with a girl who has standards. 💅\nMy peace is not negotiable.\nRespect me or lose me. 💯"
+      },
+      {
+        "id": "att-g17",
+        "text": "Silence is golden, unless I'm speaking. 🗣️\nMy voice, my power.\nHear me roar. 🦁"
+      },
+      {
+        "id": "att-g18",
+        "text": "Classy, sassy, and a bit bad-assy. 😉\nHandling life with style and a smile.\nUnbothered and beautiful."
+      },
+      {
+        "id": "att-g19",
+        "text": "My loyalty is earned, my trust is sacred. 💖\nCross me once, regret it forever.\nReal recognizes real."
+      },
+      {
+        "id": "att-g20",
+        "text": "I'm not perfect, but I'm limited edition. 🌟\nMy flaws are my sparkle.\nUniquely me."
+      },
+      {
+        "id": "att-g21",
+        "text": "They told me I couldn't, that's why I did. 🚀\nProving them wrong is my favorite hobby.\nSuccess is my sweetest revenge. 😎"
+      },
+      {
+        "id": "att-g22",
+        "text": "Head up, darling. Your crown is falling. 👑\nMy confidence doesn't need your validation.\nStanding tall, always."
+      },
+      {
+        "id": "att-g23",
+        "text": "My aura is expensive. 💸\nDon't try to fit me in your budget.\nLuxury and attitude go hand in hand. ✨"
+      },
+      {
+        "id": "att-g24",
+        "text": "Queen of my own narrative. 📖\nWriting my success story with a pen of fire.\nWatch me turn chapters into empires. 🔥"
+      },
+      {
+        "id": "att-g25",
+        "text": "I'm too busy building my empire to worry about your opinion. 🏰\nFocused, fierce, and fabulous.\nMy hustle speaks for itself. 💪"
+      },
+      {
+        "id": "att-g26",
+        "text": "Not everyone likes me, but not everyone matters. 🤷‍♀️\nMy circle is small, my peace is vast.\nLiving for myself, by myself."
+      },
+      {
+        "id": "att-g27",
+        "text": "Don't chase, don't beg, don't stress, don't need. 🙅‍♀️\nMy worth isn't determined by others.\nSelf-love is my superpower. 💖"
+      },
+      {
+        "id": "att-g28",
+        "text": "My silence is not empty, it's full of answers you won't like. 🤫\nObserve everything, say nothing.\nThen make your move. 🎯"
+      },
+      {
+        "id": "att-g29",
+        "text": "I'm a vibe no one can recreate. ✨\nOriginal and iconic.\nBorn to be an inspiration, not a copy. 🌟"
+      },
+      {
+        "id": "att-g30",
+        "text": "They call it attitude, I call it standards. 💯\nMy boundaries are clear, my values non-negotiable.\nRespect it or stay away. 😌"
+      }
+    ]
+  },
+
+  "common": [
+    {
+      "id": "common-1",
+      "text": "🎂 Birthday On 20 August\n🎧 Music Is My Life\n🎮 Game Lover\n😊 Happy Soul\n🥰 Love My Family 👨‍👩‍👧‍👦"
+    },
+    {
+      "id": "common-2",
+      "text": "💪 Fitness Freak\n😎 Cool Vibes Only\n🏍️ Ride Or Die\n📚 Student Life\n👑 King In My Own World"
+    },
+    {
+      "id": "common-3",
+      "text": "⚽ Football Fanatic\n📸 Capturing Moments\n🛣️ Explorer By Nature\n🔥 Living The Dream\n❣️ Dil Se Desi"
+    },
+    {
+      "id": "common-4",
+      "text": "😇 Simple Boy\n😂 Laughter Is The Best Medicine\n🎶 Old Songs Lover\n🙏 Respect All\n🥳 Enjoying Every Bit"
+    },
+    {
+      "id": "common-5",
+      "text": "👑 Own Rules\n💯 Self-Made\n🔥 Passion For Goals\n👨‍💻 Tech Enthusiast\n💙 Love My Freedom"
+    },
+    {
+      "id": "common-6",
+      "text": "🎂 Cake Day 05 May\n🎬 Movie Buff\n💪 Work Hard Play Hard\n😎 Attitude Positive\n👨‍👩‍👧 My World My Parents"
+    },
+    {
+      "id": "common-7",
+      "text": "✨ Dreamer\n🚀 Future Is Bright\n📚 Learning Everyday\n🌍 Wanderlust\n😇 Good Vibes Only"
+    },
+    {
+      "id": "common-8",
+      "text": "🎧 Headphone Addict\n🚗 Car Lover\n🤫 Silent Killer\n🧡 Believe In Karma\n🥰 Mom Is Queen"
+    },
+    {
+      "id": "common-9",
+      "text": "🏏 Cricket Is My Religion\n🏞️ Nature Explorer\n🤩 Always Happy\n💯 Unique Personality\n🤙 Living My Style"
+    },
+    {
+      "id": "common-10",
+      "text": "🎂 Wish Me 12 Dec\n😎 Chill Life\n📸 Aspiring Photographer\n🎶 Music Heals\n👨‍👩‍👧‍👦 Family First"
+    },
+    {
+      "id": "common-11",
+      "text": "💖 Love My Life\n👑 Queen In Making\n🌸 Spreading Positivity\n📚 Book Worm\n🥰 Mom & Dad's Princess"
+    },
+    {
+      "id": "common-12",
+      "text": "🎂 Birthday On 10 June\n💄 Fashionista\n💃 Dance Lover\n😊 Always Smiling\n✨ Dream Big"
+    },
+    {
+      "id": "common-13",
+      "text": "📸 Clicking Memories\n✈️ Travel Enthusiast\n💅 Classy & Sassy\n🎵 Music Soul\n🦋 Free Spirit"
+    },
+    {
+      "id": "common-14",
+      "text": "💫 Stargazer\n🎨 Art Lover\n👑 Self-Love Queen\n😇 Sweet But Strong\n🌱 Growing Every Day"
+    },
+    {
+      "id": "common-15",
+      "text": "🎀 Girly Vibes\n🍰 Cake Lover\n🥳 Enjoying Small Moments\n💖 Positive Mindset\n👩‍👧‍👦 Family Is Everything"
+    },
+    {
+      "id": "common-16",
+      "text": "🎂 Wish Me 25 Feb\n🛍️ Shopaholic\n📚 Student Life\n💡 Creative Soul\n🥰 Blessed & Grateful"
+    },
+    {
+      "id": "common-17",
+      "text": "🌻 Sunshine Mixed With A Little Hurricane\n📖 Storyteller\n🧘‍♀️ Calm Mind\n🎶 Melophile\n💖 Love Good Vibes"
+    },
+    {
+      "id": "common-18",
+      "text": "✨ Sparkle Everyday\n👗 Style Icon\n👩‍🎓 Future Goals\n😇 Kind Heart\n🌸 Living My Best Life"
+    },
+    {
+      "id": "common-19",
+      "text": "💖 Love My Self\n💪 Independent Girl\n😊 Keep Smiling\n🏞️ Nature Lover\n👑 Born To Shine"
+    },
+    {
+      "id": "common-20",
+      "text": "🎂 Cake Kill 01 April\n☕ Coffee Addict\n✈️ Wanderlust Soul\n🌟 Living My Dream\n🥰 Happy With My Tribe"
+    },
+    {
+      "id": "common-21",
+      "text": "🔱MAHADEV🔱\nChocolate lover\nVaranasi\nBe the reason for someone's smile"
+    },
+    {
+      "id": "common-22",
+      "text": "🎶 Music Is My Escape\n🍕 Pizza Is My Love Language\n😂 Always Laughing\n✨ Making Memories\n🐶 Dog Parent"
+    },
+    {
+      "id": "common-23",
+      "text": "🎯 Goal Setter\n🏋️‍♀️ Fitness Journey\n😎 Positive Mindset\n☕ Coffee & Chill\n💖 Grateful Heart"
+    },
+    {
+      "id": "common-24",
+      "text": "📚 Learning & Growing\n🎨 Creative Soul\n🌍 Exploring New Places\n😊 Spreading Smiles\n😇 Simple Pleasures"
+    },
+    {
+      "id": "common-25",
+      "text": "🎮 Gaming All Day\n🍔 Foodie Forever\n🚀 Chasing Dreams\n🤙 Good Company Only\n👨‍👩‍👧‍👦 Family's Pride"
+    },
+    {
+      "id": "common-26",
+      "text": "🎂 It's My Day 07 July\n🌟 Living For Experiences\n🌿 Nature Lover\n📸 Capturing Beauty\n💖 Pure Soul"
+    },
+    {
+      "id": "common-27",
+      "text": "💡 Innovative Thinker\n💻 Coding Life\n💪 Never Give Up\n🎶 Rhythm In My Soul\n👑 Building My Empire"
+    },
+    {
+      "id": "common-28",
+      "text": "✈️ Always On The Go\n🗺️ Adventurer At Heart\n😊 Happy Go Lucky\n🎧 Lo-Fi Vibes\n🥰 Loving Life"
+    },
+    {
+      "id": "common-29",
+      "text": "💖 Heart Full Of Love\n🌸 Blossom & Grow\n😇 Spreading Kindness\n📚 Knowledge Seeker\n👨‍👩‍👧‍👦 My Everything"
+    },
+    {
+      "id": "common-30",
+      "text": "🎂 Celebrate 19 March\n🏋️‍♂️ Gym Lover\n🚗 On The Road\n😎 Born To Be Real\n💯 Unapologetically Me"
+    },
+    {
+      "id": "common-31",
+      "text": "✨ Sparkling Personality\n💅 Nails On Point\n🛍️ Retail Therapy\n💃 Dance Like Nobody's Watching\n💖 Self-Love Club"
+    },
+    {
+      "id": "common-32",
+      "text": "🧘‍♂️ Inner Peace Seeker\n🌅 Sunset Chaser\n🎵 Melodies Of Life\n🌱 Growing Stronger\n😇 Blessed Life"
+    },
+    {
+      "id": "common-33",
+      "text": "🍩 Sweet Tooth\n📖 Story Of My Life\n📸 Lens Focus\n✈️ Passport Ready\n🥰 Happy In My Own Skin"
+    },
+    {
+      "id": "common-34",
+      "text": "👑 Queen Of My Castle\n💖 Dream Big, Sparkle More\n🌸 Petal Power\n💡 Bright Ideas\n🥳 Life Is A Party"
+    },
+    {
+      "id": "common-35",
+      "text": "🚀 Future-Proof\n🤖 Tech Geek\n📚 Book Smart\n💪 Mindset Strong\n😎 Always Level Up"
+    },
+    {
+      "id": "common-36",
+      "text": "🎂 Cake Day 01 Jan\n🎤 Karaoke King/Queen\n🎭 Drama Free Zone\n🎶 Good Music, Good Mood\n🧡 Love Is All Around"
+    },
+    {
+      "id": "common-37",
+      "text": "🌊 Ocean Child\n☀️ Sunshine Seeker\n😊 Smiling Through Life\n📸 Picture Perfect\n💖 Living Authentically"
+    },
+    {
+      "id": "common-38",
+      "text": "🍔 Burger Enthusiast\n🎮 Pro Gamer\n🛣️ Road Tripper\n🤫 Quietly Confident\n💙 Loyal To My Crew"
+    },
+    {
+      "id": "common-39",
+      "text": "🌻 Wild & Free\n💫 Making Wishes\n📚 Learning Is Fun\n🥳 Every Day Is A Gift\n🥰 Happy Place Is Here"
+    },
+    {
+      "id": "common-40",
+      "text": "🎂 Born To Shine 22 May\n💡 Idea Machine\n🌟 Striving For Greatness\n🧡 Positive Vibes Only\n👨‍👩‍👧‍👦 Family's Blessing"
+    }
+  ],
+  "love": {
+    "boys": [
+      {
+        "id": "love-b1",
+        "text": "You're my favorite chapter.\nEvery heartbeat says your name.\nYou're love in its purest form. 💖"
+      },
+      {
+        "id": "love-b2",
+        "text": "You held my hand, never wanted to let go.\nYour smile rewrote my sadness.\nYou’re the song my soul hums. 🎵"
+      },
+      {
+        "id": "love-b3",
+        "text": "I saw stars in your eyes.\nYou speak in silences my heart understands.\nYou're not my type — you're my destiny. ✨"
+      },
+      {
+        "id": "love-b4",
+        "text": "I love you not just in words, but every quiet moment.\nWhen you laugh, my whole world glows.\nYou're my peace, my chaos. ❤️"
+      },
+      {
+        "id": "love-b5",
+        "text": "In a world of distractions, your love is my focus.\nYou feel like home.\nYou didn’t steal my heart, you earned it. 🏡"
+      },
+      {
+        "id": "love-b6",
+        "text": "You're my once in a lifetime.\nThe kind novels dream of.\nFalling for you felt like flying. 🕊️"
+      },
+      {
+        "id": "love-b7",
+        "text": "I’ve loved you through a thousand thoughts.\nEach one louder than the last.\nYou’re the only 'what if' I wanted real. 💫"
+      },
+      {
+        "id": "love-b8",
+        "text": "My soul whispered your name before I knew you.\nNow it echoes you.\nYou’re love that lasts forever. ♾️"
+      },
+      {
+        "id": "love-b9",
+        "text": "You walked into my heart so gently.\nYour love tastes like Sunday mornings.\nExactly what I needed. ☕"
+      },
+      {
+        "id": "love-b10",
+        "text": "We’re not perfect, but we’re poetry.\nLines that don’t always rhyme, but still beautiful.\nYou & I — the story I never want to stop reading. 📖"
+      }
+    ],
+    
+    "girls": [
+      {
+        "id": "love-g11",
+        "text": "You light me up like city lights at midnight.\nEven my shadows feel safe around you.\nYou're not a person, you're a feeling — home. 🌆"
+      },
+      {
+        "id": "love-g12",
+        "text": "You love me like the world is ending.\nAnd maybe that’s how love is supposed to feel.\nTerrifying. Beautiful. Real. 💥"
+      },
+      {
+        "id": "love-g13",
+        "text": "You came like sunrise, quiet but life-changing.\nYour presence makes moments unforgettable.\nYou’re the peace I didn’t know I was praying for. 🌅"
+      },
+      {
+        "id": "love-g14",
+        "text": "Your love doesn’t complete me — it expands me.\nMakes me believe in colors I’ve never seen.\nYou're the reason my heart writes poetry. 🎨"
+      },
+      {
+        "id": "love-g15",
+        "text": "No filter, no pose — just your love makes me glow.\nYou see the parts of me I forgot existed.\nYou're the calm in my chaos. 📸"
+      },
+      {
+        "id": "love-g16",
+        "text": "Your voice is my favorite sound.\nEven silence feels full when you're near.\nYou're not just my person — you're my forever place. 🔒"
+      },
+      {
+        "id": "love-g17",
+        "text": "You kissed my scars without ever seeing them.\nYour soul speaks fluently to mine.\nThat’s more than love — it’s soul recognition. 🔥"
+      },
+      {
+        "id": "love-g18",
+        "text": "The day I met you, my lonely chapters ended.\nYou turned the pages of my heart with care.\nNow every heartbeat writes your name. 📚"
+      },
+      {
+        "id": "love-g19",
+        "text": "You're the only addiction that makes me feel alive.\nI don’t want a break — I want forever.\nYour love is a sweet kind of madness. 💉"
+      },
+      {
+        "id": "love-g20",
+        "text": "We don’t match, we mix.\nPerfectly messy, effortlessly beautiful.\nYou're the art in my chaos. 🎨💖"
+      }
+    ]
+  },
+  "sad": {
+    "boys": [
+      {
+        "id": "sad-b1",
+        "text": "Sometimes, it's better to be alone.\nNo one can hurt you. 💔"
+      },
+      {
+        "id": "sad-b2",
+        "text": "My silence is just another word\nfor my pain. 😔"
+      },
+      {
+        "id": "sad-b3",
+        "text": "Tears are words the heart\ncan't express. 💧"
+      }
+    ],
+    "girls": [
+      {
+        "id": "sad-g1",
+        "text": "My smile is fake, my tears are real. 😢"
+      },
+      {
+        "id": "sad-g2",
+        "text": "Lost in a world that doesn't\nunderstand my soul. ☁️"
+      },
+      {
+        "id": "sad-g3",
+        "text": "It hurts, but it's okay.\nI'm used to it. 🥀"
+      }
+    ]
+  },
+  "funny": {
+    "boys": [
+      {
+        "id": "fun-b1",
+        "text": "I'm not lazy, I'm on energy-saving mode. 🔋"
+      },
+      {
+        "id": "fun-b2",
+        "text": "Eating pizza and avoiding adulting. 🍕"
+      },
+      {
+        "id": "fun-b3",
+        "text": "My bed is my happy place.\nAnd sometimes my office. 😴"
+      }
+    ],
+    "girls": [
+      {
+        "id": "fun-g1",
+        "text": "I followed my heart, and it led me to the fridge. 🍔"
+      },
+      {
+        "id": "fun-g2",
+        "text": "Queen of sarcasm and bad decisions. 👑🤦‍♀️"
+      },
+      {
+        "id": "fun-g3",
+        "text": "I'm not crazy, my reality is just\ndifferent than yours. 🤪"
+      }
+    ]
+  },
+  "cool": {
+    "boys": [
+      {
+        "id": "cool-b1",
+        "text": "Too cool for school, too hot for hell. 😎"
+      },
+      {
+        "id": "cool-b2",
+        "text": "🌻 Sunshine Mixed With A Little Hurricane\n👑 Queen Of My Own Empire\n✨ Making Every Day Count\n😇 Blessed & Grateful"
+      },
+      {
+        "id": "cool-b3",
+        "text": "🎨 Life Is My Canvas\n🎶 Music Is My Escape\n🌍 Exploring New Horizons\n😊 Spread Kindness Like Confetti"
+      },
+      {
+        "id": "cool-b4",
+        "text": "🌟 खुद की कहानी, खुद का अंदाज\n😇 Simple Soul, Strong Mind\n☕ Coffee Lover By Heart\n💯 Being Me Is My Superpower"
+      },
+      {
+        "id": "cool-b5",
+        "text": "🔥 Passion Drives Me\n📚 Always Learning, Always Growing\n📸 Capturing Moments, Not Just Photos\n❤️‍🔥 Dil Se Desi"
+      }
+    ],
+    "girls": [
+      {
+        "id": "cool-g1",
+        "text": "Slaying my own way.\nStay cool and classy. 💎"
+      },
+      {
+        "id": "cool-g2",
+        "text": "Confidence level: Selfie with no filter. ✨"
+      },
+      {
+        "id": "cool-g3",
+        "text": "Cooler than the other side\nof the pillow. 🌬️"
+      }
+    ]
+  },
+  "stylish": {
+    "boys": [
+      {
+        "id": "st-b1",
+        "text": "Fashion is what you buy.\nStyle is what you do with it. 👔"
+      },
+      {
+        "id": "st-b2",
+        "text": "My Vibe, My Rules 😎\n🚀 Future Goals On Top\n💫 Living Life, Not Just Existing\n❤️ Positive Aura Only"
+      },
+      {
+        "id": "st-b3",
+        "text": "My style is unique, don't copy. 😉"
+      }
+    ],
+    "girls": [
+      {
+        "id": "st-g1",
+        "text": "Elegance is the only beauty\nthat never fades. 💃"
+      },
+      {
+        "id": "st-g2",
+        "text": "Life's too short to wear boring clothes. ✨"
+      },
+      {
+        "id": "st-g3",
+        "text": "Style is a way to say who you are\nwithout having to speak. 💫"
+      }
+    ]
+  },
+  "friends": {
+    "boys": [
+      {
+        "id": "fr-b1",
+        "text": "Friends are the family you choose. 🤝"
+      },
+      {
+        "id": "fr-b2",
+        "text": "Brother from another mother.\nAlways got your back. 💪"
+      },
+      {
+        "id": "fr-b3",
+        "text": "Good times + Crazy friends =\nAmazing memories. 📸"
+      }
+    ],
+    "girls": [
+      {
+        "id": "fr-g1",
+        "text": "Best friends are like stars,\nyou don't always see them but you know they're always there. ✨"
+      },
+      {
+        "id": "fr-g2",
+        "text": "Friends by heart, sisters by soul. 👭"
+      },
+      {
+        "id": "fr-g3",
+        "text": "A good friend knows all your best stories,\nbut a best friend has lived them with you. 😂"
+      }
+    ]
+  },
+  
+  "single": {
+    "boys": [
+      {
+        "id": "s-b1",
+        "text": "Single and ready to mingle...\nwith my pizza. 🍕"
+      },
+      {
+        "id": "s-b2",
+        "text": "My life, my rules, no compromises.\nSingle and happy. 😊"
+      },
+      {
+        "id": "s-b3",
+        "text": "Happily single.\nDating myself. 😉"
+      }
+    ],
+    "girls": [
+      {
+        "id": "s-g1",
+        "text": "Queen of my own empire.\nSingle and flourishing. 👑"
+      },
+      {
+        "id": "s-g2",
+        "text": "I'm not single, I'm just in a relationship\nwith freedom. 🕊️"
+      },
+      {
+        "id": "s-g3",
+        "text": "Love me or leave me,\nbut please don't bother me while I'm single. 💅"
+      }
+    ]
+  },
+  "punjabi": {
+    "boys": [
+      {
+        "id": "pun-b1",
+        "text": "ਪੰਜਾਬੀ ਮੁੰਡਾ, ਦਿਲ ਦਾ ਰਾਜਾ। 💪"
+      },
+      {
+        "id": "pun-b2",
+        "text": "ਸਰਦਾਰੀ ਕਾਇਮ ਆ,\nਜਿੰਦਗੀ ਐਸ਼ ਨਾਲ ਕੱਟੋ। 👳‍♂️"
+      },
+      {
+        "id": "pun-b3",
+        "text": "ਜੱਟ ਦਾ ਮੁਕਾਬਲਾ ਨੀ। 🚜"
+      }
+    ],
+    "girls": [
+      {
+        "id": "pun-g1",
+        "text": "ਪੰਜਾਬੀ ਕੁੜੀ, ਦਿਲ ਦੀ ਸੋਹਣੀ। 🌸"
+      },
+      {
+        "id": "pun-g2",
+        "text": "ਮੈਂ ਪੰਜਾਬ ਦੀ ਸ਼ਾਨ,\nਮੇਰਾ ਰੂਪ ਨਿਰਾਲਾ। 💃"
+      },
+      {
+        "id": "pun-g3",
+        "text": "ਨਖਰਾ ਪੰਜਾਬਣ ਦਾ,\nਵੱਖਰਾ ਅੰਦਾਜ਼। ✨"
+      }
+    ]
+  }
+}
+
