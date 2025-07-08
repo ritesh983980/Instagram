@@ -694,3 +694,73 @@ footer a:hover { color: #fff; }
         grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
     }
 }
+
+/* ==================================== */
+/* Privacy Policy Page Specific Styles  */
+/* ==================================== */
+.policy-content {
+    padding: 20px;
+    max-width: 900px; /* कंटेंट की चौड़ाई नियंत्रित करें */
+    margin: 20px auto; /* पेज के केंद्र में रखें */
+    background-color: #fff; /* सफेद पृष्ठभूमि */
+    border-radius: 8px; /* गोल कोने */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* हल्का शैडो */
+    line-height: 1.8; /* पढ़ने में आसानी के लिए लाइन स्पेसिंग */
+    color: #333; /* टेक्स्ट का रंग */
+}
+
+.policy-content h2 {
+    color: #8a2be2; /* आपके ब्रांड का मुख्य रंग (बैंगनी) */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em; /* शीर्षक का आकार */
+    border-bottom: 2px solid #eee; /* हल्के रंग की बॉटम बॉर्डर */
+    padding-bottom: 5px;
+}
+
+.policy-content h3 {
+    color: #ff009c; /* आपके ब्रांड का सेकेंडरी रंग (गुलाबी) */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.4em; /* उप-शीर्षक का आकार */
+}
+
+.policy-content p {
+    margin-bottom: 15px; /* पैराग्राफ के नीचे स्पेस */
+}
+
+.policy-content ul {
+    list-style-type: disc; /* बुलेट पॉइंट */
+    margin-left: 25px; /* बाएं से इंडेंटेशन */
+    margin-bottom: 15px;
+}
+
+.policy-content ul li {
+    margin-bottom: 8px; /* सूची आइटम के नीचे स्पेस */
+}
+
+.policy-content a {
+    color: #8a2be2; /* लिंक का रंग */
+    text-decoration: none; /* अंडरलाइन हटाएँ */
+}
+
+.policy-content a:hover {
+    text-decoration: underline; /* हॉवर पर अंडरलाइन करें */
+}
+
+/* मोबाइल रिस्पॉन्सिवनेस */
+@media (max-width: 768px) {
+    .policy-content {
+        margin: 15px;
+        padding: 15px;
+    }
+    .policy-content h2 {
+        font-size: 1.5em;
+    }
+    .policy-content h3 {
+        font-size: 1.2em;
+    }
+}
+
+
+
