@@ -1,3 +1,4 @@
+
 /* General Body and Reset Styles */
 body {
     margin: 0;
@@ -21,7 +22,6 @@ body {
     z-index: 1000;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    /* 'color: white;' अब Default styles ब्लॉक में हैंडल किया जाएगा */
 }
 
 /* लोगो कंटेनर के लिए नया स्टाइल */
@@ -133,16 +133,21 @@ body {
     margin-right: auto;
 }
 
+/* UPDATED .content-image-container and .content-image styles */
 .content-image-container {
     text-align: center;
-    margin: 30px 0;
+    margin: 30px auto; /* मार्जिन दें और बीच में करें */
+    max-width: 700px; /* <--- यह मुख्य है: इमेज के कंटेनर की अधिकतम चौड़ाई सेट करें */
+    /* आप अपनी पसंद के अनुसार 700px को एडजस्ट कर सकते हैं */
 }
 
 .content-image {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* <--- यह मुख्य है: इमेज को कंटेनर से बाहर जाने से रोकेगा */
+    height: auto; /* आस्पेक्ट रेशियो बनाए रखेगा */
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block; /* ब्लॉक लेवल एलिमेंट ताकि कोई एक्स्ट्रा स्पेस न हो */
+    margin: 0 auto; /* इमेज को कंटेनर के बीच में लाने के लिए (अगर कंटेनर सेंटर में नहीं है) */
 }
 
 .spacer {
@@ -260,7 +265,6 @@ body {
 /* HEADER का डिफ़ॉल्ट बैकग्राउंड अब यहीं से आ रहा है */
 .header {
     background: linear-gradient(to right, var(--primary-purple), var(--primary-pink));
-    /* 'color: white;' यहां से हटा दिया गया है क्योंकि यह अब 'logo-container' और 'nav-menu a' में सेट होगा */
 }
 .page-title {
     color: var(--primary-purple);
@@ -690,10 +694,96 @@ footer a:hover { color: #fff; }
         grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
     }
     /* For category pages bio list */
+   .category-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
+    }
+    /* For category pages bio list */
     .bio-list-section {
         grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
     }
 }
+
+/* ==================================== */
+/* Image Slider Styles                  */
+/* ==================================== */
+.slider-container {
+    position: relative;
+    max-width: 800px; /* आपके पेज की चौड़ाई के अनुसार समायोजित करें */
+    margin: 30px auto; /* मार्जिन दें */
+    overflow: hidden; /* यह महत्वपूर्ण है ताकि सिर्फ एक इमेज दिखे */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.slider-wrapper {
+    display: flex; /* तस्वीरों को एक पंक्ति में रखेगा */
+    width: 100%; /* यह JavaScript द्वारा एडजस्ट होगा */
+    transition: transform 0.5s ease-in-out; /* स्लाइडिंग एनीमेशन */
+}
+
+.slider-wrapper img {
+    width: 100%; /* कंटेनर की पूरी चौड़ाई लें */
+    display: block;
+    flex-shrink: 0; /* इमेज को छोटा होने से रोके */
+    height: auto; /* आस्पेक्ट रेश्यो बनाए रखें */
+    /* यदि आप सभी छवियों को एक निश्चित ऊंचाई पर रखना चाहते हैं, तो 'height' सेट करें और 'object-fit: cover;' का उपयोग करें */
+    /* height: 400px; */
+    /* object-fit: cover; */
+}
+
+/* नेविगेशन बटन */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    z-index: 10;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.slider-btn:hover {
+    opacity: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* डॉट्स (इंडिकेटर) */
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+
 
 /* ==================================== */
 /* Privacy Policy Page Specific Styles  */
@@ -761,6 +851,3 @@ footer a:hover { color: #fff; }
         font-size: 1.2em;
     }
 }
-
-
-

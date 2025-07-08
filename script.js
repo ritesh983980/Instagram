@@ -256,5 +256,108 @@ document.addEventListener('DOMContentLoaded', function() {
         loadCategorySpecificBios();
         applyCategoryStyles(categoryKey);
     }
+
+
+    // ====================================
+    // Image Slider Functionality - NEW
+    // ====================================
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const images = document.querySelectorAll('.slider-wrapper img');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const sliderDotsContainer = document.querySelector('.slider-dots');
+
+    if (sliderWrapper && images.length > 0) { // सुनिश्चित करें कि स्लाइडर मौजूद है और उसमें छवियां हैं
+        let currentIndex = 0;
+        const totalImages = images.length;
+        let slideInterval; // ऑटो-स्लाइडिंग के लिए
+
+        // डॉट्स बनाएं
+        for (let i = 0; i < totalImages; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.dataset.index = i;
+            sliderDotsContainer.appendChild(dot);
+        }
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            // स्लाइडर को सही स्थिति में ले जाएँ
+            sliderWrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
+
+            // सक्रिय डॉट को अपडेट करें
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateSlider();
+        }
+
+        function showPrevSlide() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateSlider();
+        }
+
+        // ऑटो-स्लाइडिंग शुरू करें
+        function startAutoSlide() {
+            stopAutoSlide(); // सुनिश्चित करें कि कोई पिछला इंटरवल साफ हो जाए
+            slideInterval = setInterval(showNextSlide, 3000); // हर 3 सेकंड में स्लाइड करें
+        }
+
+        // ऑटो-स्लाइडिंग रोकें
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+        // बटन क्लिक इवेंट्स
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                showPrevSlide();
+                startAutoSlide(); // मैन्युअल क्लिक के बाद फिर से ऑटो-स्लाइडिंग शुरू करें
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                showNextSlide();
+                startAutoSlide(); // मैन्युअल क्लिक के बाद फिर से ऑटो-स्लाइडिंग शुरू करें
+            });
+        }
+        
+
+        // डॉट्स क्लिक इवेंट्स
+        if (sliderDotsContainer) {
+            sliderDotsContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('dot')) {
+                    stopAutoSlide();
+                    currentIndex = parseInt(event.target.dataset.index);
+                    updateSlider();
+                    startAutoSlide();
+                }
+            });
+        }
+
+        // प्रारंभिक सेटअप
+        updateSlider();
+        startAutoSlide(); // पेज लोड होने पर ऑटो-स्लाइडिंग शुरू करें
+
+        // यदि केवल एक छवि है, तो बटन और डॉट्स को छिपा दें
+        if (totalImages <= 1) {
+            if (prevBtn) prevBtn.style.display = 'none';
+            if (nextBtn) nextBtn.style.display = 'none';
+            if (sliderDotsContainer) sliderDotsContainer.style.display = 'none';
+            stopAutoSlide(); // ऑटो-स्लाइडिंग भी बंद करें
+        }
+    }
 });
+
 
