@@ -1,73 +1,75 @@
 {
   "vip": {
     "boys": [
-      {
-        "id": "vip-b1",
-        "text": "👑 Royalty in my veins.\n🔥 Attitude in my style.\nBorn to lead, not to **follow**."
-      },
-      {
-        "id": "vip-b2",
-        "text": "😎 King is here to rule your feed.\nBorn to express, not to impress.\nVIP mode always on. 🔥"
-      },
-      {
-        "id": "vip-b3",
-        "text": "🔥 Silent power\nloud success.\nMy vibe is exclusive.\nKing on my own **throne**. 🔥"
-      },
-      {
-        "id": "vip-b4",
-        "text": "Silent moves, loud wins. 🤫\nThe best revenge is massive **success**."
-      },
-      {
-        "id": "vip-b5",
-        "text": "🌟 Not just a name, it's a brand.\nLuxury is my lifestyle.\nUnapologetically me."
-      },
-      {
-        "id": "vip-b6",
-        "text": "👑 My empire, my rules.\nElevated mindset, exclusive vibe.\nWatch me shine. ✨"
-      },
-      {
-        "id": "vip-b7",
-        "text": "😎 Born to stand out.\nNot to fit in. My **legacy** begins now.\nOnly king matters. 🚀"
-      },
-      {
-        "id": "vip-b8",
-        "text": "🎩 Class apart.\nMindset of a billionaire.\nWatch me rise."
-      },
-      {
-        "id": "vip-b9",
-        "text": "My life, my rules, my attitude.\nCrown on, game strong. ✨"
-      },
-      {
-        "id": "vip-b10",
-        "text": "🖤🎯 Simple outside\nBillionaire mindset 💸\nSilent moves 🤫\nLoud results 🔥\nFocused on my own race 🏁"
-      },
-      {
-        "id": "vip-b11",
-        "text": "Just a boy with a dream and a hustle.\nSuccess is my only option. 🚀"
-      }
+      { "id": "vip-b1", "text": "👑 Royalty in my veins.\n🔥 Attitude in my style.\nBorn to lead, not to follow." },
+      { "id": "vip-b2", "text": "😎 King is here to rule your feed.\nBorn to express, not to impress.\nVIP mode always on. 🔥" },
+      { "id": "vip-b3", "text": "🔥 Silent power\nloud success.\nMy vibe is exclusive.\nKing on my own throne. 🔥" },
+      { "id": "vip-b4", "text": "Silent moves, loud wins. 🤫\nThe best revenge is massive success." },
+      { "id": "vip-b5", "text": "🌟 Not just a name, it's a brand.\nLuxury is my lifestyle.\nUnapologetically me." },
+      { "id": "vip-b6", "text": "👑 My empire, my rules.\nElevated mindset, exclusive vibe.\nWatch me shine. ✨" },
+      { "id": "vip-b7", "text": "😎 Born to stand out.\nNot to fit in. My legacy begins now.\nOnly king matters. 🚀" },
+      { "id": "vip-b8", "text": "🎩 Class apart.\nMindset of a billionaire.\nWatch me rise." },
+      { "id": "vip-b9", "text": "My life, my rules, my attitude.\nCrown on, game strong. ✨" },
+      { "id": "vip-b10", "text": "👑 King by Birth | Real by Nature\n🧠 Work in Silence | Win in Public 🎯\n🕶️ Status high, ego zero\n🕊️ Peaceful soul, but don’t test ⚔️" },
+      { "id": "vip-b11", "text": "❤️ Romantic Vibe + Real Loyalty\n💌 Searching for soulmate, not timepass\n🌹 Love once, loyal forever\n🌈 Dil clean, vibes royal\n💬 Ek baar dil se baat kar, fir dekh jaadu" },
+      { "id": "vip-b12", "text": "🕉️ Jai Mahakal | Har Har Shambhu 📿\n🎯 Kaam pe dhyan, logon pe nahi\n💣 Attitude full, par nature cool ❄️\n🚜 Proud to be a village-born King 👑" },
+      { "id": "vip-b13", "text": "🖤 Broken but Still Strong\n💭 Thoughts deep, words less\n🌌 Night thinker | Dream chaser\n🎧 Music is escape, not hobby 🎵" },
+      { "id": "vip-b14", "text": "🕶️ Style mera signature hai, fashion nahi ✨\n🖤 Silent but Savage 😎\n🎯 Focused on Goals, Not People 💯\n📿 Har din Shivaay ke naam 🕉️" },
+      { "id": "vip-b15", "text": "Just a boy with a dream and a hustle.\nSuccess is my only option. 🚀" },
+      { "id": "vip-b16", "text": "🔥 Hustler by mind\n👑 Royal by soul\n🖤 Never fake my vibe\n🕶 Style is always lethal" },
+      { "id": "vip-b17", "text": "🧠 Calm mind, wild heart\n🎯 Focus sharp like sniper\n🕶 Power silent, impact loud\n👑 I'm not one in a million, I’m the one" },
+      { "id": "vip-b18", "text": "🚫 Not everyone deserves my vibe\n💎 I value loyalty over attention\n👑 I'm a rare edition, not for sale\n🕊 Peaceful but never weak" },
+      { "id": "vip-b19", "text": "👑 Born for greatness\n📈 Failure is just a pause\n🔥 Hustle never ends\n🖤 Class never fades" },
+      { "id": "vip-b20", "text": "🦁 Lion attitude, eagle vision\n💬 Talk less, deliver more\n🎯 Crown fits right when earned\n🔥 Built from scars" },
+      { "id": "vip-b21", "text": "🎩 Classy by choice\n🧊 Cold as ice, bold as fire\n🚀 Dream big, act bigger\n💥 Never average" },
+      { "id": "vip-b22", "text": "🕶 I walk like I own the street\n👑 Not arrogant, just self-aware\n🔥 Game starts where others quit\n🖤 Only loyalty matters" },
+      { "id": "vip-b23", "text": "⚔️ Fighter by nature\n🧠 Deep thinker\n👟 Hustle in my steps\n💯 Real till the end" },
+      { "id": "vip-b24", "text": "🕊 Kind heart, killer mind\n🎯 Vision loud, words few\n🖤 Loyalty in blood\n👑 Not perfect, just rare" },
+      { "id": "vip-b25", "text": "🔥 Unstoppable energy\n👟 Journey still on\n🧠 Silent plans, loud results\n👑 Elite mindset only" },
+      { "id": "vip-b26", "text": "🕉 Mahadev in soul\n💯 Goals in sight\n🖤 Broken once, rebuilt better\n🎯 Destiny is mine" },
+      { "id": "vip-b27", "text": "🎧 Music, gym, and grind\n👟 Steps toward empire\n💬 Legends don't explain\n🔥 Respect earned, never asked" },
+      { "id": "vip-b28", "text": "👑 One man army\n📿 Mahadev ka bhakt\n💪 Strength in struggle\n🖤 Vibe royal, mood desi" },
+      { "id": "vip-b29", "text": "💼 Dream chaser\n🧠 Visionary goals\n👑 Style king\n🖤 My silence speaks louder" },
+      { "id": "vip-b30", "text": "🎯 Laser focus\n🖤 Emotions private\n👑 Royal rebel\n🔥 Not born to quit" }
     ],
+
     "girls": [
-      {
-        "id": "vip-g1",
-        "text": "Queen of my own little world.\nSlaying since day one. 👑💖"
-      },
-      {
-        "id": "vip-g2",
-        "text": "👸 Queen of my own world.\nSparkle and shine.\nBorn to be admired, not ordinary."
-      },
-      {
-        "id": "vip-g3",
-        "text": "Elegance with a touch of rebellion.\nUnapologetically me. ✨"
-      },
-      {
-        "id": "vip-g4",
-        "text": "Born to stand out, not to fit in.\nMy vibe speaks volumes. 💫"
-      }
+      { "id": "vip-g1", "text": "Queen of my own little world.\nSlaying since day one. 👑💖" },
+      { "id": "vip-g2", "text": "👸 Queen of my own world.\nSparkle and shine.\nBorn to be admired, not ordinary." },
+      { "id": "vip-g3", "text": "Elegance with a touch of rebellion.\nUnapologetically me. ✨" },
+      { "id": "vip-g4", "text": "Born to stand out, not to fit in.\nMy vibe speaks volumes. 💫" },
+      { "id": "vip-g5", "text": "👑 Beauty with brains\n🌸 Heart full of gold\n🦋 Sweet but fierce\n💫 Queen energy only" },
+      { "id": "vip-g6", "text": "💄 Grace in walk\n👠 Fire in soul\n👑 Real queen vibes\n🌟 Glowing through storms" },
+      { "id": "vip-g7", "text": "🦋 Butterfly with lioness heart\n💖 Smiles hiding strength\n🎯 Focused and fabulous\n👑 Not basic, never will be" },
+      { "id": "vip-g8", "text": "💋 Drama-free zone\n🎀 Elegance over everything\n💫 Royal heart, wild soul\n👠 Always in style" },
+      { "id": "vip-g9", "text": "🌸 Sweet outside, savage inside\n👑 Thrives alone\n💫 Mood: unbothered\n🖤 Loyal to few" },
+      { "id": "vip-g10", "text": "🌟 Dreams bigger than fears\n👠 Heels high, standards higher\n🖤 Unapologetically royal\n🦋 Magic in her aura" },
+      { "id": "vip-g11", "text": "💫 Unique not perfect\n👑 Confidence queen\n🖤 Soft voice, bold heart\n🎯 Goals over gossip" },
+      { "id": "vip-g12", "text": "💄 Attitude fierce\n👑 Soul royal\n🖤 Smiling through chaos\n💫 Too glam to give a damn" },
+      { "id": "vip-g13", "text": "🌸 Blooming silently\n🖤 Pain turned into power\n👑 Glow is real\n✨ She’s a vibe" },
+      { "id": "vip-g14", "text": "🦋 Messy bun, winning life\n💖 Class with sass\n👠 Not competing, I am the standard\n🌟 Glitter in my veins" },
+      { "id": "vip-g15", "text": "👑 I'm not a second option\n💄 Glow up queen\n🖤 Confidence loud, words few\n💫 Shining always" },
+      { "id": "vip-g16", "text": "🎀 Princess with a warrior's heart\n🦋 Soft soul, fierce mind\n💫 Shine in storms\n👑 Born rare" },
+      { "id": "vip-g17", "text": "💄 Love myself more each day\n🖤 No filter needed\n👠 Vibe so high, it’s royal\n🎯 Built not broken" },
+      { "id": "vip-g18", "text": "🌟 Creating my empire\n👑 Dream, hustle, repeat\n🖤 No crown needed to rule\n💋 Glow differently" },
+      { "id": "vip-g19", "text": "👑 Classy not trashy\n🎀 Silent grace, loud impact\n🖤 Real over perfect\n💫 Always elegant" },
+      { "id": "vip-g20", "text": "🖤 Broken but blooming\n👠 Stepping on self-doubt\n💄 Faith in her fire\n👑 Her own kind of beautiful" },
+      { "id": "vip-g21", "text": "💫 Heart royal, thoughts loyal\n👑 I don't chase, I attract\n🖤 My vibe, my rules\n💄 Style is natural" },
+      { "id": "vip-g22", "text": "🦋 Butterfly soul\n🎯 Queen mindset\n🖤 Rare not regular\n👠 She leaves sparkle" },
+      { "id": "vip-g23", "text": "👑 Ruling with grace\n💫 Strength in silence\n🖤 Fearless and free\n💄 Beauty beyond filters" },
+      { "id": "vip-g24", "text": "💋 Savage but soft\n🌟 Dreams wrapped in sparkle\n👠 Heels clicking with confidence\n🖤 Mood: VIP" },
+      { "id": "vip-g25", "text": "🖤 Royal roots\n🎀 Boss energy\n👑 Not born to please\n💫 Glow up is real" },
+      { "id": "vip-g26", "text": "🌸 Rose in a world of weeds\n🖤 Chosen not chaser\n🎯 Faithful and fearless\n💄 Made to shine" },
+      { "id": "vip-g27", "text": "👑 No fairy tale, just real queen\n💄 Lipstick + loyalty\n💫 Her vibe is victory\n🖤 Watch her rise" },
+      { "id": "vip-g28", "text": "🦋 Born to bloom\n👑 Magic in her DNA\n💄 Cute but deadly\n💫 Starlight soul" },
+      { "id": "vip-g29", "text": "🌟 From heartache to queen\n🖤 Smile is her weapon\n👠 Royal inside out\n💫 Vibe on another level" },
+      { "id": "vip-g30", "text": "💖 Classy rebel\n🖤 Silent moves\n👑 Legacy in making\n💫 No label fits her" }
     ]
   },
 
 
- 
+
+
   "attitude": {
     "boys": [
       {
