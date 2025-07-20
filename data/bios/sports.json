@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "⚽ Football is life\n🔥 Passion on the field\n🏆 Champions mindset\n💪 Training never stops",
+            "likes": 287,
+            "category": "Sports"
+        },
+        {
+            "id": 2,
+            "text": "🏀 Ball is life\n🎯 Nothing but net\n👟 Sneakerhead\n💯 Dedicated to the game",
+            "likes": 254,
+            "category": "Sports"
+        },
+        {
+            "id": 3,
+            "text": "🎾 Love the game\n💨 Speed is my weapon\n🏅 Always competing\n🔥 Burning for victory",
+            "likes": 231,
+            "category": "Sports"
+        },
+        {
+            "id": 4,
+            "text": "🏃‍♂ Runner's high\n🌅 Sunrise miles\n💪 No pain no gain\n🎯 Pushing limits",
+            "likes": 276,
+            "category": "Sports"
+        },
+        {
+            "id": 5,
+            "text": "🏋‍♂ Gym addict\n💪 Strength training\n🥇 Progress over perfection\n🔥 Burning calories",
+            "likes": 298,
+            "category": "Sports"
+        },
+        {
+            "id": 6,
+            "text": "🏊‍♀ Water is my element\n🌊 Swim to win\n⏱ Beating my time\n💯 Dedicated to the sport",
+            "likes": 243,
+            "category": "Sports"
+        }
+    ]
+}
