@@ -1,0 +1,28 @@
+{
+    "categories": [
+        {
+            "name": "General Popular",
+            "tags": ["instagram", "instadaily", "photooftheday", "love", "instagood", "follow", "like", "followme", "photography", "instamood"]
+        },
+        {
+            "name": "Travel & Adventure",
+            "tags": ["travel", "wanderlust", "travelgram", "adventure", "explore", "vacation", "instatravel", "travelphotography", "tourism", "nature"]
+        },
+        {
+            "name": "Fashion & Style",
+            "tags": ["fashion", "style", "ootd", "outfitoftheday", "streetstyle", "fashionblogger", "lookbook", "stylish", "trendy", "instafashion"]
+        },
+        {
+            "name": "Food & Dining",
+            "tags": ["food", "foodie", "foodphotography", "instafood", "yummy", "delicious", "foodstagram", "foodblogger", "foodlover", "dessert"]
+        },
+        {
+            "name": "Fitness & Health",
+            "tags": ["fitness", "workout", "gym", "fit", "fitnessmotivation", "training", "bodybuilding", "health", "exercise", "muscle"]
+        },
+        {
+            "name": "Photography",
+            "tags": ["photography", "photo", "photographer", "photoshoot", "instaphoto", "picoftheday", "portrait", "landscape", "art", "creative"]
+        }
+    ]
+}
