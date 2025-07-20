@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sad Bios - UniqueBio.in</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/icons/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <span>UniqueBio</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="vip.html">VIP Bios</a></li>
+                    <li><a href="../fonts/stylish-fonts.html">Stylish Fonts</a></li>
+                    <li><a href="../hashtags/trending.html">Hashtags</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="background: linear-gradient(135deg, #6a5acd, #9370db);">
+        <div class="container">
+            <h1>Sad Bios</h1>
+            <p>Expressive bios for when you're feeling down</p>
+        </div>
+    </section>
+
+    <section class="bio-container">
+        <div class="container">
+            <div class="bio-header">
+                <h2>Emotional Bios</h2>
+                <p>Express your feelings with these heartfelt bios</p>
+            </div>
+            
+            <div class="bio-grid" id="bioContainer">
+                <!-- Bios will be loaded from JSON -->
+                <div class="loading-message">Loading sad bios...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../about.html">About</a>
+                <a href="../../contact.html">Contact</a>
+                <a href="../../privacy-policy.html">Privacy Policy</a>
+                <a href="../../disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UniqueBio.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        fetch('../../data/bios/sad.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('bioContainer');
+                container.innerHTML = '';
+                
+                data.bios.forEach((bio, index) => {
+                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    container.innerHTML += `
+                        <div class="bio-card fade-in ${delayClass}">
+                            <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
+                            <button class="copy-btn" onclick="copyBio(this)">Copy Bio</button>
+                        </div>
+                    `;
+                });
+            });
+    </script>
+</body>
+</html>
