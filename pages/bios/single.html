@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Bios - UniqueBio.in</title>
+    <title>Single Instagram Bios - Happy & Independent Bios | UniqueBio.in</title>
+    <meta name="description" content="Celebrate your independence and happy single life with our unique Instagram bios. Find witty, empowering, and confident single bios for your profile on UniqueBio.in!">
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/single.html" />
 </head>
 <body>
     <header>
         <div class="container header-container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
                 <span>UniqueBio</span>
             </a>
             <nav>
@@ -30,21 +33,48 @@
 
     <section class="hero" style="background: linear-gradient(135deg, #a29bfe, #74b9ff);">
         <div class="container">
-            <h1>Single Bios</h1>
-            <p>Bios that celebrate the single life</p>
+            <h1>Single Instagram Bios: Embrace Your Independent Life</h1>
+            <p>Discover bios that celebrate the single life with confidence and joy. Perfect for showcasing your self-love and independence!</p>
         </div>
     </section>
 
     <section class="bio-container">
         <div class="container">
             <div class="bio-header">
-                <h2>Single & Happy</h2>
-                <p>Embrace your single status with these bios</p>
+                <h2>Browse Our Collection of Single & Happy Bios</h2>
+                <p>Choose from hundreds of **unique single bios** to embrace your independent status on Instagram. Simply click to copy!</p>
             </div>
             
             <div class="bio-grid" id="bioContainer">
-                <!-- Bios will be loaded from JSON -->
                 <div class="loading-message">Loading single bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="attitude.html" class="btn btn-secondary">Browse Attitude Bios</a>
+                <a href="funny.html" class="btn btn-secondary">Browse Funny Bios</a>
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why a Single Bio is a Powerful Statement?</h3>
+                <p>A single bio isn't just about being unattached; it's about celebrating self-love, independence, and the freedom to pursue your passions. It sends a clear message about your confidence and self-sufficiency. A strong single bio can:</p>
+                <ul>
+                    <li>**Emphasize Independence:** Showcase your self-reliant nature.</li>
+                    <li>**Promote Self-Love:** Highlight your journey of personal growth.</li>
+                    <li>**Radiate Confidence:** Project a strong and positive image.</li>
+                    <li>**Attract Like-Minded Individuals:** Connect with others who appreciate freedom and individuality.</li>
+                </ul>
+
+                <h3>Tips for Crafting the Perfect Single Bio:</h3>
+                <p>To make your single bio truly shine, consider these tips:</p>
+                <ol>
+                    <li>**Focus on Positivity:** Celebrate the joys of being single, not the downsides.</li>
+                    <li>**Highlight Hobbies/Goals:** What are you passionate about now that you have more time for yourself?</li>
+                    <li>**Use Empowering Words:** Words like "free," "independent," "thriving," "unstoppable."</li>
+                    <li>**Add a Touch of Humor:** A witty line about single life can be very engaging.</li>
+                    <li>**Include Emojis:** Emojis like ✨, 👑, 🚀 can add personality.</li>
+                </ol>
+                <p>Explore our extensive collection of **single Instagram bios** and find the perfect one to express your unique journey! Don't forget to enhance your profile with our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and discover <a href="../hashtags/trending.html">trending hashtags</a> for your posts!</p>
             </div>
         </div>
     </section>
@@ -66,14 +96,55 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
+        // Ensure copyBio and animateOnScroll are available, either in main.js or here
+        // If they are in main.js, you can remove these definitions here to avoid duplication.
+
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+        // Fetch bios from JSON
         fetch('../../data/bios/single.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('bioContainer');
-                container.innerHTML = '';
+                
+                if (!data.bios || data.bios.length === 0) {
+                    container.innerHTML = '<p class="error-message">No bios found in the data file.</p>';
+                    return;
+                }
+                
+                container.innerHTML = ''; // Clear loading message
                 
                 data.bios.forEach((bio, index) => {
-                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    const delayClass = `delay-${index % 3}`; 
                     container.innerHTML += `
                         <div class="bio-card fade-in ${delayClass}">
                             <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
@@ -81,6 +152,19 @@
                         </div>
                     `;
                 });
+
+                // Trigger animations for newly added elements after they are appended to the DOM
+                const event = new Event('scroll');
+                window.dispatchEvent(event);
+            })
+            .catch(error => {
+                console.error('Error loading single bios:', error);
+                document.getElementById('bioContainer').innerHTML = `
+                    <div class="error-message">
+                        Failed to load bios. Please try again later.
+                        <br><small>Error: ${error.message}</small>
+                    </div>
+                `;
             });
     </script>
 </body>
