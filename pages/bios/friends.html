@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friends Bios - UniqueBio.in</title>
+    <title>Friends Bios for Instagram - Best Friendship Bios | UniqueBio.in</title>
+    <meta name="description" content="Discover the best Instagram bios to celebrate friendship and bond with your best friends. Find unique, funny, and heartwarming friends bios for your profile on UniqueBio.in!">
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/friends.html" />
 </head>
 <body>
     <header>
         <div class="container header-container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
                 <span>UniqueBio</span>
             </a>
             <nav>
@@ -30,21 +33,48 @@
 
     <section class="hero" style="background: linear-gradient(135deg, #00b894, #55efc4);">
         <div class="container">
-            <h1>Friends Bios</h1>
-            <p>Celebrate friendship with these awesome bios</p>
+            <h1>Friends Bios for Instagram: Celebrate Your Squad Goals</h1>
+            <p>Celebrate your unbreakable bond with friends using these awesome and unique Instagram bios. Perfect for BFFs and groups!</p>
         </div>
     </section>
 
     <section class="bio-container">
         <div class="container">
             <div class="bio-header">
-                <h2>Squad Goals</h2>
-                <p>Bios to celebrate your amazing friends</p>
+                <h2>Browse Our Collection of Best Friendship Bios</h2>
+                <p>Choose from hundreds of **unique friends bios** to highlight your amazing friendships on Instagram. Simply click to copy!</p>
             </div>
             
             <div class="bio-grid" id="bioContainer">
-                <!-- Bios will be loaded from JSON -->
                 <div class="loading-message">Loading friends bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="love.html" class="btn btn-secondary">Browse Love Bios</a>
+                <a href="cute.html" class="btn btn-secondary">Browse Cute Bios</a>
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why a Friendship Bio is Essential for Your Profile?</h3>
+                <p>A dedicated friendship bio on Instagram is a wonderful way to honor your closest pals and showcase the importance of your bond. It's more than just words; it’s a public declaration of affection and loyalty. A great friends bio can:</p>
+                <ul>
+                    <li>**Celebrate Your Bond:** Show appreciation for your besties.</li>
+                    <li>**Attract Similar Connections:** Connect with others who value friendship.</li>
+                    <li>**Make Your Profile Relatable:** Many people relate to strong friendships.</li>
+                    <li>**Create a Positive Vibe:** Spread good vibes about companionship.</li>
+                </ul>
+
+                <h3>Tips for Crafting the Perfect Friends Bio:</h3>
+                <p>Choosing or creating the ideal friendship bio involves a few simple considerations:</p>
+                <ol>
+                    <li>**Be Authentic:** Let your genuine feelings for your friends shine through.</li>
+                    <li>**Use Inside Jokes (Subtly):** If it’s understandable to others, a subtle inside joke can add charm.</li>
+                    <li>**Include Emojis:** Friendship-themed emojis (like 👯‍♀️, 🤝, ❤️) can enhance the message.</li>
+                    <li>**Keep it Positive:** Focus on joy, support, and shared memories.</li>
+                    <li>**Mention Key Qualities:** Highlight what makes your friendship special.</li>
+                </ol>
+                <p>Explore our wide range of **friends bios for Instagram** and find the perfect words to describe your squad. Don't forget to check out our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and <a href="../hashtags/trending.html">trending hashtags</a> to make your friendship posts even more special!</p>
             </div>
         </div>
     </section>
@@ -66,14 +96,55 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
+        // Ensure copyBio and animateOnScroll are available, either in main.js or here
+        // If they are in main.js, you can remove these definitions here to avoid duplication.
+
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+        // Fetch bios from JSON
         fetch('../../data/bios/friends.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('bioContainer');
-                container.innerHTML = '';
+                
+                if (!data.bios || data.bios.length === 0) {
+                    container.innerHTML = '<p class="error-message">No bios found in the data file.</p>';
+                    return;
+                }
+                
+                container.innerHTML = ''; // Clear loading message
                 
                 data.bios.forEach((bio, index) => {
-                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    const delayClass = `delay-${index % 3}`; 
                     container.innerHTML += `
                         <div class="bio-card fade-in ${delayClass}">
                             <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
@@ -81,6 +152,19 @@
                         </div>
                     `;
                 });
+
+                // Trigger animations for newly added elements after they are appended to the DOM
+                const event = new Event('scroll');
+                window.dispatchEvent(event);
+            })
+            .catch(error => {
+                console.error('Error loading friends bios:', error);
+                document.getElementById('bioContainer').innerHTML = `
+                    <div class="error-message">
+                        Failed to load bios. Please try again later.
+                        <br><small>Error: ${error.message}</small>
+                    </div>
+                `;
             });
     </script>
 </body>
