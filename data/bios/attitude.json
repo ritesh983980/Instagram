@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "🔥 Too hot to handle\n❄ Too cold to hold\n💪 I don't compete with others\n🎯 I compete with myself",
+            "likes": 320,
+            "category": "Attitude"
+        },
+        {
+            "id": 2,
+            "text": "👑 Born to shine\n💎 Not here to impress\n🚫 No time for negativity\n✨ Glow different",
+            "likes": 278,
+            "category": "Attitude"
+        },
+        {
+            "id": 3,
+            "text": "🦁 King attitude\n💰 Money moves only\n🚀 Leveling up daily\n📌 Not your average guy",
+            "likes": 245,
+            "category": "Attitude"
+        },
+        {
+            "id": 4,
+            "text": "🚫 No excuses\n💯 100% real\n🔥 Fire in my soul\n🎯 Goals over everything",
+            "likes": 198,
+            "category": "Attitude"
+        },
+        {
+            "id": 5,
+            "text": "⚡ Electrifying personality\n🛡 Unstoppable\n💎 Diamond mindset\n🌪 Storm coming",
+            "likes": 223,
+            "category": "Attitude"
+        },
+        {
+            "id": 6,
+            "text": "👊 Punching my fears\n🚶‍♂ Walking my path\n👑 Creating my legacy\n🔥 Burning the ordinary",
+            "likes": 187,
+            "category": "Attitude"
+        }
+    ]
+}
