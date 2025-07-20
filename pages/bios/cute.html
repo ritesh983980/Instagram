@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Bios - UniqueBio.in</title>
+    <title>Cute Instagram Bios - Adorable & Sweet Bios for Girls & Boys | UniqueBio.in</title>
+    <meta name="description" content="Find the most adorable and sweet Instagram bios for your profile on UniqueBio.in. Perfect for girls and boys, our cute bios are copy-paste ready to make your profile charming!">
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/cute.html" />
 </head>
 <body>
     <header>
         <div class="container header-container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
                 <span>UniqueBio</span>
             </a>
             <nav>
@@ -30,21 +33,48 @@
 
     <section class="hero" style="background: linear-gradient(135deg, #ff9ff3, #feca57);">
         <div class="container">
-            <h1>Cute Bios</h1>
-            <p>Adorable bios perfect for your sweet personality</p>
+            <h1>Cute Instagram Bios for Sweet & Adorable Profiles</h1>
+            <p>Discover adorable bios perfect for your sweet personality. Make your Instagram profile charming and inviting!</p>
         </div>
     </section>
 
     <section class="bio-container">
         <div class="container">
             <div class="bio-header">
-                <h2>Adorable Bios</h2>
-                <p>Sweet and cute bios for your profile</p>
+                <h2>Browse Our Collection of Adorable & Sweet Bios</h2>
+                <p>Choose from hundreds of **unique cute bios** to make your Instagram profile truly stand out. Simply click to copy!</p>
             </div>
             
             <div class="bio-grid" id="bioContainer">
-                <!-- Bios will be loaded from JSON -->
                 <div class="loading-message">Loading cute bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="love.html" class="btn btn-secondary">Browse Love Bios</a>
+                <a href="../fonts/stylish-fonts.html" class="btn btn-secondary">Get Stylish Fonts</a>
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why Your Instagram Profile Needs a Cute Bio?</h3>
+                <p>A cute bio instantly makes your Instagram profile more approachable and delightful. It’s perfect for expressing a sweet, charming, or innocent personality. A well-crafted cute bio can:</p>
+                <ul>
+                    <li>**Enhance Approachability:** Make your profile feel warm and friendly.</li>
+                    <li>**Reflect Your Personality:** Showcase your sweet and charming side.</li>
+                    <li>**Attract Positive Engagement:** Appeal to followers who appreciate a softer, more endearing vibe.</li>
+                    <li>**Create a Memorable Impression:** Stand out with a bio that brings a smile to people's faces.</li>
+                </ul>
+
+                <h3>Tips for Crafting the Perfect Cute Bio:</h3>
+                <p>While our collection provides plenty of options, here are some tips to select or create your own:</p>
+                <ol>
+                    <li>**Use Emojis:** Hearts, stars, sparkles, and animals can add a touch of cuteness.</li>
+                    <li>**Keep it Simple & Sweet:** Overly complex or lengthy bios can lose their charm.</li>
+                    <li>**Express Positivity:** Focus on joy, happiness, and lightheartedness.</li>
+                    <li>**Add a Dash of Humor:** A little innocent humor can make a cute bio even more engaging.</li>
+                    <li>**Reference Hobbies/Interests:** Mention cute interests like "coffee lover," "bookworm," or "dog mom."</li>
+                </ol>
+                <p>Dive into our charming collection of **cute Instagram bios** and find the perfect one to make your profile irresistibly sweet! Don't forget to check out our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and <a href="../hashtags/trending.html">trending hashtags</a> for more inspiration!</p>
             </div>
         </div>
     </section>
@@ -66,14 +96,55 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
+        // Ensure copyBio and animateOnScroll are available, either in main.js or here
+        // If they are in main.js, you can remove these definitions here to avoid duplication.
+
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+        // Fetch bios from JSON
         fetch('../../data/bios/cute.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('bioContainer');
-                container.innerHTML = '';
+                
+                if (!data.bios || data.bios.length === 0) {
+                    container.innerHTML = '<p class="error-message">No bios found in the data file.</p>';
+                    return;
+                }
+                
+                container.innerHTML = ''; // Clear loading message
                 
                 data.bios.forEach((bio, index) => {
-                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    const delayClass = `delay-${index % 3}`; 
                     container.innerHTML += `
                         <div class="bio-card fade-in ${delayClass}">
                             <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
@@ -81,6 +152,19 @@
                         </div>
                     `;
                 });
+
+                // Trigger animations for newly added elements after they are appended to the DOM
+                const event = new Event('scroll');
+                window.dispatchEvent(event);
+            })
+            .catch(error => {
+                console.error('Error loading cute bios:', error);
+                document.getElementById('bioContainer').innerHTML = `
+                    <div class="error-message">
+                        Failed to load bios. Please try again later.
+                        <br><small>Error: ${error.message}</small>
+                    </div>
+                `;
             });
     </script>
 </body>
