@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniqueBio.in - Stylish Instagram Bios, Fonts & Hashtags</title>
+    <meta name="description" content="Get unique Instagram bios, stylish fonts, and trending hashtags for your profile.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="assets/icons/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="UniqueBio Logo">
+                <span>UniqueBio</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/bios/vip.html">VIP Bios</a></li>
+                    <li><a href="pages/fonts/stylish-fonts.html">Stylish Fonts</a></li>
+                    <li><a href="pages/hashtags/trending.html">Hashtags</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Make Your Instagram Profile Stand Out</h1>
+            <p class="fade-in delay-1">Discover thousands of unique bios, stylish fonts, and trending hashtags.</p>
+            <div class="search-box fade-in delay-2">
+                <input type="text" placeholder="Search for bios, fonts, or hashtags...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2>Popular Bio Categories</h2>
+            <div class="category-grid">
+                <a href="pages/bios/vip.html" class="category-card fade-in">
+                    <h3>VIP Bios</h3>
+                    <p>Exclusive bios for elite status</p>
+                </a>
+                <a href="pages/bios/attitude.html" class="category-card fade-in delay-1">
+                    <h3>Attitude Bios</h3>
+                    <p>Bold and confident bios</p>
+                </a>
+                <a href="pages/bios/love.html" class="category-card fade-in delay-2">
+                    <h3>Love Bios</h3>
+                    <p>Romantic bios for couples</p>
+                </a>
+                <a href="pages/bios/funny.html" class="category-card fade-in">
+                    <h3>Funny Bios</h3>
+                    <p>Hilarious bios</p>
+                </a>
+                <a href="pages/bios/cute.html" class="category-card fade-in delay-1">
+                    <h3>Cute Bios</h3>
+                    <p>Adorable bios</p>
+                </a>
+                <a href="pages/bios/single.html" class="category-card fade-in delay-2">
+                    <h3>Single Bios</h3>
+                    <p>Celebrate the single life</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose UniqueBio?</h2>
+            <div class="feature-grid">
+                <div class="feature-card fade-in">
+                    <h3><i class="fas fa-magic"></i> Unique Content</h3>
+                    <p>Curated bios you won't find elsewhere.</p>
+                </div>
+                <div class="feature-card fade-in delay-1">
+                    <h3><i class="fas fa-copy"></i> Easy Copy</h3>
+                    <p>One-click copy functionality.</p>
+                </div>
+                <div class="feature-card fade-in delay-2">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile Friendly</h3>
+                    <p>Works perfectly on all devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bio-container">
+        <div class="container">
+            <div class="bio-header">
+                <h2>Trending Bios</h2>
+                <p>Popular bios users are loving this week</p>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-card fade-in">
+                    <div class="bio-text">
+                        ✨ Living my best life ✨
+                        🌍 Travel enthusiast 
+                        📸 Capturing moments
+                    </div>
+                    <button class="copy-btn" onclick="copyBio(this)">Copy Bio</button>
+                </div>
+                <div class="bio-card fade-in delay-1">
+                    <div class="bio-text">
+                        🦁 King of my own jungle
+                        💪 Hustle never stops
+                        🚀 Building my empire
+                    </div>
+                    <button class="copy-btn" onclick="copyBio(this)">Copy Bio</button>
+                </div>
+                <div class="bio-card fade-in delay-2">
+                    <div class="bio-text">
+                        🌸 Spread love & positivity
+                        🌞 Sunshine on cloudy days
+                        📚 Bookworm forever
+                    </div>
+                    <button class="copy-btn" onclick="copyBio(this)">Copy Bio</button>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <a href="pages/bios/vip.html" class="btn">View All Bios</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UniqueBio.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>
