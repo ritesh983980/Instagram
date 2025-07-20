@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funny Bios - UniqueBio.in</title>
+    <title>Love Instagram Bios - Romantic & Couple Bios | UniqueBio.in</title>
+    <meta name="description" content="Express your deepest feelings with our collection of romantic love Instagram bios for couples and singles. Find sweet, heartfelt, and unique bios to showcase your love on UniqueBio.in!">
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/love.html" />
 </head>
 <body>
     <header>
         <div class="container header-container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
                 <span>UniqueBio</span>
             </a>
             <nav>
@@ -28,23 +31,50 @@
         </div>
     </header>
 
-    <section class="hero" style="background: linear-gradient(135deg, #f6e58d, #ffbe76);">
+    <section class="hero" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e);">
         <div class="container">
-            <h1>Funny Bios</h1>
-            <p>Hilarious bios that will make your followers laugh</p>
+            <h1>Love Instagram Bios: Romantic & Sweet Bios for Couples</h1>
+            <p>Express your affection with our collection of romantic bios, perfect for couples and lovebirds. Show your love story to the world!</p>
         </div>
     </section>
 
     <section class="bio-container">
         <div class="container">
             <div class="bio-header">
-                <h2>Hilarious Bios</h2>
-                <p>Make people smile with these funny bios</p>
+                <h2>Browse Our Collection of Sweet Love Bios</h2>
+                <p>Choose from hundreds of **unique love bios** to express your feelings on Instagram. Simply click to copy!</p>
             </div>
             
             <div class="bio-grid" id="bioContainer">
-                <!-- Bios will be loaded from JSON -->
-                <div class="loading-message">Loading funny bios...</div>
+                <div class="loading-message">Loading love bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="friends.html" class="btn btn-secondary">Browse Friends Bios</a>
+                <a href="cute.html" class="btn btn-secondary">Browse Cute Bios</a>
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why a Love Bio is Perfect for Your Instagram Profile?</h3>
+                <p>A love bio on Instagram is a beautiful way to share your romantic journey, celebrate your relationship, or simply express your feelings of affection. It adds a personal and heartfelt touch to your profile. A touching love bio can:</p>
+                <ul>
+                    <li>**Showcase Your Relationship:** Let the world know about your special bond.</li>
+                    <li>**Express Deep Feelings:** Convey emotions that words alone might not capture.</li>
+                    <li>**Inspire Others:** Share positivity and romantic vibes.</li>
+                    <li>**Create Memories:** A small snippet of your love story in your bio.</li>
+                </ul>
+
+                <h3>Tips for Crafting the Perfect Romantic Bio:</h3>
+                <p>Whether you're celebrating a partner or the idea of love, here are some tips for a charming love bio:</p>
+                <ol>
+                    <li>**Be Genuine:** Authenticity makes a love bio truly resonate.</li>
+                    <li>**Use Relevant Emojis:** Hearts (❤️, 🥰), couples (💑), or rings (💍) add romantic flair.</li>
+                    <li>**Include a Date (Optional):** Anniversaries or significant dates can add a personal touch.</li>
+                    <li>**Keep it Sweet & Concise:** Powerful emotions often come in short, impactful phrases.</li>
+                    <li>**Reference Shared Interests:** If you and your partner have a common hobby, mention it.</li>
+                </ol>
+                <p>Explore our diverse collection of **love Instagram bios** and find the perfect words to tell your unique love story! Don't forget to check out our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and <a href="../hashtags/trending.html">trending hashtags</a> to make your romantic posts even more captivating!</p>
             </div>
         </div>
     </section>
@@ -66,14 +96,55 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
-        fetch('../../data/bios/funny.json')
-            .then(response => response.json())
+        // Ensure copyBio and animateOnScroll are available, either in main.js or here
+        // If they are in main.js, you can remove these definitions here to avoid duplication.
+
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+        // Fetch bios from JSON
+        fetch('../../data/bios/love.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('bioContainer');
-                container.innerHTML = '';
+                
+                if (!data.bios || data.bios.length === 0) {
+                    container.innerHTML = '<p class="error-message">No bios found in the data file.</p>';
+                    return;
+                }
+                
+                container.innerHTML = ''; // Clear loading message
                 
                 data.bios.forEach((bio, index) => {
-                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    const delayClass = `delay-${index % 3}`; 
                     container.innerHTML += `
                         <div class="bio-card fade-in ${delayClass}">
                             <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
@@ -81,6 +152,19 @@
                         </div>
                     `;
                 });
+
+                // Trigger animations for newly added elements after they are appended to the DOM
+                const event = new Event('scroll');
+                window.dispatchEvent(event);
+            })
+            .catch(error => {
+                console.error('Error loading love bios:', error);
+                document.getElementById('bioContainer').innerHTML = `
+                    <div class="error-message">
+                        Failed to load bios. Please try again later.
+                        <br><small>Error: ${error.message}</small>
+                    </div>
+                `;
             });
     </script>
 </body>
