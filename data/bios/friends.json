@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "👯‍♀ Found my tribe\n💞 Love my squad\n🎉 Party partners\n🤪 Crazy together",
+            "likes": 312,
+            "category": "Friends"
+        },
+        {
+            "id": 2,
+            "text": "🦸‍♀ Friendship is my superpower\n🤗 Ride or dies\n🍕 Foodie partners\n😂 Laugh therapists",
+            "likes": 287,
+            "category": "Friends"
+        },
+        {
+            "id": 3,
+            "text": "👑 Queens supporting queens\n💎 Diamonds together\n✨ Shine brighter united\n❤ Sisterhood forever",
+            "likes": 276,
+            "category": "Friends"
+        },
+        {
+            "id": 4,
+            "text": "🤝 Loyalty over everything\n🎶 Concert buddies\n🍿 Movie nights\n🌎 Adventure squad",
+            "likes": 254,
+            "category": "Friends"
+        },
+        {
+            "id": 5,
+            "text": "👬 Bros before woes\n🏀 Ball is life\n🍔 Burger runs\n🎮 Gaming for life",
+            "likes": 267,
+            "category": "Friends"
+        },
+        {
+            "id": 6,
+            "text": "👫 Friendship goals\n💯 Real recognize real\n🤳 Photo booth addicts\n🍦 Ice cream dates",
+            "likes": 243,
+            "category": "Friends"
+        }
+    ]
+}
