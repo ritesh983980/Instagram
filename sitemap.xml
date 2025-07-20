@@ -79,7 +79,12 @@
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
-    
+    <url>
+        <loc>https://uniquebio.in/pages/bios/sports.html</loc>
+        <lastmod>2025-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://uniquebio.in/pages/fonts/stylish-fonts.html</loc>
         <lastmod>2025-07-20</lastmod>
