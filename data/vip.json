@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "👑 Born to shine\n💎 Diamond mentality\n🚀 Leveling up daily\n📍 Living luxuriously",
+            "likes": 245,
+            "category": "VIP"
+        },
+        {
+            "id": 2,
+            "text": "🏆 Winner by choice\n💰 Wealth is my mindset\n✈ Private jet lifestyle\n🍾 Champagne dreams",
+            "likes": 189,
+            "category": "VIP"
+        },
+        {
+            "id": 3,
+            "text": "⭐ Star quality\n🕶 Too cool for basic\n🏝 Island hopping\n🎩 Classy not flashy",
+            "likes": 156,
+            "category": "VIP"
+        },
+        {
+            "id": 4,
+            "text": "🚫 No average energy\n💵 Money moves only\n🏙 City views & VIP\n🥂 Toasting to success",
+            "likes": 201,
+            "category": "VIP"
+        },
+        {
+            "id": 5,
+            "text": "🔝 Top floor views\n🛍 Shopping is therapy\n🏎 Fast life, faster cars\n🌟 Main character energy",
+            "likes": 178,
+            "category": "VIP"
+        },
+        {
+            "id": 6,
+            "text": "🎯 Goals: Unlimited\n💎 Rare like diamonds\n🏛 Building my empire\n✨ Glow up in progress",
+            "likes": 223,
+            "category": "VIP"
+        }
+    ]
+}
