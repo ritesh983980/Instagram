@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "🤪 Professional overthinker\n🍕 Pizza is my love language\n😴 Sleep is my superpower\n🚫 Adulting: Failed successfully",
+            "likes": 456,
+            "category": "Funny"
+        },
+        {
+            "id": 2,
+            "text": "🤓 Sarcasm is my second language\n🍳 Burnt toast specialist\n🛌 World champion napper\n🤷‍♂ Why am I like this?",
+            "likes": 398,
+            "category": "Funny"
+        },
+        {
+            "id": 3,
+            "text": "🍫 Chocolate consultant\n📺 Netflix binge expert\n🐶 Dog person trapped\n😅 In a human body",
+            "likes": 376,
+            "category": "Funny"
+        },
+        {
+            "id": 4,
+            "text": "🤣 Here for a good time\n⏳ Not necessarily a long time\n🍔 Foodie by default\n😴 Lazy by choice",
+            "likes": 342,
+            "category": "Funny"
+        },
+        {
+            "id": 5,
+            "text": "🧠 99% dumb thoughts\n🍟 1% snack thoughts\n🚶‍♀ Walking disaster\n😂 But at least I'm funny",
+            "likes": 387,
+            "category": "Funny"
+        },
+        {
+            "id": 6,
+            "text": "🤪 Certified weirdo\n🍕 Pizza > people\n😴 Sleep is my hobby\n🎯 Failing successfully daily",
+            "likes": 312,
+            "category": "Funny"
+        }
+    ]
+}
