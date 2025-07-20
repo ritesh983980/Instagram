@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "💁‍♀ Single and loving it\n🎯 Focused on my goals\n💎 Not settling for less\n✨ Becoming my best self",
+            "likes": 324,
+            "category": "Single"
+        },
+        {
+            "id": 2,
+            "text": "👑 Queen of my own life\n💪 Building my empire\n🚫 No distractions\n🌱 Growing daily",
+            "likes": 287,
+            "category": "Single"
+        },
+        {
+            "id": 3,
+            "text": "🌟 Single by choice\n🎯 Not by circumstance\n💯 Working on myself\n🔥 Not waiting for anyone",
+            "likes": 276,
+            "category": "Single"
+        },
+        {
+            "id": 4,
+            "text": "🚶‍♀ Walking my own path\n💖 Loving myself first\n📈 Leveling up\n🎉 Celebrating singlehood",
+            "likes": 245,
+            "category": "Single"
+        },
+        {
+            "id": 5,
+            "text": "🦸‍♀ My own superhero\n💎 Self-love journey\n✨ Glowing solo\n🌍 Conquering my world",
+            "likes": 298,
+            "category": "Single"
+        },
+        {
+            "id": 6,
+            "text": "🧘‍♀ Peacefully single\n🎯 Focused on my purpose\n💪 Strong independently\n🌻 Blooming alone",
+            "likes": 267,
+            "category": "Single"
+        }
+    ]
+}
