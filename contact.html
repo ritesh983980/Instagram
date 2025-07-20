@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UniqueBio.in</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/icons/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="UniqueBio Logo">
+                <span>UniqueBio</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/bios/vip.html">VIP Bios</a></li>
+                    <li><a href="../pages/fonts/stylish-fonts.html">Stylish Fonts</a></li>
+                    <li><a href="../pages/hashtags/trending.html">Hashtags</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out with questions or suggestions.</p>
+        </div>
+    </section>
+
+    <section class="container" style="padding: 80px 0;">
+        <div class="feature-card">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+            <div class="success-message" id="successMessage" style="display: none;">
+                Thank you for your message! We'll get back to you soon.
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <h3>Other Ways to Reach Us</h3>
+                <p>Email: <a href="mailto:contact@uniquebio.in">contact@uniquebio.in</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UniqueBio.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
