@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "💔 Broken but still breathing\n🌧 Storms don't last forever\n☔ But right now it's raining\n😔 Healing takes time",
+            "likes": 287,
+            "category": "Sad"
+        },
+        {
+            "id": 2,
+            "text": "😶 Words left unsaid\n💭 Thoughts keep spinning\n🌑 Dark nights\n🌅 Hoping for sunrise",
+            "likes": 245,
+            "category": "Sad"
+        },
+        {
+            "id": 3,
+            "text": "🖤 Black heart\n🎶 Sad songs on repeat\n📖 Missing chapter\n🚶‍♂ Walking alone",
+            "likes": 198,
+            "category": "Sad"
+        },
+        {
+            "id": 4,
+            "text": "💧 Tears dry\n🕳 Empty inside\n🛌 Can't sleep\n🌌 Nightmares awake",
+            "likes": 176,
+            "category": "Sad"
+        },
+        {
+            "id": 5,
+            "text": "🚶‍♀ Walking through pain\n🩹 Scars tell stories\n💔 Heart in pieces\n⏳ Time will tell",
+            "likes": 203,
+            "category": "Sad"
+        },
+        {
+            "id": 6,
+            "text": "🌫 Lost in thoughts\n🎭 Fake smile\n💌 Letters unsent\n😢 Crying inside",
+            "likes": 187,
+            "category": "Sad"
+        }
+    ]
+}
