@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "🇮🇳 Proud Indian Army\n💪 Strength & Honor\n🛡 Protecting my nation\n🎖 Service above self",
+            "likes": 287,
+            "category": "Army"
+        },
+        {
+            "id": 2,
+            "text": "⚔ Army life chosen\n🦅 Eyes always open\n🏔 Mountains my home\n💯 Dedicated to duty",
+            "likes": 245,
+            "category": "Army"
+        },
+        {
+            "id": 3,
+            "text": "🎖 Salute to soldiers\n❤ Love for my country\n🛡 Shield of the nation\n🌄 Dawn to dusk service",
+            "likes": 276,
+            "category": "Army"
+        },
+        {
+            "id": 4,
+            "text": "🪖 Uniform is my pride\n💪 Training is my life\n🇮🇳 India is my soul\n🎯 Mission is my goal",
+            "likes": 254,
+            "category": "Army"
+        },
+        {
+            "id": 5,
+            "text": "🔥 Fire in my heart\n🛡 Shield in my hand\n🇮🇳 India in my soul\n🎖 Army is my life",
+            "likes": 298,
+            "category": "Army"
+        },
+        {
+            "id": 6,
+            "text": "⚔ Warrior by choice\n🏔 Mountains my playground\n🌅 Duty before dawn\n🎖 Proud to serve",
+            "likes": 267,
+            "category": "Army"
+        }
+    ]
+}
