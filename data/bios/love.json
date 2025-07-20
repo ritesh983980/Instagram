@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "❤ My heart belongs to you\n🌹 Roses are red\n💌 My love is true\n✨ You're my everything",
+            "likes": 412,
+            "category": "Love"
+        },
+        {
+            "id": 2,
+            "text": "💑 Together forever\n🌈 Our love story continues\n📖 Writing our next chapter\n💞 Soulmates",
+            "likes": 387,
+            "category": "Love"
+        },
+        {
+            "id": 3,
+            "text": "👫 Two hearts\n💓 One beat\n🌌 Our own universe\n💘 Crazy in love",
+            "likes": 356,
+            "category": "Love"
+        },
+        {
+            "id": 4,
+            "text": "🌙 Moonlight and you\n✨ Starlight in your eyes\n💫 My favorite view\n💖 My person",
+            "likes": 298,
+            "category": "Love"
+        },
+        {
+            "id": 5,
+            "text": "🤗 Hugs from you\n💋 Kisses from me\n🏡 Home is wherever\n❤ We're together",
+            "likes": 324,
+            "category": "Love"
+        },
+        {
+            "id": 6,
+            "text": "💕 You're my favorite\n🌅 Sunrise to sunset\n👰‍♂ Future plans include you\n💍 Forever yours",
+            "likes": 276,
+            "category": "Love"
+        }
+    ]
+}
