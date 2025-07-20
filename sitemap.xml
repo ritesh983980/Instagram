@@ -2,95 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://uniquebio.in/</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/about.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/contact.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/privacy-policy.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/disclaimer.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     
-    <!-- Bio Pages -->
     <url>
         <loc>https://uniquebio.in/pages/bios/vip.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/bios/attitude.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/bios/love.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/bios/sad.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/bios/funny.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/bios/cute.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/bios/single.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/bios/army.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     
-    <!-- Other Pages -->
     <url>
         <loc>https://uniquebio.in/pages/fonts/stylish-fonts.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://uniquebio.in/pages/hashtags/trending.html</loc>
-        <lastmod>2023-11-15</lastmod>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
     </url>
