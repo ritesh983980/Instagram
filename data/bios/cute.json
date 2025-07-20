@@ -1,0 +1,40 @@
+{
+    "bios": [
+        {
+            "id": 1,
+            "text": "🌸 Spread kindness like confetti\n🌈 Little but fierce\n🧸 Teddy bear enthusiast\n✨ Sparkle daily",
+            "likes": 345,
+            "category": "Cute"
+        },
+        {
+            "id": 2,
+            "text": "🐇 Small but mighty\n🍭 Sweet tooth alert\n🌼 Sunflower soul\n💕 Positivity only",
+            "likes": 298,
+            "category": "Cute"
+        },
+        {
+            "id": 3,
+            "text": "🧁 Life is sweet\n🐾 Animal lover\n🎀 Pink is my signature\n💫 Dream big little one",
+            "likes": 276,
+            "category": "Cute"
+        },
+        {
+            "id": 4,
+            "text": "🐰 Hop through life happily\n🍬 Sugar, spice & everything nice\n🌷 Flower child\n✨ Making cute normal",
+            "likes": 312,
+            "category": "Cute"
+        },
+        {
+            "id": 5,
+            "text": "🦄 Unicorn at heart\n🍪 Cookie monster\n🎈 Balloons make me happy\n💖 Love is my language",
+            "likes": 287,
+            "category": "Cute"
+        },
+        {
+            "id": 6,
+            "text": "🐶 Puppy love\n🍦 Ice cream solves everything\n🌞 Sunshine collector\n💐 Blooming daily",
+            "likes": 254,
+            "category": "Cute"
+        }
+    ]
+}
