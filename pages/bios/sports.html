@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Instagram Bios - Athlete & Game Lover Bios | UniqueBio.in</title>
+    <meta name="description" content="Showcase your passion for sports and fitness with our dynamic collection of Instagram bios. Find inspiring, motivational, and game-on bios for athletes and sports enthusiasts on UniqueBio.in!">
+    
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/sports.html" />
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
+                <span>UniqueBio</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="vip.html">VIP Bios</a></li>
+                    <li><a href="../fonts/stylish-fonts.html">Stylish Fonts</a></li>
+                    <li><a href="../hashtags/trending.html">Hashtags</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="background: linear-gradient(135deg, #0984e3, #00cec9);">
+        <div class="container">
+            <h1>Sports Instagram Bios: Fuel Your Athletic Spirit</h1>
+            <p>Show your passion for sports and fitness with these dynamic bios. Perfect for athletes, fitness enthusiasts, and game lovers!</p>
+        </div>
+    </section>
+
+    <section class="bio-container">
+        <div class="container">
+            <div class="bio-header">
+                <h2>Browse Our Collection of Game On & Athlete Bios</h2>
+                <p>Choose from hundreds of **unique sports bios** to celebrate your love for the game on Instagram. Simply click to copy!</p>
+            </div>
+            
+            <div class="bio-grid" id="bioContainer">
+                <div class="loading-message">Loading sports bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="attitude.html" class="btn btn-secondary">Browse Attitude Bios</a>
+                <a href="motivation.html" class="btn btn-secondary">Browse Motivation Bios</a> 
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why a Sports Bio is a Game-Changer for Your Profile?</h3>
+                <p>For sports enthusiasts, an Instagram bio is more than just text; it's a declaration of your passion, discipline, and competitive spirit. It allows you to connect with a community that shares your zeal for the game. A powerful sports bio can:</p>
+                <ul>
+                    <li>**Showcase Your Dedication:** Highlight your commitment to your sport or fitness.</li>
+                    <li>**Inspire Others:** Motivate fellow athletes and enthusiasts.</li>
+                    <li>**Connect with a Community:** Find like-minded individuals and teams.</li>
+                    <li>**Reflect Your Discipline:** Emphasize the hard work and training behind your passion.</li>
+                </ul>
+
+                <h3>Tips for Crafting the Perfect Sports Bio:</h3>
+                <p>To make your sports bio truly impactful, consider these tips:</p>
+                <ol>
+                    <li>**Mention Your Sport/Team:** Clearly state your primary athletic interest.</li>
+                    <li>**Include Achievements (Optional):** If relevant, a small achievement can be inspiring.</li>
+                    <li>**Use Motivational Quotes:** Short, powerful quotes about effort or winning.</li>
+                    <li>**Add Emojis:** Sports-related emojis (e.g., ⚽, 🏀, 🏋️‍♂️, 🏃‍♀️) can enhance the bio.</li>
+                    <li>**Show Your Spirit:** Whether it's about passion, resilience, or teamwork.</li>
+                </ol>
+                <p>Explore our extensive collection of **sports Instagram bios** and find the perfect one to highlight your athletic journey! Don't forget to enhance your profile with our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and discover <a href="../hashtags/trending.html">trending hashtags</a> to level up your game!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../about.html">About</a>
+                <a href="../../contact.html">Contact</a>
+                <a href="../../privacy-policy.html">Privacy Policy</a>
+                <a href="../../disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UniqueBio.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Ensure copyBio and animateOnScroll are available, either in main.js or here
+        // If they are in main.js, you can remove these definitions here to avoid duplication.
+
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+        // Fetch bios from JSON
+        fetch('../../data/bios/sports.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const container = document.getElementById('bioContainer');
+                
+                if (!data.bios || data.bios.length === 0) {
+                    container.innerHTML = '<p class="error-message">No bios found in the data file.</p>';
+                    return;
+                }
+                
+                container.innerHTML = ''; // Clear loading message
+                
+                data.bios.forEach((bio, index) => {
+                    const delayClass = `delay-${index % 3}`; 
+                    container.innerHTML += `
+                        <div class="bio-card fade-in ${delayClass}">
+                            <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
+                            <button class="copy-btn" onclick="copyBio(this)">Copy Bio</button>
+                        </div>
+                    `;
+                });
+
+                // Trigger animations for newly added elements after they are appended to the DOM
+                const event = new Event('scroll');
+                window.dispatchEvent(event);
+            })
+            .catch(error => {
+                console.error('Error loading sports bios:', error);
+                document.getElementById('bioContainer').innerHTML = `
+                    <div class="error-message">
+                        Failed to load bios. Please try again later.
+                        <br><small>Error: ${error.message}</small>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>
