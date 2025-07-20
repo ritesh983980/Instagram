@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Hashtags - UniqueBio.in</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/icons/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <span>UniqueBio</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../bios/vip.html">VIP Bios</a></li>
+                    <li><a href="../fonts/stylish-fonts.html">Stylish Fonts</a></li>
+                    <li><a href="trending.html" class="active">Hashtags</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));">
+        <div class="container">
+            <h1>Trending Hashtags</h1>
+            <p>Boost your Instagram engagement with these popular hashtags</p>
+        </div>
+    </section>
+
+    <section class="bio-container">
+        <div class="container">
+            <div class="bio-header">
+                <h2>Popular Hashtag Categories</h2>
+                <p>Updated weekly with the most trending hashtags</p>
+            </div>
+            
+            <div class="hashtag-grid">
+                <!-- General Hashtags -->
+                <div class="hashtag-card fade-in">
+                    <h3>General Popular</h3>
+                    <div class="hashtag-list">
+                        #instagram #instadaily #photooftheday #love #instagood #follow #like #followme #photography #instamood
+                    </div>
+                    <button class="copy-btn" onclick="copyHashtags(this)">Copy Hashtags</button>
+                </div>
+                
+                <!-- Travel Hashtags -->
+                <div class="hashtag-card fade-in delay-1">
+                    <h3>Travel & Adventure</h3>
+                    <div class="hashtag-list">
+                        #travel #wanderlust #travelgram #adventure #explore #vacation #instatravel #travelphotography #tourism #nature
+                    </div>
+                    <button class="copy-btn" onclick="copyHashtags(this)">Copy Hashtags</button>
+                </div>
+                
+                <!-- Fashion Hashtags -->
+                <div class="hashtag-card fade-in delay-2">
+                    <h3>Fashion & Style</h3>
+                    <div class="hashtag-list">
+                        #fashion #style #ootd #outfitoftheday #streetstyle #fashionblogger #lookbook #stylish #trendy #instafashion
+                    </div>
+                    <button class="copy-btn" onclick="copyHashtags(this)">Copy Hashtags</button>
+                </div>
+                
+                <!-- Food Hashtags -->
+                <div class="hashtag-card fade-in">
+                    <h3>Food & Dining</h3>
+                    <div class="hashtag-list">
+                        #food #foodie #foodphotography #instafood #yummy #delicious #foodstagram #foodblogger #foodlover #dessert
+                    </div>
+                    <button class="copy-btn" onclick="copyHashtags(this)">Copy Hashtags</button>
+                </div>
+                
+                <!-- Fitness Hashtags -->
+                <div class="hashtag-card fade-in delay-1">
+                    <h3>Fitness & Health</h3>
+                    <div class="hashtag-list">
+                        #fitness #workout #gym #fit #fitnessmotivation #training #bodybuilding #health #exercise #muscle
+                    </div>
+                    <button class="copy-btn" onclick="copyHashtags(this)">Copy Hashtags</button>
+                </div>
+                
+                <!-- Photography Hashtags -->
+                <div class="hashtag-card fade-in delay-2">
+                    <h3>Photography</h3>
+                    <div class="hashtag-list">
+                        #photography #photo #photographer #photoshoot #instaphoto #picoftheday #portrait #landscape #art #creative
+                    </div>
+                    <button class="copy-btn" onclick="copyHashtags(this)">Copy Hashtags</button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-2">
+                <h3>Hashtag Tips</h3>
+                <p>1. Use 5-10 relevant hashtags per post</p>
+                <p>2. Mix popular and niche hashtags</p>
+                <p>3. Create your own branded hashtag</p>
+                <p>4. Update your hashtags regularly</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../about.html">About</a>
+                <a href="../../contact.html">Contact</a>
+                <a href="../../privacy-policy.html">Privacy Policy</a>
+                <a href="../../disclaimer.html">Disclaimer</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 UniqueBio.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        function copyHashtags(button) {
+            const hashtagsText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(hashtagsText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
