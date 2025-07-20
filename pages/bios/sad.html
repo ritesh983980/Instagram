@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sad Bios - UniqueBio.in</title>
+    <title>Sad Instagram Bios - Emotional & Heartfelt Bios | UniqueBio.in</title>
+    <meta name="description" content="Express your true feelings with our collection of sad Instagram bios. Find emotional, heartbroken, and deeply reflective bios to share your thoughts on UniqueBio.in.">
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/sad.html" />
 </head>
 <body>
     <header>
         <div class="container header-container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
                 <span>UniqueBio</span>
             </a>
             <nav>
@@ -30,21 +33,48 @@
 
     <section class="hero" style="background: linear-gradient(135deg, #6a5acd, #9370db);">
         <div class="container">
-            <h1>Sad Bios</h1>
-            <p>Expressive bios for when you're feeling down</p>
+            <h1>Sad Instagram Bios: Express Your True Feelings</h1>
+            <p>Find expressive and heartfelt bios for when you're feeling down. Share your emotions with our deep and reflective collection.</p>
         </div>
     </section>
 
     <section class="bio-container">
         <div class="container">
             <div class="bio-header">
-                <h2>Emotional Bios</h2>
-                <p>Express your feelings with these heartfelt bios</p>
+                <h2>Browse Our Collection of Emotional & Heartfelt Bios</h2>
+                <p>Choose from hundreds of **unique sad bios** to express your feelings on Instagram. Simply click to copy!</p>
             </div>
             
             <div class="bio-grid" id="bioContainer">
-                <!-- Bios will be loaded from JSON -->
                 <div class="loading-message">Loading sad bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="love.html" class="btn btn-secondary">Browse Love Bios</a>
+                <a href="attitude.html" class="btn btn-secondary">Browse Attitude Bios</a>
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why an Emotional Bio Matters on Instagram?</h3>
+                <p>Sometimes, your Instagram bio is the perfect place to subtly convey your mood or current feelings. A sad or emotional bio can resonate with others, foster empathy, and even serve as a quiet outlet for personal expression. A thoughtful emotional bio can:</p>
+                <ul>
+                    <li>**Reflect Your Mood:** Accurately represent your current state of mind.</li>
+                    <li>**Connect with Others:** Find a community that understands similar feelings.</li>
+                    <li>**Encourage Empathy:** Invite understanding from your followers.</li>
+                    <li>**Provide an Outlet:** A simple way to express complex emotions.</li>
+                </ul>
+
+                <h3>Tips for Choosing the Right Sad or Emotional Bio:</h3>
+                <p>When selecting a bio that expresses sadness or deep emotion, consider these points:</p>
+                <ol>
+                    <li>**Authenticity is Key:** Choose words that genuinely reflect your feelings.</li>
+                    <li>**Keep it Concise:** Powerful emotions can often be conveyed in a few impactful words.</li>
+                    <li>**Use Relevant Emojis (Optional):** Emojis like 😔, 💔, 🌧️ can add to the sentiment.</li>
+                    <li>**Focus on Reflection:** Bios that encourage thought or introspection can be powerful.</li>
+                    <li>**Avoid Over-sharing:** Keep it brief and leave room for interpretation.</li>
+                </ol>
+                <p>Explore our collection of **sad Instagram bios** and find the words that truly resonate with your heart. Don't forget to check out our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and <a href="../hashtags/trending.html">trending hashtags</a> to make your posts truly unique!</p>
             </div>
         </div>
     </section>
@@ -66,14 +96,55 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
+        // Ensure copyBio and animateOnScroll are available, either in main.js or here
+        // If they are in main.js, you can remove these definitions here to avoid duplication.
+
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+        // Fetch bios from JSON
         fetch('../../data/bios/sad.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('bioContainer');
-                container.innerHTML = '';
+                
+                if (!data.bios || data.bios.length === 0) {
+                    container.innerHTML = '<p class="error-message">No bios found in the data file.</p>';
+                    return;
+                }
+                
+                container.innerHTML = ''; // Clear loading message
                 
                 data.bios.forEach((bio, index) => {
-                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    const delayClass = `delay-${index % 3}`; 
                     container.innerHTML += `
                         <div class="bio-card fade-in ${delayClass}">
                             <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
@@ -81,6 +152,19 @@
                         </div>
                     `;
                 });
+
+                // Trigger animations for newly added elements after they are appended to the DOM
+                const event = new Event('scroll');
+                window.dispatchEvent(event);
+            })
+            .catch(error => {
+                console.error('Error loading sad bios:', error);
+                document.getElementById('bioContainer').innerHTML = `
+                    <div class="error-message">
+                        Failed to load bios. Please try again later.
+                        <br><small>Error: ${error.message}</small>
+                    </div>
+                `;
             });
     </script>
 </body>
