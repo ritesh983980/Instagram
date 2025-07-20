@@ -1,0 +1,84 @@
+{
+    "fonts": [
+        {
+            "id": 1,
+            "name": "Bold Mathematical",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Headings",
+            "unicodeType": "Mathematical Bold (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp", "Facebook", "Twitter"]
+        },
+        {
+            "id": 2,
+            "name": "Elegant Script",
+            "style": "font-family: 'Arial', sans-serif; font-size: 2.2rem;",
+            "category": "Romantic bios",
+            "unicodeType": "Mathematical Script (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp", "Facebook"]
+        },
+        {
+            "id": 3,
+            "name": "Monospace Tech",
+            "style": "font-family: 'Courier New', monospace; letter-spacing: 2px;",
+            "category": "Tech/gaming bios",
+            "unicodeType": "Monospace (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp", "Discord"]
+        },
+        {
+            "id": 4,
+            "name": "Gothic Blackletter",
+            "style": "font-family: 'Times New Roman', serif;",
+            "category": "Mysterious bios",
+            "unicodeType": "Blackletter (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp"]
+        },
+        {
+            "id": 5,
+            "name": "Rounded Fun",
+            "style": "font-family: 'Comic Sans MS', cursive; font-size: 2rem;",
+            "category": "Funny bios",
+            "unicodeType": "Bubble (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp", "Facebook"]
+        },
+        {
+            "id": 6,
+            "name": "Minimal Modern",
+            "style": "font-family: 'Helvetica Neue', sans-serif; letter-spacing: 3px;",
+            "category": "Professional bios",
+            "unicodeType": "Sans-serif (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp", "LinkedIn"]
+        },
+        {
+            "id": 7,
+            "name": "Retro Vibes",
+            "style": "font-family: 'Palatino', serif; font-size: 2.2rem;",
+            "category": "Artistic bios",
+            "unicodeType": "Serif (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp"]
+        },
+        {
+            "id": 8,
+            "name": "Double Struck",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Academic bios",
+            "unicodeType": "Mathematical Double-struck (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp"]
+        },
+        {
+            "id": 9,
+            "name": "Futuristic",
+            "style": "font-family: 'Arial', sans-serif; letter-spacing: 4px;",
+            "category": "Modern bios",
+            "unicodeType": "Square (Unicode)",
+            "worksOn": ["Instagram", "WhatsApp", "Twitter"]
+        },
+        {
+            "id": 10,
+            "name": "Luxury Gold",
+            "style": "font-family: 'Georgia', serif; color: #d4af37; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);",
+            "category": "VIP bios",
+            "unicodeType": "Colored Text (Unicode + CSS)",
+            "worksOn": ["Instagram (as text)", "Websites"]
+        }
+    ]
+}
