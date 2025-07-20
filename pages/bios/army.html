@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Army Bios - UniqueBio.in</title>
+    <title>Army Instagram Bios - Military & Patriotic Bios | UniqueBio.in</title>
+    <meta name="description" content="Show your respect and pride with our collection of Army Instagram bios. Find patriotic, brave, and inspiring military bios for soldiers, veterans, and supporters on UniqueBio.in!">
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/army.html" />
 </head>
 <body>
     <header>
         <div class="container header-container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
                 <span>UniqueBio</span>
             </a>
             <nav>
@@ -30,21 +33,48 @@
 
     <section class="hero" style="background: linear-gradient(135deg, #2d3436, #636e72);">
         <div class="container">
-            <h1>Army Bios</h1>
-            <p>Proud bios for military personnel and supporters</p>
+            <h1>Army Instagram Bios: Showcase Your Military Pride</h1>
+            <p>Find proud and inspiring bios for military personnel, veterans, and supporters. Express your respect for the armed forces!</p>
         </div>
     </section>
 
     <section class="bio-container">
         <div class="container">
             <div class="bio-header">
-                <h2>Military Pride</h2>
-                <p>Show your military pride with these bios</p>
+                <h2>Browse Our Collection of Military Pride Bios</h2>
+                <p>Choose from hundreds of **unique army bios** to show your unwavering support and pride on Instagram. Simply click to copy!</p>
             </div>
             
             <div class="bio-grid" id="bioContainer">
-                <!-- Bios will be loaded from JSON -->
                 <div class="loading-message">Loading army bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="motivation.html" class="btn btn-secondary">Browse Motivation Bios</a>
+                <a href="attitude.html" class="btn btn-secondary">Browse Attitude Bios</a>
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why an Army or Military Bio is a Powerful Statement?</h3>
+                <p>For those who serve, have served, or simply want to show solidarity with the armed forces, an Instagram bio dedicated to military pride is incredibly meaningful. It's a way to express patriotism, discipline, and respect for sacrifice. A strong army bio can:</p>
+                <ul>
+                    <li>**Show Patriotism:** Express love and dedication to your country.</li>
+                    <li>**Honor Service:** Pay tribute to military personnel and veterans.</li>
+                    <li>**Reflect Discipline:** Showcase values like courage, honor, and commitment.</li>
+                    <li>**Connect with Community:** Find fellow service members, families, and supporters.</li>
+                </ul>
+
+                <h3>Tips for Crafting the Perfect Military-Themed Bio:</h3>
+                <p>When creating a bio that reflects military pride, consider these tips:</p>
+                <ol>
+                    <li>**Be Authentic:** Let your genuine respect and pride shine through.</li>
+                    <li>**Use Powerful Keywords:** Words like "honor," "duty," "courage," "service," "freedom," "nation."</li>
+                    <li>**Include Relevant Emojis:** Emojis like 🇮🇳 (or your country's flag), 🛡️, 💪, 🦅 can add impact.</li>
+                    <li>**Mention Your Branch (Optional):** If comfortable, specify Army, Navy, Air Force, etc.</li>
+                    <li>**Focus on Values:** Emphasize the core values associated with military service.</li>
+                </ol>
+                <p>Explore our wide range of **Army Instagram bios** and find the perfect words to salute the spirit of service and sacrifice! Don't forget to enhance your profile with our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and discover <a href="../hashtags/trending.html">trending hashtags</a> to make your posts truly stand out!</p>
             </div>
         </div>
     </section>
@@ -66,14 +96,55 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
+        // Ensure copyBio and animateOnScroll are available, either in main.js or here
+        // If they are in main.js, you can remove these definitions here to avoid duplication.
+
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+
+        // Fetch bios from JSON
         fetch('../../data/bios/army.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('bioContainer');
-                container.innerHTML = '';
+                
+                if (!data.bios || data.bios.length === 0) {
+                    container.innerHTML = '<p class="error-message">No bios found in the data file.</p>';
+                    return;
+                }
+                
+                container.innerHTML = ''; // Clear loading message
                 
                 data.bios.forEach((bio, index) => {
-                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    const delayClass = `delay-${index % 3}`; 
                     container.innerHTML += `
                         <div class="bio-card fade-in ${delayClass}">
                             <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
@@ -81,6 +152,19 @@
                         </div>
                     `;
                 });
+
+                // Trigger animations for newly added elements after they are appended to the DOM
+                const event = new Event('scroll');
+                window.dispatchEvent(event);
+            })
+            .catch(error => {
+                console.error('Error loading army bios:', error);
+                document.getElementById('bioContainer').innerHTML = `
+                    <div class="error-message">
+                        Failed to load bios. Please try again later.
+                        <br><small>Error: ${error.message}</small>
+                    </div>
+                `;
             });
     </script>
 </body>
