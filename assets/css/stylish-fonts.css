@@ -1,0 +1,165 @@
+/* Font Preview Section */
+.font-preview-container {
+    margin-bottom: 40px;
+}
+
+.name-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.name-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.update-btn {
+    padding: 12px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.update-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Font Cards */
+.font-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 20px; /* Reduced padding for smaller card */
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin-bottom: 20px; /* Reduced margin for smaller card */
+}
+
+.font-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.font-name {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem; /* Reduced font name size */
+}
+
+.font-preview {
+    font-size: 1.5rem; /* Reduced font size */
+    margin: 15px 0;
+    text-align: center;
+    padding: 15px; /* Reduced padding */
+    background: #f8f9fa;
+    border-radius: 10px;
+    min-height: 50px; /* Reduced min-height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif; /* Default fallback */
+}
+
+.font-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap */
+    margin-top: 10px; /* Reduced margin */
+}
+
+.font-usage, .font-unicode {
+    font-size: 0.8rem; /* Reduced font size */
+    color: var(--gray-color);
+}
+
+.platform-compatibility {
+    display: none; /* Hides the platform compatibility tags */
+}
+
+/* .platform-tag {
+    // These styles are effectively hidden by .platform-compatibility { display: none; }
+    // No need to remove unless you want to clean up unused CSS.
+} */
+
+/* Loading and Error States */
+.loading-message {
+    text-align: center;
+    padding: 30px;
+    color: var(--gray-color);
+}
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification.error {
+    background: #f44336;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px; /* Reduced padding */
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem; /* Added font size for button text */
+}
+
+.copy-btn:hover {
+    background: var(--secondary-color);
+}
