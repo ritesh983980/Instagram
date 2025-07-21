@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // विशिष्ट कैटेगरी की JSON फ़ाइल का पाथ बनाएं
             // मान लें कि JSON फ़ाइलें /data/ फोल्डर में हैं
-            const response = await fetch(/data/${category}.json);
+            const response = await fetch(`/data/${category}.json`);
 
             // जांचें कि रिक्वेस्ट सफल थी या नहीं
             if (!response.ok) {
-                throw new Error(HTTP error! status: ${response.status} for category: ${category}. Check if /data/${category}.json exists.);
+                throw new Error(`HTTP error! status: ${response.status} for category: ${category}. Check if /data/${category}.json exists.`);
             }
 
             const data = await response.json();
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data && data.length > 0 && data[0].bios) {
                 return data[0].bios;
             } else {
-                console.warn('/data/${category}.json' में 'bios' array नहीं मिला या फ़ाइल खाली है।);
+                console.warn(`'/data/${category}.json' में 'bios' array नहीं मिला या फ़ाइल खाली है।`);
                 return [];
             }
         } catch (error) {
-            console.error(कैटेगरी '${category}' के बायो fetch करने में त्रुटि:, error);
+            console.error(`कैटेगरी '${category}' के बायो fetch करने में त्रुटि:`, error);
             // त्रुटि होने पर खाली array लौटाएं ताकि ऐप क्रैश न हो
             return [];
         }
@@ -66,13 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
         bioDisplayArea.innerHTML = '';
 
         if (biosArray.length === 0) {
-            bioDisplayArea.innerHTML = <p>"${currentCategory}" कैटेगरी के लिए कोई बायो उपलब्ध नहीं है।</p>;
+            bioDisplayArea.innerHTML = `<p>"${currentCategory}" कैटेगरी के लिए कोई बायो उपलब्ध नहीं है।</p>`;
             return;
         }
 
         // वर्तमान कैटेगरी के लिए एक शीर्षक जोड़ें
         const categoryHeading = document.createElement('h2');
-        categoryHeading.textContent = ${currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)} Bios;
+        categoryHeading.textContent = `${currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)} Bios`;
         bioDisplayArea.appendChild(categoryHeading);
 
         // प्रत्येक बायो के लिए एक सूची या व्यक्तिगत पैराग्राफ बनाएं
