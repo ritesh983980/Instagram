@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
     <link rel="canonical" href="https://www.uniquebio.in/pages/bios/love.html" />
-<!-- ✅ PAGE: love.html | SECTION: <head> | PURPOSE: Breadcrumb Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,29 +30,19 @@
   ]
 }
 </script>
-<!-- ✅ END: Breadcrumb Schema for love.html -->
 </head>
 <body>
-    <header>
+    <header class="header-gradient-bg">
         <div class="container header-container">
-            <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
-                <span>UniqueBio</span>
-            </a>
-            <nav>
+            <a href="../../index.html" class="logo-text"> <span>UniqueBio.in</span> </a>
+            <p class="header-tagline">Elevate your social media presence</p> <nav class="hero-tabs">
                 <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="vip.html">VIP Bios</a></li>
-                    <li><a href="../fonts/stylish-fonts.html">Stylish Fonts</a></li>
-                    <li><a href="../hashtags/trending.html">Hashtags</a></li>
-                    <li><a href="../../about.html">About</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
+                    <li><a href="../../index.html" class="hero-tab">Home</a></li> <li><a href="vip.html" class="hero-tab">VIP Bios</a></li> <li><a href="../fonts/stylish-fonts.html" class="hero-tab">Stylish Fonts</a></li> <li><a href="../hashtags/trending.html" class="hero-tab">Hashtags</a></li> </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e);">
+    <section class="hero secondary-hero" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e);">
         <div class="container">
             <h1>Love Instagram Bios: Romantic & Sweet Bios for Couples</h1>
             <p>Express your affection with our collection of romantic bios, perfect for couples and lovebirds. Show your love story to the world!</p>
@@ -92,7 +81,7 @@
                 <ol>
                     <li>**Be Genuine:** Authenticity makes a love bio truly resonate.</li>
                     <li>**Use Relevant Emojis:** Hearts (❤️, 🥰), couples (💑), or rings (💍) add romantic flair.</li>
-                    <li>**Include a Date (Optional):** Anniversaries or significant dates can add a personal touch.</li>
+                    <li>**Include a Date (Optional):1** Anniversaries or significant dates can add a personal touch.</li>
                     <li>**Keep it Sweet & Concise:** Powerful emotions often come in short, impactful phrases.</li>
                     <li>**Reference Shared Interests:** If you and your partner have a common hobby, mention it.</li>
                 </ol>
@@ -118,34 +107,8 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
-        // Ensure copyBio and animateOnScroll are available, either in main.js or here
-        // If they are in main.js, you can remove these definitions here to avoid duplication.
-
-        function copyBio(button) {
-            const bioText = button.previousElementSibling.textContent;
-            navigator.clipboard.writeText(bioText.trim()).then(() => {
-                const originalText = button.textContent;
-                button.textContent = 'Copied!';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                }, 2000);
-            });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.fade-in:not(.animated)');
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-                    if (elementPosition < screenPosition) {
-                        element.classList.add('animated');
-                    }
-                });
-            };
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll(); // Run once on load
-        });
+        // Removed redundant copyBio and animateOnScroll functions.
+        // They should be in main.js or defined globally if used across pages.
 
         // Fetch bios from JSON
         fetch('../../data/bios/love.json')
