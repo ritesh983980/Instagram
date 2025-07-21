@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
     <link rel="canonical" href="https://www.uniquebio.in/pages/bios/attitude.html" />
-<!-- ✅ PAGE: attitude.html | SECTION: <head> | PURPOSE: Breadcrumb Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,29 +30,19 @@
   ]
 }
 </script>
-<!-- ✅ END: Breadcrumb Schema for attitude.html -->
 </head>
 <body>
-    <header>
+    <header class="header-gradient-bg">
         <div class="container header-container">
-            <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
-                <span>UniqueBio</span>
-            </a>
-            <nav>
+            <a href="../../index.html" class="logo-text"> <span>UniqueBio.in</span> </a>
+            <p class="header-tagline">Elevate your social media presence</p> <nav class="hero-tabs">
                 <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="vip.html">VIP Bios</a></li>
-                    <li><a href="../fonts/stylish-fonts.html">Stylish Fonts</a></li>
-                    <li><a href="../hashtags/trending.html">Hashtags</a></li>
-                    <li><a href="../../about.html">About</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
+                    <li><a href="../../index.html" class="hero-tab">Home</a></li> <li><a href="vip.html" class="hero-tab">VIP Bios</a></li> <li><a href="../fonts/stylish-fonts.html" class="hero-tab">Stylish Fonts</a></li> <li><a href="../hashtags/trending.html" class="hero-tab">Hashtags</a></li> </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));">
+    <section class="hero secondary-hero" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));">
         <div class="container">
             <h1>Attitude Bios for Instagram Profile</h1>
             <p>Bold and confident bios that make a statement. Find the perfect attitude bio to reflect your personality.</p>
@@ -160,18 +149,18 @@
                 `;
             });
             
-        // Assuming copyBio function is in main.js or here as well if needed.
+        // Removed redundant copyBio function. It should be in main.js
         // If copyBio is ONLY in main.js and you don't want it duplicated, remove this one.
-        function copyBio(button) {
-            const bioText = button.previousElementSibling.textContent;
-            navigator.clipboard.writeText(bioText.trim()).then(() => {
-                const originalText = button.textContent;
-                button.textContent = 'Copied!';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                }, 2000);
-            });
-        }
+        // function copyBio(button) {
+        //     const bioText = button.previousElementSibling.textContent;
+        //     navigator.clipboard.writeText(bioText.trim()).then(() => {
+        //         const originalText = button.textContent;
+        //         button.textContent = 'Copied!';
+        //         setTimeout(() => {
+        //             button.textContent = originalText;
+        //         }, 2000);
+        //     });
+        // }
         
         // Animation on scroll function - Ensure this is present if used on this page
         document.addEventListener('DOMContentLoaded', function() {
