@@ -21,6 +21,9 @@
     --spacing-md: 1.5rem;  /* ~24px */
     --spacing-lg: 2rem;    /* ~32px */
     --spacing-xl: 3rem;    /* ~48px */
+
+    /* Define dark background color for footer - THIS IS THE ADDITION */
+    --dark-bg-color: #2d3436; /* Using your --dark-color for consistency */
 }
 
 * {
@@ -57,14 +60,17 @@ h1, h2, h3, h4 {
     margin-bottom: var(--spacing-sm); /* Using spacing variable */
 }
 
-h1 {
+/* Removed default h1 gradient styles as they are always overridden by .secondary-hero h1 */
+/* If you plan to use gradient h1 elsewhere, keep the original h1 styles by uncommenting below */
+/* h1 {
     font-size: 2.5rem;
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* This makes the text transparent and shows gradient */
+    color: transparent;
     display: inline-block;
-}
+} */
+
 
 h2 {
     font-size: 2rem;
@@ -161,9 +167,7 @@ header {
     min-height: 140px;
 }
 
-.header-body-bg { /* This class is now less used, as most headers are gradient */
-    background-color: var(--light-color);
-}
+/* Removed .header-body-bg as it is not being used in your HTML files */
 
 /* Header with gradient background for category pages AND index.html */
 .header-gradient-bg {
@@ -267,8 +271,8 @@ header {
 
 /* === SECONDARY HERO SECTION (Now the main top section for all pages) === */
 .secondary-hero {
-    background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9)),
-                url('../images/banners/secondary-banner.jpg') center/cover fixed;
+    /* Removed image URL and directly used gradient background based on user's request */
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));
     color: white;
     text-align: center;
     padding: 100px 0;
@@ -281,15 +285,14 @@ header {
     margin-top: 0;
 }
 
-.secondary-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 0;
+/* Removed ::before pseudo-element as the gradient itself provides the overlay */
+/* If a darker overlay is needed, adjust the rgba values in the background gradient above */
+
+/* New class for VIP page specific gradient, to be used on the section.hero element in vip.html */
+/* This replaces the inline style you had in vip.html */
+.vip-gradient-bg {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));
+    /* You can adjust the colors here if you want a different gradient for VIP page */
 }
 
 .secondary-hero .container {
@@ -516,36 +519,122 @@ header {
     background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
 }
 
-/* Footer Styles */
+
+/* --- Responsive adjustments for Mobile --- */
+@media (max-width: 768px) {
+    /* Removed redundant footer-grid styles from here, they are now consolidated below */
+    /* Removed redundant footer-section styles from here */
+    /* Removed redundant social-icons styles from here */
+}
+
+/* --- Footer Styles --- */
 footer {
-    background-color: var(--dark-color);
-    color: white;
+    background-color: var(--dark-bg-color);
+    color: var(--light-color);
     padding: 40px 0 20px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile first: 1 column */
+    gap: 30px;
+    text-align: center; /* Center all content by default */
+    padding: 0 20px; /* Added padding to ensure content doesn't touch edges */
+    max-width: 1200px; /* Align with your .container max-width */
+    margin: 0 auto; /* Center the grid */
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets and up */
+        text-align: left;
+    }
+}
+
+.footer-section {
+    /* Ensure no background is set here, let the footer's background apply */
+    background-color: transparent; /* Explicitly ensure no white background */
+    padding: 0; /* Remove any default padding that might create gaps */
+}
+
+.footer-section h3 {
+    color: var(--secondary-color); /* Highlight headings */
+    font-size: 1.1rem;
     margin-bottom: 15px;
-    flex-wrap: wrap;
+    font-weight: 600;
 }
 
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    transition: var(--transition);
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 8px; /* Spacing between links */
+    justify-content: center; /* Center links horizontally for mobile when stacked */
+    align-items: center; /* Center for mobile in single column */
 }
 
-.footer-links a:hover {
-    color: white;
+@media (min-width: 768px) {
+    .footer-section ul {
+        justify-content: flex-start; /* Align left on larger screens */
+        align-items: flex-start; /* Align left on larger screens */
+    }
+}
+
+.footer-section ul li {
+    /* margin-bottom: 8px; */ /* Removed as gap handles spacing now */
+}
+
+.footer-section ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    background-color: transparent; /* Explicitly ensure no white background on links */
+    display: block; /* Make links block to take up full width for better click area */
+    padding: 2px 0; /* Small padding for clickable area */
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color); /* e.g., #6c5ce7 */
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+    display: flex; /* Use flexbox to align icons */
+    justify-content: center; /* Center icons */
+    gap: 15px; /* Space between social icons */
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        justify-content: flex-start; /* Align left on larger screens */
+    }
+}
+
+.social-icons a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    /* margin: 0 10px; */ /* Removed as gap handles spacing now */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: transparent; /* Explicitly ensure no white background on icons */
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
     color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
 }
 
 /* Utility Classes for spacing (if not using a framework) */
@@ -575,6 +664,7 @@ footer {
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
 .delay-3 { animation-delay: 0.6s; }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -616,10 +706,40 @@ footer {
         max-width: 90%;
     }
 
-    .footer-links {
+    /* Redundant footer-links removed as they are not in the new footer structure */
+    /* .footer-links {
         flex-direction: column;
         gap: 8px;
+    } */
+
+    /* Consolidated footer responsive styles within the main footer block */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    .footer-section:last-of-type {
+        margin-bottom: 0;
+    }
+    /* Removed inline-block for list items in footer as flex-direction: column is used */
+    /* .footer-section ul li {
+        display: inline-block;
+        margin: 0 10px 8px;
+    } */
+
+    /* Social icons are already centered via flexbox in the main footer block for mobile */
+    /* .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+    } */
 }
 
 @media (max-width: 576px) {
@@ -654,4 +774,139 @@ footer {
     .search-box input, .search-box button {
         padding: 8px 15px;
     }
+}
+
+/* --- Contact Page Styles --- */
+.contact-content {
+    padding: 60px 0;
+    background-color: white;
+    text-align: center; /* For overall alignment of sections */
+}
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: var(--spacing-xl);
+}
+.contact-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+.contact-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.contact-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+.contact-card p {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+}
+.contact-card .email-link {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.contact-form-block {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+.contact-form-block h2 {
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+.contact-form-block p {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+.contact-form .form-group {
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    transition: border-color 0.3s ease;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.contact-form .btn {
+    width: auto;
+    display: block; /* Make it a block button */
+    margin: 20px auto 0; /* Center the button */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-card {
+        padding: 20px;
+    }
+}
+
+
+/* --- Legal Pages Styles (for Disclaimer and Privacy Policy) --- */
+.legal-content {
+    padding: 60px 0;
+    background-color: white;
+}
+.legal-text-block {
+    margin-bottom: var(--spacing-xl); /* Increased space between blocks */
+    line-height: 1.8;
+}
+.legal-text-block:last-of-type {
+    margin-bottom: var(--spacing-lg); /* Less margin for the last block before button */
+}
+.legal-text-block h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+.legal-text-block p {
+    color: var(--dark-color);
+    font-size: 0.95rem;
 }
