@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
     <link rel="canonical" href="https://www.uniquebio.in/pages/bios/cute.html" />
-<!-- ✅ PAGE: cute.html | SECTION: <head> | PURPOSE: Breadcrumb Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,29 +30,19 @@
   ]
 }
 </script>
-<!-- ✅ END: Breadcrumb Schema for cute.html -->
 </head>
 <body>
-    <header>
+    <header class="header-gradient-bg">
         <div class="container header-container">
-            <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
-                <span>UniqueBio</span>
-            </a>
-            <nav>
+            <a href="../../index.html" class="logo-text"> <span>UniqueBio.in</span> </a>
+            <p class="header-tagline">Elevate your social media presence</p> <nav class="hero-tabs">
                 <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="vip.html">VIP Bios</a></li>
-                    <li><a href="../fonts/stylish-fonts.html">Stylish Fonts</a></li>
-                    <li><a href="../hashtags/trending.html">Hashtags</a></li>
-                    <li><a href="../../about.html">About</a></li>
-                    <li><a href="../../contact.html">Contact</a></li>
-                </ul>
+                    <li><a href="../../index.html" class="hero-tab">Home</a></li> <li><a href="vip.html" class="hero-tab">VIP Bios</a></li> <li><a href="../fonts/stylish-fonts.html" class="hero-tab">Stylish Fonts</a></li> <li><a href="../hashtags/trending.html" class="hero-tab">Hashtags</a></li> </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="background: linear-gradient(135deg, #ff9ff3, #feca57);">
+    <section class="hero secondary-hero" style="background: linear-gradient(135deg, #ff9ff3, #feca57);">
         <div class="container">
             <h1>Cute Instagram Bios for Sweet & Adorable Profiles</h1>
             <p>Discover adorable bios perfect for your sweet personality. Make your Instagram profile charming and inviting!</p>
@@ -118,34 +107,8 @@
 
     <script src="../../assets/js/main.js"></script>
     <script>
-        // Ensure copyBio and animateOnScroll are available, either in main.js or here
-        // If they are in main.js, you can remove these definitions here to avoid duplication.
-
-        function copyBio(button) {
-            const bioText = button.previousElementSibling.textContent;
-            navigator.clipboard.writeText(bioText.trim()).then(() => {
-                const originalText = button.textContent;
-                button.textContent = 'Copied!';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                }, 2000);
-            });
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.fade-in:not(.animated)');
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-                    if (elementPosition < screenPosition) {
-                        element.classList.add('animated');
-                    }
-                });
-            };
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll(); // Run once on load
-        });
+        // Removed redundant copyBio and animateOnScroll functions.
+        // They should be in main.js or defined globally if used across pages.
 
         // Fetch bios from JSON
         fetch('../../data/bios/cute.json')
