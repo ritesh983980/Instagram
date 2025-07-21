@@ -3,16 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attitude Bios - UniqueBio.in</title>
+    <title>Attitude Bios for Instagram - UniqueBio.in</title>
+    <meta name="description" content="Discover the best collection of bold and confident attitude bios for your Instagram profile on UniqueBio.in. Make a strong statement with unique bios for boys & girls, copy-paste ready!">
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../../assets/icons/favicon.ico">
+    <link rel="canonical" href="https://www.uniquebio.in/pages/bios/attitude.html" />
+<!-- ✅ PAGE: attitude.html | SECTION: <head> | PURPOSE: Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.uniquebio.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Attitude Bios",
+      "item": "https://www.uniquebio.in/pages/bios/attitude.html"
+    }
+  ]
+}
+</script>
+<!-- ✅ END: Breadcrumb Schema for attitude.html -->
 </head>
 <body>
     <header>
         <div class="container header-container">
             <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="UniqueBio Logo">
+                <img src="../../assets/images/logo.png" alt="UniqueBio.in Logo - Best Instagram Bios">
                 <span>UniqueBio</span>
             </a>
             <nav>
@@ -30,20 +55,48 @@
 
     <section class="hero" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));">
         <div class="container">
-            <h1>Attitude Bios</h1>
-            <p>Bold and confident bios that make a statement</p>
+            <h1>Attitude Bios for Instagram Profile</h1>
+            <p>Bold and confident bios that make a statement. Find the perfect attitude bio to reflect your personality.</p>
         </div>
     </section>
 
     <section class="bio-container">
         <div class="container">
             <div class="bio-header">
-                <h2>Best Attitude Bios</h2>
-                <p>Show your confidence with these powerful bios</p>
+                <h2>Best Attitude Bios for Boys & Girls</h2>
+                <p>Show your confidence and unique personality with these powerful and stylish attitude bios. Whether you're looking for a short, sassy, or deep attitude bio, we've got you covered. Simply click to copy!</p>
             </div>
             
             <div class="bio-grid" id="bioContainer">
                 <div class="loading-message">Loading attitude bios...</div>
+            </div>
+
+            <div class="text-center mt-4"> 
+                <p>Looking for more amazing bios? Explore our full collection and other popular categories!</p>
+                <a href="vip.html" class="btn btn-secondary">Browse VIP Bios</a>
+                <a href="../fonts/stylish-fonts.html" class="btn btn-secondary">Get Stylish Fonts</a>
+            </div>
+
+            <div class="additional-content mt-4">
+                <h3>Why Choose a Strong Attitude Bio?</h3>
+                <p>An attitude bio on Instagram isn't just a collection of words; it's your digital fingerprint. It sets the tone for your profile, conveys your personality, and helps you stand out in a crowded social media landscape. A powerful attitude bio can:</p>
+                <ul>
+                    <li>**Reflect Your Confidence:** Show the world who you are without saying a word.</li>
+                    <li>**Attract Like-Minded Followers:** People who resonate with your vibe are more likely to engage.</li>
+                    <li>**Make a Memorable First Impression:** Your bio is often the first thing people see on your profile.</li>
+                    <li>**Express Your Unique Style:** From cool and sassy to deep and motivational, your bio can truly represent you.</li>
+                </ul>
+
+                <h3>Tips for Crafting the Perfect Attitude Bio:</h3>
+                <p>While our collection offers ready-to-use bios, understanding these tips can help you choose or even customize one:</p>
+                <ol>
+                    <li>**Keep it Concise:** Instagram bios have character limits. Make every word count.</li>
+                    <li>**Use Emojis Wisely:** Emojis can add personality and visual appeal without taking up too much space.</li>
+                    <li>**Include Keywords (Naturally):** If you have specific interests or a niche, subtly weave in relevant keywords.</li>
+                    <li>**Add a Call to Action (Optional):** "Link in bio" or "DM for collabs" if applicable.</li>
+                    <li>**Be Authentic:** The best bio is one that genuinely reflects who you are.</li>
+                </ol>
+                <p>Explore our wide range of **attitude bios for Instagram** and find one that truly speaks to you. Don't forget to check out our <a href="../fonts/stylish-fonts.html">stylish fonts</a> and <a href="../hashtags/trending.html">trending hashtags</a> to further enhance your profile!</p>
             </div>
         </div>
     </section>
@@ -66,18 +119,18 @@
     <script src="../../assets/js/main.js"></script>
     <script>
         // Debugging path
-        console.log('Current path to JSON:', '../../data/bios/attitude.json');
+        // console.log('Current path to JSON:', '../../data/bios/attitude.json'); // Keep for debugging if needed
         
         fetch('../../data/bios/attitude.json')
             .then(response => {
-                console.log('Response status:', response.status);
+                // console.log('Response status:', response.status); // Keep for debugging if needed
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json();
             })
             .then(data => {
-                console.log('Data loaded:', data);
+                // console.log('Data loaded:', data); // Keep for debugging if needed
                 const container = document.getElementById('bioContainer');
                 
                 if (!data.bios || data.bios.length === 0) {
@@ -85,10 +138,10 @@
                     return;
                 }
                 
-                container.innerHTML = '';
+                container.innerHTML = ''; // Clear loading message or previous content
                 
                 data.bios.forEach((bio, index) => {
-                    const delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-1' : 'delay-2';
+                    const delayClass = `delay-${index % 3}`; 
                     container.innerHTML += `
                         <div class="bio-card fade-in ${delayClass}">
                             <div class="bio-text">${bio.text.replace(/\n/g, '<br>')}</div>
@@ -106,6 +159,35 @@
                     </div>
                 `;
             });
+            
+        // Assuming copyBio function is in main.js or here as well if needed.
+        // If copyBio is ONLY in main.js and you don't want it duplicated, remove this one.
+        function copyBio(button) {
+            const bioText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(bioText.trim()).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        // Animation on scroll function - Ensure this is present if used on this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
     </script>
 </body>
 </html>
