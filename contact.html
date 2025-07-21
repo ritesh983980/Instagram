@@ -4,87 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - UniqueBio.in</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <meta name="description" content="Have questions or suggestions? Contact UniqueBio.in for support, feedback, or business inquiries.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/icons/favicon.ico">
-<!-- ✅ PAGE: contact.html | SECTION: <head> | PURPOSE: Breadcrumb Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </noscript>
+
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+    
+    <link rel="icon" href="assets/icons/favicon.ico">
+
+    <link rel="canonical" href="https://www.uniquebio.in/contact.html" />
+
+    <script type="application/ld+json">
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.uniquebio.in/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Contact",
-      "item": "https://www.uniquebio.in/contact.html"
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "url": "https://www.uniquebio.in/contact.html",
+      "name": "Contact UniqueBio.in",
+      "description": "Get in touch with UniqueBio.in for any queries, feedback, or support.",
+      "potentialAction": {
+        "@type": "CommunicateAction",
+        "target": {
+          "@type": "EntryPoint",
+          "actionPlatform": [
+            "http://schema.org/Website",
+            "http://schema.org/MobileApp",
+            "http://schema.org/SMS",
+            "http://schema.org/EmailMessage"
+          ]
+        }
+      }
     }
-  ]
-}
-</script>
+    </script>
 </head>
 <body>
-    <header>
+
+    <header class="header-gradient-bg"> 
         <div class="container header-container">
-            <a href="../index.html" class="logo">
-                <img src="../assets/images/logo.png" alt="UniqueBio Logo">
-                <span>UniqueBio</span>
+            <a href="index.html" class="logo-text">
+                <span>UniqueBio.in</span>
             </a>
-            <nav>
+            <p class="header-tagline">Elevate your social media presence</p>
+            <nav class="hero-tabs">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/bios/vip.html">VIP Bios</a></li>
-                    <li><a href="../pages/fonts/stylish-fonts.html">Stylish Fonts</a></li>
-                    <li><a href="../pages/hashtags/trending.html">Hashtags</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html" class="active">Contact</a></li>
+                    <li><a href="index.html" class="hero-tab">Home</a></li>
+                    <li><a href="pages/bios/vip.html" class="hero-tab">VIP Bios</a></li>
+                    <li><a href="pages/fonts/stylish-fonts.html" class="hero-tab">Stylish Fonts</a></li>
+                    <li><a href="pages/hashtags/trending.html" class="hero-tab">Hashtags</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));">
+    <section class="hero secondary-hero">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you! Reach out with questions or suggestions.</p>
+            <h1 class="fade-in">Contact Us</h1>
+            <p class="fade-in delay-1">आपके प्रश्नों, सुझावों और प्रतिक्रिया का हमें हमेशा स्वागत है।</p>
         </div>
     </section>
 
-    <section class="container" style="padding: 80px 0;">
-        <div class="feature-card">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-card fade-in">
+                    <i class="fas fa-envelope icon-color"></i>
+                    <h3>Email Us</h3>
+                    <p>किसी भी प्रश्न या समर्थन के लिए हमें ईमेल करें।</p>
+                    <a href="mailto:support@uniquebio.in" class="email-link">support@uniquebio.in</a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="contact-card fade-in delay-1">
+                    <i class="fas fa-comment-dots icon-color"></i>
+                    <h3>Feedback</h3>
+                    <p>हमारा कंटेंट कैसा लगा? हमें अपनी राय दें!</p>
+                    <a href="mailto:feedback@uniquebio.in" class="email-link">feedback@uniquebio.in</a>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
+                <div class="contact-card fade-in delay-2">
+                    <i class="fas fa-briefcase icon-color"></i>
+                    <h3>Business Inquiries</h3>
+                    <p>साझेदारी या व्यावसायिक प्रस्तावों के लिए संपर्क करें।</p>
+                    <a href="mailto:business@uniquebio.in" class="email-link">business@uniquebio.in</a>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            
-            <div class="success-message" id="successMessage" style="display: none;">
-                Thank you for your message! We'll get back to you soon.
             </div>
-            
-            <div style="margin-top: 50px;">
-                <h3>Other Ways to Reach Us</h3>
-                <p>Email: <a href="mailto:contact@uniquebio.in">contact@uniquebio.in</a></p>
+
+            <div class="contact-form-block fade-in mt-5">
+                <h2>Send Us a Message</h2>
+                <p>नीचे दिए गए फ़ॉर्म का उपयोग करके हमें एक त्वरित संदेश भेजें। हम जल्द से जल्द आपसे संपर्क करेंगे।</p>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">आपका नाम:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">आपकी ईमेल:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">विषय:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">आपका संदेश:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">संदेश भेजें</button>
+                </form>
             </div>
         </div>
     </section>
@@ -92,28 +127,148 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="../index.html">Home</a>
-                <a href="../about.html">About</a>
-                <a href="../contact.html">Contact</a>
-                <a href="../privacy-policy.html">Privacy Policy</a>
-                <a href="../disclaimer.html">Disclaimer</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 UniqueBio.in. All rights reserved.</p>
+                <p>&copy; 2023 UniqueBio.in. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('successMessage').style.display = 'block';
-            this.reset();
-            setTimeout(() => {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 5000);
+        // Fade-in animation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.fade-in:not(.animated)');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            };
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run on load to animate elements already in view
         });
     </script>
+    <style>
+        .contact-content {
+            padding: 60px 0;
+            background-color: white;
+            text-align: center; /* For overall alignment of sections */
+        }
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: var(--spacing-xl);
+        }
+        .contact-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        .contact-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .contact-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        .contact-card p {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            margin-bottom: 15px;
+        }
+        .contact-card .email-link {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        .contact-form-block {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        .contact-form-block h2 {
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+        }
+        .contact-form-block p {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        .contact-form .form-group {
+            margin-bottom: var(--spacing-md);
+            text-align: left;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+            font-size: 0.95rem;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            transition: border-color 0.3s ease;
+        }
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-form .btn {
+            width: auto;
+            display: block; /* Make it a block button */
+            margin: 20px auto 0; /* Center the button */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </body>
 </html>
