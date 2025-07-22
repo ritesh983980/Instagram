@@ -97,11 +97,6 @@
     display: none; /* Hides the platform compatibility tags */
 }
 
-/* .platform-tag {
-    // These styles are effectively hidden by .platform-compatibility { display: none; }
-    // No need to remove unless you want to clean up unused CSS.
-} */
-
 /* Loading and Error States */
 .loading-message {
     text-align: center;
@@ -163,3 +158,9 @@
 .copy-btn:hover {
     background: var(--secondary-color);
 }
+
+/* Specific gradient for Stylish Fonts page */
+.fonts-gradient-bg {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));
+}
+
