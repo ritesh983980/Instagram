@@ -1,4 +1,5 @@
-// === FONT MAPPINGS (JSON content moved here) ===
+// === FONT MAPPINGS (JSON content) ===
+// This data is specific to the stylish fonts generator, so it's good to keep it here.
 const FONT_DATA = [
     {
         "id": 1,
@@ -131,31 +132,28 @@ const FONT_DATA = [
         "name": "Underline",
         "category": "Emphasis",
         "unicodeType": "Combining Diacritics",
-        "worksOn": ["Instagram", "WhatsApp", "Twitter"],
         "mapping": {}, // This will be handled by a special function
         "specialProcessor": "underline"
     }
 ];
 
-// Global variables
+// Global variable (scoped to this script, not truly global to window if using modules)
 let currentName = "Ritesh"; // Default name
 
 // Function to generate styled text using Unicode mappings
 function generateStyledText(inputText, font) {
     if (font.specialProcessor === "underline") {
-        // Special handling for underline (combining characters)
         let underlinedText = '';
         for (let i = 0; i < inputText.length; i++) {
             underlinedText += inputText[i] + '\u0332'; // Add combining low line
         }
         return underlinedText;
     } else if (font.mapping) {
-        // Use mapping for other fonts
         let styledOutput = '';
         for (let i = 0; i < inputText.length; i++) {
             const char = inputText[i];
-            // Check for uppercase, lowercase, numbers first
-            const mappedChar = font.mapping[char.toUpperCase()] || font.mapping[char.toLowerCase()] || font.mapping[char];
+            // Handle both uppercase and lowercase lookup in mapping
+            const mappedChar = font.mapping[char.toUpperCase()] || font.mapping[char.toLowerCase()];
             
             styledOutput += mappedChar || char; // Use mapped char, or original if not found
         }
@@ -181,12 +179,11 @@ function updateFontPreviews() {
     container.innerHTML = ''; // Clear loading message
     
     FONT_DATA.forEach((font, index) => {
+        // Applying delay class for staggered animation, consistent with bio cards
         const delayClass = `delay-${index % 3}`;
         
-        // Generate the styled text using the mapping
         const styledText = generateStyledText(currentName, font);
         
-        // Create platform tags (These are hidden by CSS, but the logic remains)
         const platformTags = (font.worksOn || []).map(platform => {
             const iconMap = {
                 'Instagram': 'instagram',
@@ -195,9 +192,9 @@ function updateFontPreviews() {
                 'Twitter': 'twitter',
                 'Discord': 'discord',
                 'LinkedIn': 'linkedin',
-                'Websites': 'globe' // For generic web display
+                'Websites': 'globe'
             };
-            const icon = iconMap[platform] || 'question-circle'; // Default icon
+            const icon = iconMap[platform] || 'question-circle';
             return `
                 <span class="platform-tag">
                     <i class="fab fa-${icon}"></i> ${platform}
@@ -228,18 +225,33 @@ function updateFontPreviews() {
             </div>
         `;
     });
+
+    // Trigger animations for newly added elements after they are appended to the DOM
+    // This assumes `animateOnScroll` or a similar function is globally available in main.js
+    const event = new Event('scroll');
+    window.dispatchEvent(event);
 }
 
 // Helper function to escape text for HTML attributes (especially for onclick)
+// Converts ' to &apos; and " to &quot;
 function escapeText(str) {
-    // Replace single quotes with HTML entity &apos; and double quotes with &quot;
+    if (typeof str !== 'string') {
+        return '';
+    }
     return str.replace(/'/g, '&apos;').replace(/"/g, '&quot;');
 }
 
+// Helper function to decode HTML entities back to characters
+function decodeHtmlEntities(text) {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = text;
+    return textarea.value;
+}
+
 // Copy font text to clipboard
-function copyFont(button, text, fontName) {
-    // Unescape the text from HTML entities before copying to clipboard
-    const textToCopy = text.replace(/&apos;/g, "'").replace(/&quot;/g, '"');
+function copyFont(button, encodedText, fontName) {
+    // Decode the text from HTML entities before copying to clipboard
+    const textToCopy = decodeHtmlEntities(encodedText);
 
     if (!textToCopy || textToCopy.includes('Enter text above')) {
         showNotification('Please enter some text first', 'error');
@@ -247,23 +259,24 @@ function copyFont(button, text, fontName) {
     }
     
     navigator.clipboard.writeText(textToCopy).then(() => {
-        const originalText = button.innerHTML;
+        const originalHtml = button.innerHTML;
+        const originalBackground = button.style.background;
         button.innerHTML = '<i class="fas fa-check"></i> Copied!';
-        button.style.background = 'var(--success-color)';
+        button.style.background = 'var(--success-color)'; // Assuming --success-color is defined
         
         showNotification(`"${fontName}" style copied!`);
         
         setTimeout(() => {
-            button.innerHTML = originalText;
-            button.style.background = ''; // Reset background
+            button.innerHTML = originalHtml; // Reset inner HTML
+            button.style.background = originalBackground; // Reset background
         }, 2000);
     }).catch(err => {
-        console.error('Failed to copy:', err);
+        console.error('Failed to copy text for font:', fontName, 'Error:', err);
         showNotification('Failed to copy. Please try again.', 'error');
     });
 }
 
-// Show notification
+// Show notification (specific to this page)
 function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
     notification.className = `notification ${type === 'error' ? 'error' : ''}`;
@@ -273,35 +286,57 @@ function showNotification(message, type = 'success') {
     `;
     document.body.appendChild(notification);
     
-    setTimeout(() => {
+    // Use requestAnimationFrame for smoother animation start
+    requestAnimationFrame(() => {
         notification.classList.add('show');
-    }, 10);
+    });
     
     setTimeout(() => {
         notification.classList.remove('show');
+        // Give time for transition to complete before removing element
         setTimeout(() => {
-            document.body.removeChild(notification);
+            if (notification.parentNode) { // Check if it's still in DOM
+                document.body.removeChild(notification);
+            }
         }, 300);
-    }, 3000);
+    }, 3000); // Notification visible for 3 seconds
 }
 
-// Initialize page
+
+// Initialize page functionalities
 document.addEventListener('DOMContentLoaded', function() {
     // Set initial name from input value
     currentName = document.getElementById('userName').value.trim();
-    updateFontPreviews(); // Call updateFontPreviews directly using FONT_DATA
+    if (currentName === '') { // Ensure default text is set if input is empty
+        currentName = document.getElementById('userName').placeholder; // Use placeholder as fallback
+        document.getElementById('userName').value = currentName;
+    }
+    updateFontPreviews();
     
-    // Setup update button
-    document.getElementById('updateBtn').addEventListener('click', function() {
-        currentName = document.getElementById('userName').value.trim();
-        updateFontPreviews();
-    });
-    
-    // Allow Enter key to update preview
-    document.getElementById('userName').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            currentName = this.value.trim();
+    // Setup update button event listener
+    const updateButton = document.getElementById('updateBtn');
+    if (updateButton) {
+        updateButton.addEventListener('click', function() {
+            currentName = document.getElementById('userName').value.trim();
             updateFontPreviews();
-        }
-    });
+        });
+    } else {
+        console.warn("Update button with ID 'updateBtn' not found.");
+    }
+
+    // Allow Enter key to update preview in the input field
+    const userNameInput = document.getElementById('userName');
+    if (userNameInput) {
+        userNameInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                currentName = this.value.trim();
+                updateFontPreviews();
+                this.blur(); // Optional: remove focus from input after Enter
+            }
+        });
+    } else {
+        console.warn("User name input with ID 'userName' not found.");
+    }
 });
+
+            
