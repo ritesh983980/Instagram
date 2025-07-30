@@ -79,6 +79,87 @@
             "category": "VIP bios",
             "unicodeType": "Colored Text (Unicode + CSS)",
             "worksOn": ["Instagram (as text)", "Websites"]
-        }
-    ]
+
+        },
+    {
+      "id": 11,
+      "name": "Italic Classy",
+      "style": "font-family: 'Georgia', serif; font-style: italic;",
+      "category": "Stylish bios",
+      "unicodeType": "Italic Unicode",
+      "worksOn": ["Instagram", "WhatsApp", "Facebook"]
+    },
+    {
+      "id": 12,
+      "name": "Tiny Text",
+      "style": "font-family: 'Arial', sans-serif; font-size: 0.7rem;",
+      "category": "Soft/baby bios",
+      "unicodeType": "Superscript Unicode",
+      "worksOn": ["Instagram", "Twitter"]
+    },
+    {
+      "id": 13,
+      "name": "Mirror Flip",
+      "style": "font-family: 'Arial', sans-serif; transform: scaleX(-1);",
+      "category": "Creative/fun bios",
+      "unicodeType": "Flipped Unicode",
+      "worksOn": ["Instagram", "WhatsApp"]
+    },
+    {
+      "id": 14,
+      "name": "Wide Caps",
+      "style": "font-family: 'Courier', monospace; letter-spacing: 6px;",
+      "category": "Bold intro bios",
+      "unicodeType": "Fullwidth Unicode",
+      "worksOn": ["Instagram", "Facebook", "Discord"]
+    },
+    {
+      "id": 15,
+      "name": "Zalgo Glitch",
+      "style": "font-family: 'Arial', sans-serif;",
+      "category": "Spooky/mystery bios",
+      "unicodeType": "Zalgo Text",
+      "worksOn": ["Instagram", "Discord"]
+    },
+    {
+      "id": 16,
+      "name": "Currency Style",
+      "style": "font-family: 'Arial', sans-serif;",
+      "category": "Money/Finance bios",
+      "unicodeType": "Currency Unicode Symbols",
+      "worksOn": ["Instagram", "WhatsApp", "LinkedIn"]
+    },
+    {
+      "id": 17,
+      "name": "Cute Kawaii",
+      "style": "font-family: 'Comic Sans MS', cursive;",
+      "category": "Kawaii/cute bios",
+      "unicodeType": "Cutesy Unicode",
+      "worksOn": ["Instagram", "WhatsApp", "Snapchat"]
+    },
+    {
+      "id": 18,
+      "name": "Boxed Letters",
+      "style": "font-family: 'Arial', sans-serif;",
+      "category": "Gaming/fancy bios",
+      "unicodeType": "Box Drawing Unicode",
+      "worksOn": ["Instagram", "Discord"]
+    },
+    {
+      "id": 19,
+      "name": "Old Typewriter",
+      "style": "font-family: 'Lucida Console', monospace;",
+      "category": "Vintage bios",
+      "unicodeType": "Monospaced Unicode",
+      "worksOn": ["Instagram", "Facebook"]
+    },
+    {
+      "id": 20,
+      "name": "Cursive Romantic",
+      "style": "font-family: 'Dancing Script', cursive; font-size: 2rem;",
+      "category": "Romantic bios",
+      "unicodeType": "Cursive Unicode",
+      "worksOn": ["Instagram", "WhatsApp"]
+    }
+  ]
 }
