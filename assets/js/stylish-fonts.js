@@ -134,6 +134,252 @@ const FONT_DATA = [
         "unicodeType": "Combining Diacritics",
         "mapping": {}, // This will be handled by a special function
         "specialProcessor": "underline"
+    },
+    {
+        "id": 11,
+        "name": "Italic Sans",
+        "category": "Stylish bios",
+        "unicodeType": "Mathematical Italic Sans-serif",
+        "worksOn": ["Instagram", "WhatsApp", "Facebook"],
+        "mapping": {
+            "A": "𝘈", "B": "𝘉", "C": "𝘊", "D": "𝘋", "E": "𝘌", "F": "𝘍", "G": "𝘎", "H": "𝘏", "I": "𝘐", "J": "𝘑", "K": "𝘒", "L": "𝘓", "M": "𝘔",
+            "N": "𝘕", "O": "𝘖", "P": "𝘗", "Q": "𝘘", "R": "𝘙", "S": "𝘚", "T": "𝘛", "U": "𝘜", "V": "𝘝", "W": "𝘞", "X": "𝘟", "Y": "𝘠", "Z": "𝘡",
+            "a": "𝘢", "b": "𝘣", "c": "𝘤", "d": "𝘥", "e": "𝘦", "f": "𝘧", "g": "𝘨", "h": "𝘩", "i": "𝘪", "j": "𝘫", "k": "𝘬", "l": "𝘭", "m": "𝘮",
+            "n": "𝘯", "o": "𝘰", "p": "𝘱", "q": "𝘲", "r": "𝘳", "s": "𝘴", "t": "𝘵", "u": "𝘶", "v": "𝘷", "w": "𝘸", "x": "𝘹", "y": "𝘺", "z": "𝘻",
+            "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Small Caps",
+        "category": "Subtle Headings",
+        "unicodeType": "Small Capitals Unicode",
+        "worksOn": ["Instagram", "Twitter"],
+        "mapping": {
+            "A": "ᴀ", "B": "ʙ", "C": "ᴄ", "D": "ᴅ", "E": "ᴇ", "F": "ꜰ", "G": "ɢ", "H": "ʜ", "I": "ɪ", "J": "ᴊ", "K": "ᴋ", "L": "ʟ", "M": "ᴍ",
+            "N": "ɴ", "O": "ᴏ", "P": "ᴘ", "Q": "ǫ", "R": "ʀ", "S": "s", "T": "ᴛ", "U": "ᴜ", "V": "ᴠ", "W": "ᴡ", "X": "x", "Y": "ʏ", "Z": "ᴢ",
+            "a": "ᴀ", "b": "ʙ", "c": "ᴄ", "d": "ᴅ", "e": "ᴇ", "f": "ꜰ", "g": "ɢ", "h": "ʜ", "i": "ɪ", "j": "ᴊ", "k": "ᴋ", "l": "ʟ", "m": "ᴍ",
+            "n": "ɴ", "o": "ᴏ", "p": "ᴘ", "q": "ǫ", "r": "ʀ", "s": "s", "t": "ᴛ", "u": "ᴜ", "v": "ᴠ", "w": "ᴡ", "x": "x", "y": "ʏ", "z": "ᴢ",
+            "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Superscript",
+        "category": "Tiny Text",
+        "unicodeType": "Superscript Unicode",
+        "worksOn": ["Instagram", "Twitter"],
+        "mapping": {
+            "a": "ᵃ", "b": "ᵇ", "c": "ᶜ", "d": "ᵈ", "e": "ᵉ", "f": "ᶠ", "g": "ᵍ", "h": "ʰ", "i": "ⁱ", "j": "ʲ", "k": "ᵏ", "l": "ˡ", "m": "ᵐ",
+            "n": "ⁿ", "o": "ᵒ", "p": "ᵖ", "q": "۹", "r": "ʳ", "s": "ˢ", "t": "ᵗ", "u": "ᵘ", "v": "ᵛ", "w": "ʷ", "x": "ˣ", "y": "ʸ", "z": "ᶻ",
+            "A": "ᴬ", "B": "ᴮ", "C": "ᶜ", "D": "ᴰ", "E": "ᴱ", "F": "ᶠ", "G": "ᴳ", "H": "ᴴ", "I": "ᴵ", "J": "ᴶ", "K": "ᴷ", "L": "ᴸ", "M": "ᴹ",
+            "N": "ᴺ", "O": "ᴼ", "P": "ᴾ", "Q": "Q", "R": "ᴿ", "S": "ˢ", "T": "ᵀ", "U": "ᵁ", "V": "ⱽ", "W": "ᵂ", "X": "ˣ", "Y": "ʸ", "Z": "ᶻ",
+            "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹",
+            "+": "⁺", "-": "⁻", "=": "⁼", "(": "⁽", ")": "⁾"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Subscript",
+        "category": "Tiny Text",
+        "unicodeType": "Subscript Unicode",
+        "worksOn": ["Instagram", "Twitter"],
+        "mapping": {
+            "a": "ₐ", "b": "ᵦ", "c": "𝒸", "d": "ᑯ", "e": "ₑ", "f": "բ", "g": "₉", "h": "ₕ", "i": "ᵢ", "j": "ⱼ", "k": "ₖ", "l": "ₗ", "m": "ₘ",
+            "n": "ₙ", "o": "ₒ", "p": "ₚ", "q": "૧", "r": "ᵣ", "s": "ₛ", "t": "ₜ", "u": "ᵤ", "v": "ᵥ", "w": "ᵥᵥ", "x": "ₓ", "y": "ᵧ", "z": "₂",
+            "0": "₀", "1": "₁", "2": "₂", "3": "₃", "4": "₄", "5": "₅", "6": "₆", "7": "₇", "8": "₈", "9": "₉",
+            "+": "₊", "-": "₋", "=": "₌", "(": "₍", ")": "₎"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Strikethrough",
+        "category": "Correction/Deleted",
+        "unicodeType": "Combining Diacritics",
+        "mapping": {},
+        "specialProcessor": "strikethrough"
+    },
+    {
+        "id": 16,
+        "name": "Currency Symbols",
+        "category": "Money/Finance",
+        "unicodeType": "Currency Unicode Symbols",
+        "worksOn": ["Instagram", "WhatsApp", "LinkedIn"],
+        "mapping": {
+            "A": "₳", "B": "฿", "C": "₵", "D": "₫", "E": "€", "F": "₣", "G": "₲", "H": "₴", "I": "Ⱡ", "J": "J", "K": "₭", "L": "Ł", "M": "₥",
+            "N": "₦", "O": "Ø", "P": "₱", "Q": "Q", "R": "₹", "S": "$", "T": "₮", "U": "ⱡ", "V": "V", "W": "₩", "X": "X", "Y": "¥", "Z": "Z",
+            "a": "₳", "b": "฿", "c": "₵", "d": "₫", "e": "€", "f": "₣", "g": "₲", "h": "₴", "i": "Ⱡ", "j": "j", "k": "₭", "l": "Ł", "m": "₥",
+            "n": "₦", "o": "Ø", "p": "₱", "q": "q", "r": "₹", "s": "$", "t": "₮", "u": "ⱡ", "v": "v", "w": "₩", "x": "x", "y": "y", "z": "z"
+            // Numbers are typically not mapped for currency symbols directly, can add if needed
+        }
+    },
+    {
+        "id": 17,
+        "name": "Boxed Light",
+        "category": "Decorated",
+        "unicodeType": "Box Drawing Unicode",
+        "worksOn": ["Instagram", "Discord"],
+        "mapping": {
+            "A": "🄰", "B": "🄱", "C": "🄲", "D": "🄳", "E": "🄴", "F": "🄵", "G": "🄶", "H": "🄷", "I": "🄸", "J": "🄹", "K": "🄺", "L": "🄻", "M": "🄼",
+            "N": "🄽", "O": "🄾", "P": "🄿", "Q": "🅀", "R": "🅁", "S": "🅂", "T": "🅃", "U": "🅄", "V": "🅅", "W": "🅆", "X": "🅇", "Y": "🅈", "Z": "🅉",
+            "a": "ⓐ", "b": "ⓑ", "c": "ⓒ", "d": "ⓓ", "e": "ⓔ", "f": "ⓕ", "g": "ⓖ", "h": "ⓗ", "i": "ⓘ", "j": "ⓙ", "k": "ⓚ", "l": "ⓛ", "m": "ⓜ",
+            "n": "ⓝ", "o": "ⓞ", "p": "ⓟ", "q": "ⓠ", "r": "ⓡ", "s": "ⓢ", "t": "ⓣ", "u": "ⓤ", "v": "ⓥ", "w": "ⓦ", "x": "ⓧ", "y": "ⓨ", "z": "ⓩ",
+            "0": "⓪", "1": "①", "2": "②", "3": "③", "4": "④", "5": "⑤", "6": "⑥", "7": "⑦", "8": "⑧", "9": "⑨"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Inverted Square",
+        "category": "Unique/Tech",
+        "unicodeType": "Negative Squared Unicode",
+        "worksOn": ["Instagram", "Discord"],
+        "mapping": {
+            "A": "🅐", "B": "🅑", "C": "🅒", "D": "🅓", "E": "🅔", "F": "🅕", "G": "🅖", "H": "🅗", "I": "🅘", "J": "🅙", "K": "🅚", "L": "🅛", "M": "🅜",
+            "N": "🅝", "O": "🅞", "P": "🅟", "Q": "🅠", "R": "🅡", "S": "🅢", "T": "🅣", "U": "🅤", "V": "🅥", "W": "🅦", "X": "🅧", "Y": "🅨", "Z": "🅩",
+            "a": "🅐", "b": "🅑", "c": "🅒", "d": "🅓", "e": "🅔", "f": "🅕", "g": "🅖", "h": "🅗", "i": "🅘", "j": "🅙", "k": "🅚", "l": "🅛", "m": "🅜",
+            "n": "🅝", "o": "🅞", "p": "🅟", "q": "🅠", "r": "🅡", "s": "🅢", "t": "🅣", "u": "🅤", "v": "🅥", "w": "🅦", "x": "🅧", "y": "🅨", "z": "🅩",
+            "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9"
+        }
+    },
+    {
+        "id": 19,
+        "name": "Cursive Fancy",
+        "category": "Elegant/Artistic",
+        "unicodeType": "Cursive Unicode",
+        "worksOn": ["Instagram", "Facebook"],
+        "mapping": {
+            "A": "𝒶", "B": "𝒷", "C": "𝒸", "D": "𝒹", "E": "𝑒", "F": "𝒻", "G": "𝑔", "H": "𝒽", "I": "𝒾", "J": "𝒿", "K": "𝓀", "L": "𝓁", "M": "𝓂",
+            "N": "𝓃", "O": "𝑜", "P": "𝓅", "Q": "𝓆", "R": "𝓇", "S": "𝓈", "T": "𝓉", "U": "𝓊", "V": "𝓋", "W": "𝓌", "X": "𝓍", "Y": "𝓎", "Z": "𝓏",
+            "a": "𝒶", "b": "𝒷", "c": "𝒸", "d": "𝒹", "e": "𝑒", "f": "𝒻", "g": "𝑔", "h": "𝒽", "i": "𝒾", "j": "𝒿", "k": "𝓀", "l": "𝓁", "m": "𝓂",
+            "n": "𝓃", "o": "𝑜", "p": "𝓅", "q": "𝓆", "r": "𝓇", "s": "𝓈", "t": "𝓉", "u": "𝓊", "v": "𝓋", "w": "𝓌", "x": "𝓍", "y": "𝓎", "z": "𝓏",
+            "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9"
+        }
+    },
+    {
+        "id": 20,
+        "name": "Mathematical Bold Italic Serif",
+        "category": "Scientific/Formal",
+        "unicodeType": "Mathematical Bold Italic Serif",
+        "worksOn": ["Instagram", "WhatsApp"],
+        "mapping": {
+            "A": "𝑨", "B": "𝑩", "C": "𝑪", "D": "𝑫", "E": "𝑬", "F": "𝑭", "G": "𝑮", "H": "𝑯", "I": "𝑰", "J": "𝑱", "K": "𝑲", "L": "𝑳", "M": "𝑴",
+            "N": "𝑵", "O": "𝑶", "P": "𝑷", "Q": "𝑸", "R": "𝑹", "S": "𝑺", "T": "𝑻", "U": "𝑼", "V": "𝑽", "W": "𝑾", "X": "𝑿", "Y": " Y", "Z": "𝑾",
+            "a": "𝒂", "b": "𝒃", "c": "𝒄", "d": "𝒅", "e": "𝒆", "f": "𝒇", "g": "𝒈", "h": "𝒉", "i": "𝒊", "j": "𝒋", "k": "𝒌", "l": "𝒍", "m": "𝒎",
+            "n": "𝒏", "o": "𝒐", "p": "𝒑", "q": "𝒒", "r": "𝒓", "s": "𝒔", "t": "𝒕", "u": "𝒖", "v": "𝒗", "w": "𝒘", "x": "𝒙", "y": "𝒚", "z": "𝒛",
+            "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9"
+        }
+    },
+    // --- New Fonts (IDs 21-30) ---
+    {
+        "id": 21,
+        "name": "Fraktur (Gothic)",
+        "category": "Old/Mysterious",
+        "unicodeType": "Mathematical Fraktur",
+        "worksOn": ["Instagram", "WhatsApp"],
+        "mapping": {
+            "A": "𝔄", "B": "𝔅", "C": "ℭ", "D": "𝔇", "E": "𝔈", "F": "𝔉", "G": "𝔊", "H": "ℌ", "I": "ℑ", "J": "𝔍", "K": "𝔎", "L": "𝔏", "M": "𝔐",
+            "N": "𝔑", "O": "𝔒", "P": "𝔓", "Q": "𝔔", "R": "ℜ", "S": "𝔖", "T": "𝔗", "U": "𝔘", "V": "𝔙", "W": "𝔚", "X": "𝔛", "Y": "𝔜", "Z": "ℨ",
+            "a": "𝔞", "b": "𝔟", "c": "𝔠", "d": "𝔡", "e": "𝔢", "f": "𝔣", "g": "𝔤", "h": "𝔥", "i": "𝔦", "j": "𝔧", "k": "𝔨", "l": "𝔩", "m": "𝔪",
+            "n": "𝔫", "o": "𝔬", "p": "𝔭", "q": "𝔮", "r": "𝔯", "s": "𝔰", "t": "𝔱", "u": "𝔲", "v": "𝔳", "w": "𝔴", "x": "𝔵", "y": "𝔶", "z": "𝔷",
+            "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9"
+        }
+    },
+    {
+        "id": 22,
+        "name": "Monospace Bold",
+        "category": "Tech/Gaming",
+        "unicodeType": "Mathematical Monospace Bold",
+        "worksOn": ["Instagram", "Discord"],
+        "mapping": {
+            "A": "𝐀", "B": "𝐁", "C": "𝐂", "D": "𝐃", "E": "𝐄", "F": "𝐅", "G": "𝐆", "H": "𝐇", "I": "𝐈", "J": "𝐉", "K": "𝐊", "L": "𝐋", "M": "𝐌",
+            "N": "𝐍", "O": "𝐎", "P": "𝐏", "Q": "𝐐", "R": "𝐑", "S": "𝐒", "T": "𝐓", "U": "𝐔", "V": "𝐕", "W": "𝐖", "X": "𝐗", "Y": "𝐘", "Z": "𝐙",
+            "a": "𝐚", "b": "𝐛", "c": "𝐜", "d": "𝐝", "e": "𝐞", "f": "𝐟", "g": "𝐠", "h": "𝐡", "i": "𝐢", "j": "𝐣", "k": "𝐤", "l": "𝐥", "m": "𝐦",
+            "n": "𝐧", "o": "𝐨", "p": "𝐩", "q": "𝐪", "r": "𝐫", "s": "𝐬", "t": "𝐭", "u": "𝐮", "v": "𝐯", "w": "𝐰", "x": "𝐱", "y": "𝐲", "z": "𝐳",
+            "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9"
+        }
+    },
+
+     {
+        "id": 23,
+        "name": "Circled Inverted",
+        "category": "Unique/Attention",
+        "unicodeType": "Negative Circled Unicode",
+        "worksOn": ["Instagram", "WhatsApp"],
+        "mapping": {
+            "A": "🅐", "B": "🅑", "C": "🅒", "D": "🅓", "E": "🅔", "F": "🅕", "G": "🅖", "H": "🅗", "I": "🅘", "J": "🅙", "K": "🅚", "L": "🅛", "M": "🅜",
+            "N": "🅝", "O": "🅞", "P": "🅟", "Q": "🅠", "R": "🅡", "S": "🅢", "T": "🅣", "U": "🅤", "V": "🅥", "W": "🅦", "X": "🅧", "Y": "🅨", "Z": "🅩",
+            "a": "🅐", "b": "🅑", "c": "🅒", "d": "🅓", "e": "🅔", "f": "🅕", "g": "🅖", "h": "🅗", "i": "🅘", "j": "🅙", "k": "🅚", "l": "🅛", "m": "🅜",
+            "n": "🅝", "o": "🅞", "p": "🅟", "q": "🅠", "r": "🅡", "s": "🅢", "t": "🅣", "u": "🅤", "v": "🅥", "w": "🅦", "x": "🅧", "y": "🅨", "z": "🅩",
+            "0": "⓿", "1": "❶", "2": "❷", "3": "❸", "4": "❹", "5": "❺", "6": "❻", "7": "❼", "8": "❽", "9": "❾"
+        }
+    },
+    {
+        "id": 24,
+        "name": "Parenthesized",
+        "category": "Informal/Lists",
+        "unicodeType": "Parenthesized Unicode",
+        "worksOn": ["Instagram", "Twitter"],
+        "mapping": {
+            "a": "⒜", "b": "⒝", "c": "⒞", "d": "⒟", "e": "⒠", "f": "⒡", "g": "⒢", "h": "⒣", "i": "⒤", "j": "⒥", "k": "⒦", "l": "⒧", "m": "⒨",
+            "n": "⒩", "o": "⒪", "p": "⒫", "q": "⒬", "r": "⒭", "s": "⒮", "t": "⒯", "u": "⒰", "v": "⒱", "w": "⒲", "x": "⒳", "y": "⒴", "z": "⒵",
+            "0": "⓰", "1": "⓱", "2": "⓲", "3": "⓳", "4": "⓴"
+            // Note: Limited numbers for Parenthesized
+        }
+    },
+    {
+        "id": 25,
+        "name": "Dot Above",
+        "category": "Scientific/Subtle",
+        "unicodeType": "Combining Dot Above",
+        "mapping": {},
+        "specialProcessor": "dotAbove"
+    },
+    {
+        "id": 26,
+        "name": "Double Underline",
+        "category": "Emphasis/Formal",
+        "unicodeType": "Combining Double Underline",
+        "mapping": {},
+        "specialProcessor": "doubleUnderline"
+    },
+    {
+        "id": 27,
+        "name": "Diacritics: Acute Accent",
+        "category": "Special Characters",
+        "unicodeType": "Combining Acute Accent",
+        "mapping": {},
+        "specialProcessor": "acuteAccent"
+    },
+    {
+        "id": 28,
+        "name": "Mirror Text",
+        "category": "Creative/Fun",
+        "unicodeType": "Flipped Unicode",
+        "worksOn": ["Instagram", "WhatsApp"],
+        "mapping": {
+            "a": "ɐ", "b": "q", "c": "ɔ", "d": "p", "e": "ǝ", "f": "ɟ", "g": "ƃ", "h": "ɥ", "i": "ı", "j": "ɾ", "k": "ʞ", "l": "l", "m": "ɯ",
+            "n": "u", "o": "o", "p": "d", "q": "b", "r": "ɹ", "s": "s", "t": "ʇ", "u": "n", "v": "ʌ", "w": "ʍ", "x": "x", "y": "ʎ", "z": "z",
+            "A": "∀", "B": "𐐒", "C": "Ɔ", "D": "◖", "E": "Ǝ", "F": "Ⅎ", "G": "⅁", "H": "H", "I": "I", "J": "ſ", "K": "Opts", "L": "˥", "M": "W",
+            "N": "N", "O": "O", "P": "Ԁ", "Q": "Q", "R": "ᴚ", "S": "S", "T": "⊥", "U": "∩", "V": "Λ", "W": "M", "X": "X", "Y": "⅄", "Z": "Z",
+            "0": "0", "1": "Ɩ", "2": "ᄅ", "3": "Ɛ", "4": "ㄣ", "5": "ϛ", "6": "9", "7": "ㄥ", "8": "8", "9": "6"
+        }
+    },
+    {
+        "id": 29,
+        "name": "Zalgo Glitch (Light)",
+        "category": "Spooky/Mystery",
+        "unicodeType": "Zalgo Text (Combining Diacritics)",
+        "worksOn": ["Instagram", "Discord"],
+        "mapping": {},
+        "specialProcessor": "zalgoLight"
+    },
+    {
+        "id": 30,
+        "name": "Wavy Underline",
+        "category": "Decorative",
+        "unicodeType": "Combining Wavy Underline",
+        "mapping": {},
+        "specialProcessor": "wavyUnderline"
     }
 ];
 
@@ -142,30 +388,77 @@ let currentName = "Ritesh"; // Default name
 
 // Function to generate styled text using Unicode mappings
 function generateStyledText(inputText, font) {
-    if (font.specialProcessor === "underline") {
-        let underlinedText = '';
-        for (let i = 0; i < inputText.length; i++) {
-            underlinedText += inputText[i] + '\u0332'; // Add combining low line
+    let styledOutput = '';
+
+    // Handle special processors first
+    if (font.specialProcessor) {
+        switch (font.specialProcessor) {
+            case "underline":
+                for (let i = 0; i < inputText.length; i++) {
+                    styledOutput += inputText[i] + '\u0332'; // Combining low line
+                }
+                return styledOutput;
+            case "strikethrough":
+                for (let i = 0; i < inputText.length; i++) {
+                    styledOutput += inputText[i] + '\u0336'; // Combining long stroke overlay
+                }
+                return styledOutput;
+            case "dotAbove":
+                for (let i = 0; i < inputText.length; i++) {
+                    styledOutput += inputText[i] + '\u0307'; // Combining dot above
+                }
+                return styledOutput;
+            case "doubleUnderline":
+                for (let i = 0; i < inputText.length; i++) {
+                    styledOutput += inputText[i] + '\u0333'; // Combining double low line
+                }
+                return styledOutput;
+            case "acuteAccent":
+                for (let i = 0; i < inputText.length; i++) {
+                    styledOutput += inputText[i] + '\u0301'; // Combining acute accent
+                }
+                return styledOutput;
+            case "wavyUnderline":
+                for (let i = 0; i < inputText.length; i++) {
+                    styledOutput += inputText[i] + '\u033E'; // Combining wavy low line
+                }
+                return styledOutput;
+            case "zalgoLight":
+                // A light Zalgo effect
+                const zalgoCharsTop = ['\u0300', '\u0301', '\u0302', '\u0303', '\u0304', '\u0305', '\u0306', '\u0307', '\u0308', '\u030A'];
+                const zalgoCharsBottom = ['\u0316', '\u0317', '\u0318', '\u0319', '\u031C', '\u031D', '\u031E', '\u031F', '\u0320', '\u0321'];
+                const getRandomZalgoChar = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+                for (let i = 0; i < inputText.length; i++) {
+                    let char = inputText[i];
+                    char += getRandomZalgoChar(zalgoCharsTop);
+                    char += getRandomZalgoChar(zalgoCharsBottom);
+                    styledOutput += char;
+                }
+                return styledOutput;
+            default:
+                // If specialProcessor is defined but not recognized, fall through to mapping or original
+                break;
         }
-        return underlinedText;
-    } else if (font.mapping) {
-        let styledOutput = '';
+    }
+
+    // Fallback to mapping if no specialProcessor or if specialProcessor didn't handle it
+    if (font.mapping) {
         for (let i = 0; i < inputText.length; i++) {
             const char = inputText[i];
-            // Handle both uppercase and lowercase lookup in mapping
             const mappedChar = font.mapping[char.toUpperCase()] || font.mapping[char.toLowerCase()];
-            
             styledOutput += mappedChar || char; // Use mapped char, or original if not found
         }
         return styledOutput;
     }
+
     return inputText; // Return original if no mapping or special processor
 }
 
 // Update all font previews with current name
 function updateFontPreviews() {
     const container = document.getElementById('fontContainer');
-    
+
     if (!FONT_DATA || FONT_DATA.length === 0) {
         container.innerHTML = `
             <div class="error-message">
@@ -175,15 +468,15 @@ function updateFontPreviews() {
         `;
         return;
     }
-    
+
     container.innerHTML = ''; // Clear loading message
-    
+
     FONT_DATA.forEach((font, index) => {
         // Applying delay class for staggered animation, consistent with bio cards
         const delayClass = `delay-${index % 3}`;
-        
+
         const styledText = generateStyledText(currentName, font);
-        
+
         const platformTags = (font.worksOn || []).map(platform => {
             const iconMap = {
                 'Instagram': 'instagram',
@@ -192,16 +485,17 @@ function updateFontPreviews() {
                 'Twitter': 'twitter',
                 'Discord': 'discord',
                 'LinkedIn': 'linkedin',
+                'Snapchat': 'snapchat',
                 'Websites': 'globe'
             };
-            const icon = iconMap[platform] || 'question-circle';
+            const icon = iconMap[platform] || 'question-circle'; // Fallback icon
             return `
                 <span class="platform-tag">
                     <i class="fab fa-${icon}"></i> ${platform}
                 </span>
             `;
         }).join('');
-        
+
         container.innerHTML += `
             <div class="font-card fade-in ${delayClass}">
                 <div class="font-header">
@@ -233,11 +527,12 @@ function updateFontPreviews() {
 }
 
 // Helper function to escape text for HTML attributes (especially for onclick)
-// Converts ' to &apos; and " to &quot;
+// Converts ' to ' and " to "
 function escapeText(str) {
     if (typeof str !== 'string') {
         return '';
     }
+    // Escape single quotes and double quotes for HTML attribute safety
     return str.replace(/'/g, '&apos;').replace(/"/g, '&quot;');
 }
 
@@ -257,15 +552,15 @@ function copyFont(button, encodedText, fontName) {
         showNotification('Please enter some text first', 'error');
         return;
     }
-    
+
     navigator.clipboard.writeText(textToCopy).then(() => {
         const originalHtml = button.innerHTML;
         const originalBackground = button.style.background;
         button.innerHTML = '<i class="fas fa-check"></i> Copied!';
         button.style.background = 'var(--success-color)'; // Assuming --success-color is defined
-        
+
         showNotification(`"${fontName}" style copied!`);
-        
+
         setTimeout(() => {
             button.innerHTML = originalHtml; // Reset inner HTML
             button.style.background = originalBackground; // Reset background
@@ -280,17 +575,14 @@ function copyFont(button, encodedText, fontName) {
 function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
     notification.className = `notification ${type === 'error' ? 'error' : ''}`;
-    notification.innerHTML = `
-        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
-        ${message}
-    `;
+    notification.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
     document.body.appendChild(notification);
-    
+
     // Use requestAnimationFrame for smoother animation start
     requestAnimationFrame(() => {
         notification.classList.add('show');
     });
-    
+
     setTimeout(() => {
         notification.classList.remove('show');
         // Give time for transition to complete before removing element
@@ -302,7 +594,6 @@ function showNotification(message, type = 'success') {
     }, 3000); // Notification visible for 3 seconds
 }
 
-
 // Initialize page functionalities
 document.addEventListener('DOMContentLoaded', function() {
     // Set initial name from input value
@@ -312,7 +603,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('userName').value = currentName;
     }
     updateFontPreviews();
-    
+
     // Setup update button event listener
     const updateButton = document.getElementById('updateBtn');
     if (updateButton) {
@@ -338,5 +629,3 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn("User name input with ID 'userName' not found.");
     }
 });
-
-            
