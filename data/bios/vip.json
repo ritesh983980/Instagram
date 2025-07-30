@@ -35,6 +35,271 @@
             "text": "🎯 Goals: Unlimited\n💎 Rare like diamonds\n🏛 Building my empire\n✨ Glow up in progress",
             "likes": 223,
             "category": "VIP"
-        }
-    ]
+        },
+
+    {
+      "id": 7,
+      "text": "👠 Walk like royalty\n🎯 Focused like a sniper\n🛩 Jet-setting mindset\n💫 Living my legacy",
+      "likes": 165,
+      "category": "VIP"
+    },
+    {
+      "id": 8,
+      "text": "💼 CEO mode ON\n📱 Notifications on silent\n💰 Stacking digits\n🔒 Private but powerful",
+      "likes": 210,
+      "category": "VIP"
+    },
+    {
+      "id": 9,
+      "text": "🖤 Black cards & bold moves\n🌐 Global player\n🚁 Helicopter perspective\n🔥 Built different",
+      "likes": 190,
+      "category": "VIP"
+    },
+    {
+      "id": 10,
+      "text": "🎩 Dressed for domination\n🏦 Bank account blessed\n🌇 Penthouse dreams\n📸 Flawless every frame",
+      "likes": 178,
+      "category": "VIP"
+    },
+    {
+      "id": 11,
+      "text": "👑 Crown never slips\n📍 Location: Success\n🎯 Locked in, leveled up\n🛡 Unbothered & unbreakable",
+      "likes": 194,
+      "category": "VIP"
+    },
+    {
+      "id": 12,
+      "text": "🚘 Rollin’ in luxury\n📈 Hustle with elegance\n🎭 Silent moves, loud results\n💎 Born exclusive",
+      "likes": 171,
+      "category": "VIP"
+    },
+    {
+      "id": 13,
+      "text": "👟 Flex without trying\n📊 Making business look sexy\n🖤 Dark vibes, bright future\n🎉 Party like a mogul",
+      "likes": 159,
+      "category": "VIP"
+    },
+    {
+      "id": 14,
+      "text": "🎖 Decorated with ambition\n💬 Speaks in success\n🔱 Elite from birth\n🌪 Moves like magic",
+      "likes": 188,
+      "category": "VIP"
+    },
+    {
+      "id": 15,
+      "text": "🛍 Designer habits\n🏙 Sunset with skyline\n💸 Success on repeat\n🚀 Vision never sleeps",
+      "likes": 207,
+      "category": "VIP"
+    },
+    {
+      "id": 16,
+      "text": "🔒 Private club only\n💼 Empire mindset\n🚘 Chauffeured through life\n💎 Class in every detail",
+      "likes": 200,
+      "category": "VIP"
+    },
+    {
+      "id": 17,
+      "text": "👁 Eyes on the crown\n🎲 Risk it for the throne\n🪩 VIP every night\n📸 Flash-proof confidence",
+      "likes": 183,
+      "category": "VIP"
+    },
+    {
+      "id": 18,
+      "text": "🏝 Vacation is a lifestyle\n🧊 Ice in my veins\n🛫 Always in first class\n✨ Sparkle without trying",
+      "likes": 168,
+      "category": "VIP"
+    },
+    {
+      "id": 19,
+      "text": "📶 Always in range of success\n🚦Green lights only\n👞 Suited to win\n💫 Born to elevate",
+      "likes": 172,
+      "category": "VIP"
+    },
+    {
+      "id": 20,
+      "text": "🏛 Built for greatness\n🍷 Taste of success\n🛡 Guarded by grace\n📱 Digital dominance",
+      "likes": 176,
+      "category": "VIP"
+    },
+    {
+      "id": 21,
+      "text": "🕶 Cool without effort\n💸 Money talks, I whisper\n📍 Global elite\n🧠 Sharp mind, soft look",
+      "likes": 190,
+      "category": "VIP"
+    },
+    {
+      "id": 22,
+      "text": "🌟 Living legend mode\n📷 Camera loves me\n🚤 Life in the fast lane\n👔 Business casual royalty",
+      "likes": 187,
+      "category": "VIP"
+    },
+    {
+      "id": 23,
+      "text": "🛬 Touchdown in style\n📊 Wealth over fame\n🧳 Packed for power\n🖼 Painting my legacy",
+      "likes": 202,
+      "category": "VIP"
+    },
+    {
+      "id": 24,
+      "text": "🧊 Ice drip only\n💼 Office is my kingdom\n🛣 Path paved in gold\n🌇 View from the top",
+      "likes": 175,
+      "category": "VIP"
+    },
+    {
+      "id": 25,
+      "text": "🎓 Educated & elevated\n💄 Slay every second\n📈 Results over opinions\n📱 Status: Unreachable",
+      "likes": 179,
+      "category": "VIP"
+    },
+    {
+      "id": 26,
+      "text": "📦 Boxed in never\n💥 Energy unmatched\n🌍 World is my playground\n👑 Dripped in discipline",
+      "likes": 193,
+      "category": "VIP"
+    },
+    {
+      "id": 27,
+      "text": "🏹 Aim is royalty\n💼 CEO in progress\n🚘 Drive is designer\n✨ Signature shine only",
+      "likes": 181,
+      "category": "VIP"
+    },
+    {
+      "id": 28,
+      "text": "💵 Profits over problems\n🧠 Rich mind, rich life\n🗺 Born for world tour\n💃 Dance like a diva",
+      "likes": 173,
+      "category": "VIP"
+    },
+    {
+      "id": 29,
+      "text": "🏙 Skyscraper soul\n👔 Luxury is a lifestyle\n📍 Marked by elegance\n🛫 Jet mood always",
+      "likes": 185,
+      "category": "VIP"
+    },
+    {
+      "id": 30,
+      "text": "🌟 VIP from day one\n👗 Dressed like a deal\n🎤 Mic drop aura\n💎 Glam with goals",
+      "likes": 184,
+      "category": "VIP"
+    },
+    {
+      "id": 31,
+      "text": "🪙 Gold soul\n🔐 Secrets of success\n🧃 Sip success slowly\n📸 VIP from every angle",
+      "likes": 177,
+      "category": "VIP"
+    },
+    {
+      "id": 32,
+      "text": "🔮 Future: Fabulous\n🛍 Luxury cravings\n📞 Calls from opportunity\n🚘 Cruising to success",
+      "likes": 179,
+      "category": "VIP"
+    },
+    {
+      "id": 33,
+      "text": "🥂 Toast to the top\n🌉 Built bridges not excuses\n📌 Elite everyday\n💎 Dripping finesse",
+      "likes": 186,
+      "category": "VIP"
+    },
+    {
+      "id": 34,
+      "text": "💬 Talk less, flex more\n🕰 Timeless aura\n🚘 Wheels of wealth\n🎬 Life in high definition",
+      "likes": 181,
+      "category": "VIP"
+    },
+    {
+      "id": 35,
+      "text": "🌈 Rich vibes only\n👛 Bags and blessings\n🪩 VIP access granted\n🚨 Status: Unmatched",
+      "likes": 192,
+      "category": "VIP"
+    },
+    {
+      "id": 36,
+      "text": "🧿 Eyes blessed\n🌍 Global influencer\n💸 Bills paid in advance\n✨ Queen of the moment",
+      "likes": 188,
+      "category": "VIP"
+    },
+    {
+      "id": 37,
+      "text": "🚀 Born to rise\n📷 Filter: Rich only\n🏆 Trophy aura\n🎉 Life: Invite only",
+      "likes": 180,
+      "category": "VIP"
+    },
+    {
+      "id": 38,
+      "text": "🎀 Beauty in control\n🏖 Beach and business\n💎 Glow is real\n📍 Location: Paradise",
+      "likes": 170,
+      "category": "VIP"
+    },
+    {
+      "id": 39,
+      "text": "💼 Hustle like royalty\n🛬 Landed with purpose\n👑 Styled for the spotlight\n📱 Screen saver vibes",
+      "likes": 174,
+      "category": "VIP"
+    },
+    {
+      "id": 40,
+      "text": "🎯 Shot caller\n💍 Rich inside out\n📦 Package of power\n🚘 Driven by dreams",
+      "likes": 189,
+      "category": "VIP"
+    },
+    {
+      "id": 41,
+      "text": "💸 Swipe elite\n📶 Signal: High frequency\n🌐 Worldwide winner\n👗 Styled by success",
+      "likes": 182,
+      "category": "VIP"
+    },
+    {
+      "id": 42,
+      "text": "🌠 Star in every story\n💻 Built from hustle\n📍 Always top-tier\n🎁 Wrapped in royalty",
+      "likes": 168,
+      "category": "VIP"
+    },
+    {
+      "id": 43,
+      "text": "🛍 Splurge season\n🧠 Smarter than most\n📊 Boss status earned\n💅 Classy domination",
+      "likes": 173,
+      "category": "VIP"
+    },
+    {
+      "id": 44,
+      "text": "📸 Picture-perfect\n💎 Pure gold vibes\n🚗 Valet lifestyle\n🌙 Dreams already lived",
+      "likes": 179,
+      "category": "VIP"
+    },
+    {
+      "id": 45,
+      "text": "💬 Fluent in success\n🎧 Soundtrack: Winning\n👠 Stepping in style\n🪞 Reflection of royalty",
+      "likes": 176,
+      "category": "VIP"
+    },
+    {
+      "id": 46,
+      "text": "📱 Notifications off\n🧊 Ice energy\n🎯 Focused forever\n👑 Graceful dominance",
+      "likes": 181,
+      "category": "VIP"
+    },
+    {
+      "id": 47,
+      "text": "🚁 Only heights\n💼 Meetings with millionaires\n💃 Presence like power\n💎 Polished ambition",
+      "likes": 178,
+      "category": "VIP"
+    },
+    {
+      "id": 48,
+      "text": "📦 Luxury unboxed\n🖤 Mystery & elegance\n🎯 Manifested magic\n📸 Caught in excellence",
+      "likes": 172,
+      "category": "VIP"
+    },
+    {
+      "id": 49,
+      "text": "👛 Branded mentality\n🎇 Glow-up queen\n🚘 Driven to dominate\n📱 Viral & vital",
+      "likes": 180,
+      "category": "VIP"
+    },
+    {
+      "id": 50,
+      "text": "👑 Status secured\n💬 Talking legacy\n🚦Green lights only\n🛍 Thriving in style",
+      "likes": 199,
+      "category": "VIP"
+    }
+  ]
 }
