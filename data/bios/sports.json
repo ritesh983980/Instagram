@@ -35,6 +35,307 @@
             "text": "🏊‍♀ Water is my element\n🌊 Swim to win\n⏱ Beating my time\n💯 Dedicated to the sport",
             "likes": 243,
             "category": "Sports"
-        }
-    ]
+        },
+        
+    {
+      "id": 7,
+      "text": "🥊 Fight mode always on\n🔥 No fear, just focus\n🏆 Training like a beast\n💯 Born for greatness",
+      "likes": 265,
+      "category": "Sports"
+    },
+    {
+      "id": 8,
+      "text": "⚾ Baseball bloodline\n🎯 Focused on every pitch\n💪 Grind > Hype\n🏟 Live for game day",
+      "likes": 248,
+      "category": "Sports"
+    },
+    {
+      "id": 9,
+      "text": "🏓 Ping pong power\n💥 Fast reflexes\n🎯 Eye on the spin\n💪 Smash that point",
+      "likes": 233,
+      "category": "Sports"
+    },
+    {
+      "id": 10,
+      "text": "🏹 Aim. Focus. Release.\n🎯 Archer mindset\n💨 Precision in silence\n🔥 Target locked in",
+      "likes": 257,
+      "category": "Sports"
+    },
+    {
+      "id": 11,
+      "text": "🥋 Discipline is strength\n👊 Martial artist soul\n🔥 Train hard, fight easy\n🏅 Respect the grind",
+      "likes": 274,
+      "category": "Sports"
+    },
+    {
+      "id": 12,
+      "text": "🚴‍♂ Pedal with purpose\n🌄 Conquer the climb\n💪 Legs of steel\n🔥 No brakes, just speed",
+      "likes": 241,
+      "category": "Sports"
+    },
+    {
+      "id": 13,
+      "text": "🎮 Esports warrior\n🧠 Strategy over speed\n🔥 Gamer on fire\n🏆 Play to dominate",
+      "likes": 222,
+      "category": "Sports"
+    },
+    {
+      "id": 14,
+      "text": "🏐 Spike it hard\n🧠 Game smart\n🔥 Set. Spike. Win.\n🏆 Volleyball vibes only",
+      "likes": 234,
+      "category": "Sports"
+    },
+    {
+      "id": 15,
+      "text": "🥅 Goalkeeper pride\n🧤 Save after save\n💯 Reflex like lightning\n⚽ Defense is an art",
+      "likes": 253,
+      "category": "Sports"
+    },
+    {
+      "id": 16,
+      "text": "⛳ Calm mind, strong swing\n🌿 Green goals\n💥 Focused from tee to pin\n🏌‍♂ Golf is life",
+      "likes": 230,
+      "category": "Sports"
+    },
+    {
+      "id": 17,
+      "text": "🧗‍♂ Rise above fear\n🌄 One grip at a time\n💪 Strength meets courage\n🔥 Climb your limits",
+      "likes": 244,
+      "category": "Sports"
+    },
+    {
+      "id": 18,
+      "text": "🥶 Cold sweat, warm heart\n🏃‍♀ Marathon mode\n🔥 Keep moving forward\n🏅 Miles of motivation",
+      "likes": 260,
+      "category": "Sports"
+    },
+    {
+      "id": 19,
+      "text": "🏋‍♀ Strength in silence\n⏱ Every rep counts\n🔥 Hustle beats excuses\n🏆 Lifting legends only",
+      "likes": 239,
+      "category": "Sports"
+    },
+    {
+      "id": 20,
+      "text": "🛹 Skate or fade\n🌀 Tricks over talks\n🔥 Street legend mode\n💯 Rolling with style",
+      "likes": 227,
+      "category": "Sports"
+    },
+    {
+      "id": 21,
+      "text": "🤸‍♀ Flex & fly\n🎯 Balance is beauty\n🔥 Power in every pose\n🏅 Gymnast in action",
+      "likes": 238,
+      "category": "Sports"
+    },
+    {
+      "id": 22,
+      "text": "🥶 Ice in my veins\n🏒 Hockey mindset\n💥 Fast, fierce, focused\n🏆 Game face on",
+      "likes": 246,
+      "category": "Sports"
+    },
+    {
+      "id": 23,
+      "text": "🛼 Skating soul\n🌈 Glide with grace\n🔥 Spins & speed\n🏅 Rhythm on wheels",
+      "likes": 221,
+      "category": "Sports"
+    },
+    {
+      "id": 24,
+      "text": "🥊 One punch changes all\n💢 Built for the ring\n🔥 Discipline + power\n🏆 Fighter by blood",
+      "likes": 267,
+      "category": "Sports"
+    },
+    {
+      "id": 25,
+      "text": "🏃‍♂ Train. Sweat. Repeat.\n🔥 No excuses here\n🎯 Speed is power\n🏁 Always in motion",
+      "likes": 259,
+      "category": "Sports"
+    },
+    {
+      "id": 26,
+      "text": "⚽ Eat. Sleep. Football.\n💯 Dream beyond limits\n🏆 Live the jersey\n🔥 Matchday every day",
+      "likes": 273,
+      "category": "Sports"
+    },
+    {
+      "id": 27,
+      "text": "🏸 Smash mode on\n🔥 Shuttle never rests\n🎯 Accuracy over power\n💪 Trained to win",
+      "likes": 245,
+      "category": "Sports"
+    },
+    {
+      "id": 28,
+      "text": "🎿 Skiing through life\n🌨 Snow is my zone\n💨 Speed meets peace\n🏔 Born to descend",
+      "likes": 218,
+      "category": "Sports"
+    },
+    {
+      "id": 29,
+      "text": "🤾‍♂ Teamwork = victory\n🔥 Fast and fierce\n🎯 Pass, shoot, win\n🏆 Handball beast mode",
+      "likes": 225,
+      "category": "Sports"
+    },
+    {
+      "id": 30,
+      "text": "🚣‍♂ Power in strokes\n🌊 Rhythm & resistance\n🔥 Never back down\n🏅 Row till glory",
+      "likes": 226,
+      "category": "Sports"
+    },
+    {
+      "id": 31,
+      "text": "🧘‍♂ Mind + body = power\n🌅 Calm under pressure\n🔥 Stretch the limits\n🏆 Fitness is peace",
+      "likes": 232,
+      "category": "Sports"
+    },
+    {
+      "id": 32,
+      "text": "🚀 Speed defines me\n🏁 Built for racing\n🔥 Fuel the fire\n🏎 Catch me if you can",
+      "likes": 261,
+      "category": "Sports"
+    },
+    {
+      "id": 33,
+      "text": "⛷ Slopes are my runway\n💨 Snow trail killer\n🔥 Glide, turn, conquer\n🎿 Winter warrior",
+      "likes": 219,
+      "category": "Sports"
+    },
+    {
+      "id": 34,
+      "text": "🧤 Gloves on, fear gone\n🥅 I guard the goal\n🔥 Precision under pressure\n⚽ Save every shot",
+      "likes": 247,
+      "category": "Sports"
+    },
+    {
+      "id": 35,
+      "text": "🏋‍♂ Lift heavy, live strong\n🔥 Earn every rep\n🎯 Focused & fierce\n💪 Train like a legend",
+      "likes": 268,
+      "category": "Sports"
+    },
+    {
+      "id": 36,
+      "text": "🏸 Drop, drive, dominate\n💥 Fast hands, faster feet\n🔥 Game never ends\n🏅 Serve and win",
+      "likes": 235,
+      "category": "Sports"
+    },
+    {
+      "id": 37,
+      "text": "🧠 Mind of a coach\n🔥 Heart of a champion\n🏆 Strategy over luck\n🎯 Every move matters",
+      "likes": 240,
+      "category": "Sports"
+    },
+    {
+      "id": 38,
+      "text": "🥊 Punch with purpose\n🧠 Calm under chaos\n🔥 Fist full of fire\n🏆 Knockout mindset",
+      "likes": 258,
+      "category": "Sports"
+    },
+    {
+      "id": 39,
+      "text": "🚴‍♀ Speed addict\n🔥 Push the pedal\n🌬 Ride the wind\n🏁 No limits, no fear",
+      "likes": 229,
+      "category": "Sports"
+    },
+    {
+      "id": 40,
+      "text": "🏌‍♂ Swing like a pro\n🌤 Tee to triumph\n🔥 Precision is power\n⛳ Score with class",
+      "likes": 217,
+      "category": "Sports"
+    },
+    {
+      "id": 41,
+      "text": "🤽‍♂ Water warrior\n🔥 Dive to dominate\n🎯 Aim, shoot, win\n🌊 Aqua athlete",
+      "likes": 224,
+      "category": "Sports"
+    },
+    {
+      "id": 42,
+      "text": "🎮 Gaming is sport\n💯 Precision in play\n🔥 Competitive soul\n🏆 Always online for glory",
+      "likes": 220,
+      "category": "Sports"
+    },
+    {
+      "id": 43,
+      "text": "🎿 Glide like a storm\n🔥 Ice is home\n🏆 Freeze the moment\n⛷ Born to ski",
+      "likes": 216,
+      "category": "Sports"
+    },
+    {
+      "id": 44,
+      "text": "🏏 Bat talks louder\n🔥 Cricket is religion\n💪 Trained in heat\n🏆 Born for boundaries",
+      "likes": 275,
+      "category": "Sports"
+    },
+    {
+      "id": 45,
+      "text": "🎯 Every shot counts\n🔥 Focused eyes\n🏹 Calm before release\n🏆 Archery is life",
+      "likes": 236,
+      "category": "Sports"
+    },
+    {
+      "id": 46,
+      "text": "🤸‍♂ No fear in flight\n💪 Core of steel\n🔥 Twist, turn, triumph\n🏅 Gymnast pride",
+      "likes": 228,
+      "category": "Sports"
+    },
+    {
+      "id": 47,
+      "text": "🥍 Fast like fire\n🎯 Stick control king\n🔥 Lacrosse love\n🏆 Goals over limits",
+      "likes": 223,
+      "category": "Sports"
+    },
+    {
+      "id": 48,
+      "text": "🛷 Ice rush mode\n🔥 Cold speed thrill\n🌬 Glide with grit\n🏁 Born for the slide",
+      "likes": 215,
+      "category": "Sports"
+    },
+    {
+      "id": 49,
+      "text": "🤼‍♂ Grapple with strength\n🔥 Fight with heart\n🎯 Technique wins\n🏆 Wrestle to rise",
+      "likes": 252,
+      "category": "Sports"
+    },
+    
+      "id": 50,
+      "text": "🏓 Focused and fast\n💨 No time to blink\n🔥 Spin and strike\n🏆 Ping pong pride",
+      "likes": 237,
+      "category": "Sports"
+    },
+    {
+      "id": 51,
+      "text": "🏸 Sky-high smashes\n🎯 Game mode always on\n🔥 Never miss a shot\n💪 Champion's touch",
+      "likes": 249,
+      "category": "Sports"
+    },
+    {
+      "id": 52,
+      "text": "🏁 Sprint to success\n🔥 Legs of lightning\n🎯 Beat your best\n💪 Athlete mind always",
+      "likes": 264,
+      "category": "Sports"
+    },
+    {
+      "id": 53,
+      "text": "⚽ One ball, one dream\n🔥 Life is matchday\n🏆 Skills + will\n🎯 Win with passion",
+      "likes": 266,
+      "category": "Sports"
+    },
+    {
+      "id": 54,
+      "text": "🏀 Hustle on the court\n🔥 Defense is the key\n🎯 Teamwork wins\n🏆 Ball never lies",
+      "likes": 250,
+      "category": "Sports"
+    },
+    {
+      "id": 55,
+      "text": "🏋‍♂ Power in progress\n🔥 Beast mode ON\n🎯 Train like a warrior\n💯 No rest, just reps",
+      "likes": 270,
+      "category": "Sports"
+    },
+    {
+      "id": 56,
+      "text": "🏅 Sports isn't a game\n🔥 It's a lifestyle\n💪 Sweat > shortcuts\n🎯 Everyday is day one",
+      "likes": 271,
+      "category": "Sports"
+    }
+  ]
 }
