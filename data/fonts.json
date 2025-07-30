@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Bold Mathematical",
-            "style": "font-family: 'Arial', sans-serif;",
+            "style": "font-family: 'Arial', sans-serif; font-weight: bold;",
             "category": "Headings",
             "unicodeType": "Mathematical Bold (Unicode)",
             "worksOn": ["Instagram", "WhatsApp", "Facebook", "Twitter"]
@@ -11,7 +11,7 @@
         {
             "id": 2,
             "name": "Elegant Script",
-            "style": "font-family: 'Arial', sans-serif; font-size: 2.2rem;",
+            "style": "font-family: 'Dancing Script', cursive; font-size: 2.2rem;",
             "category": "Romantic bios",
             "unicodeType": "Mathematical Script (Unicode)",
             "worksOn": ["Instagram", "WhatsApp", "Facebook"]
@@ -27,7 +27,7 @@
         {
             "id": 4,
             "name": "Gothic Blackletter",
-            "style": "font-family: 'Times New Roman', serif;",
+            "style": "font-family: 'Texturina', serif; /* Or a similar gothic web font */",
             "category": "Mysterious bios",
             "unicodeType": "Blackletter (Unicode)",
             "worksOn": ["Instagram", "WhatsApp"]
@@ -59,7 +59,7 @@
         {
             "id": 8,
             "name": "Double Struck",
-            "style": "font-family: 'Arial', sans-serif;",
+            "style": "font-family: 'Arial', sans-serif; text-shadow: 0.5px 0 0 currentColor, -0.5px 0 0 currentColor;",
             "category": "Academic bios",
             "unicodeType": "Mathematical Double-struck (Unicode)",
             "worksOn": ["Instagram", "WhatsApp"]
@@ -79,87 +79,166 @@
             "category": "VIP bios",
             "unicodeType": "Colored Text (Unicode + CSS)",
             "worksOn": ["Instagram (as text)", "Websites"]
-
         },
-    {
-      "id": 11,
-      "name": "Italic Classy",
-      "style": "font-family: 'Georgia', serif; font-style: italic;",
-      "category": "Stylish bios",
-      "unicodeType": "Italic Unicode",
-      "worksOn": ["Instagram", "WhatsApp", "Facebook"]
-    },
-    {
-      "id": 12,
-      "name": "Tiny Text",
-      "style": "font-family: 'Arial', sans-serif; font-size: 0.7rem;",
-      "category": "Soft/baby bios",
-      "unicodeType": "Superscript Unicode",
-      "worksOn": ["Instagram", "Twitter"]
-    },
-    {
-      "id": 13,
-      "name": "Mirror Flip",
-      "style": "font-family: 'Arial', sans-serif; transform: scaleX(-1);",
-      "category": "Creative/fun bios",
-      "unicodeType": "Flipped Unicode",
-      "worksOn": ["Instagram", "WhatsApp"]
-    },
-    {
-      "id": 14,
-      "name": "Wide Caps",
-      "style": "font-family: 'Courier', monospace; letter-spacing: 6px;",
-      "category": "Bold intro bios",
-      "unicodeType": "Fullwidth Unicode",
-      "worksOn": ["Instagram", "Facebook", "Discord"]
-    },
-    {
-      "id": 15,
-      "name": "Zalgo Glitch",
-      "style": "font-family: 'Arial', sans-serif;",
-      "category": "Spooky/mystery bios",
-      "unicodeType": "Zalgo Text",
-      "worksOn": ["Instagram", "Discord"]
-    },
-    {
-      "id": 16,
-      "name": "Currency Style",
-      "style": "font-family: 'Arial', sans-serif;",
-      "category": "Money/Finance bios",
-      "unicodeType": "Currency Unicode Symbols",
-      "worksOn": ["Instagram", "WhatsApp", "LinkedIn"]
-    },
-    {
-      "id": 17,
-      "name": "Cute Kawaii",
-      "style": "font-family: 'Comic Sans MS', cursive;",
-      "category": "Kawaii/cute bios",
-      "unicodeType": "Cutesy Unicode",
-      "worksOn": ["Instagram", "WhatsApp", "Snapchat"]
-    },
-    {
-      "id": 18,
-      "name": "Boxed Letters",
-      "style": "font-family: 'Arial', sans-serif;",
-      "category": "Gaming/fancy bios",
-      "unicodeType": "Box Drawing Unicode",
-      "worksOn": ["Instagram", "Discord"]
-    },
-    {
-      "id": 19,
-      "name": "Old Typewriter",
-      "style": "font-family: 'Lucida Console', monospace;",
-      "category": "Vintage bios",
-      "unicodeType": "Monospaced Unicode",
-      "worksOn": ["Instagram", "Facebook"]
-    },
-    {
-      "id": 20,
-      "name": "Cursive Romantic",
-      "style": "font-family: 'Dancing Script', cursive; font-size: 2rem;",
-      "category": "Romantic bios",
-      "unicodeType": "Cursive Unicode",
-      "worksOn": ["Instagram", "WhatsApp"]
-    }
-  ]
+        {
+            "id": 11,
+            "name": "Italic Classy",
+            "style": "font-family: 'Georgia', serif; font-style: italic;",
+            "category": "Stylish bios",
+            "unicodeType": "Italic Unicode",
+            "worksOn": ["Instagram", "WhatsApp", "Facebook"]
+        },
+        {
+            "id": 12,
+            "name": "Tiny Text",
+            "style": "font-family: 'Arial', sans-serif; font-size: 0.7rem;",
+            "category": "Soft/baby bios",
+            "unicodeType": "Superscript Unicode",
+            "worksOn": ["Instagram", "Twitter"]
+        },
+        {
+            "id": 13,
+            "name": "Mirror Flip",
+            "style": "font-family: 'Arial', sans-serif; transform: scaleX(-1);",
+            "category": "Creative/fun bios",
+            "unicodeType": "Flipped Unicode",
+            "worksOn": ["Instagram", "WhatsApp"]
+        },
+        {
+            "id": 14,
+            "name": "Wide Caps",
+            "style": "font-family: 'Courier', monospace; letter-spacing: 6px;",
+            "category": "Bold intro bios",
+            "unicodeType": "Fullwidth Unicode",
+            "worksOn": ["Instagram", "Facebook", "Discord"]
+        },
+        {
+            "id": 15,
+            "name": "Zalgo Glitch",
+            "style": "font-family: 'Arial', sans-serif; /* Zalgo is done by combining characters, not CSS */",
+            "category": "Spooky/mystery bios",
+            "unicodeType": "Zalgo Text",
+            "worksOn": ["Instagram", "Discord"]
+        },
+        {
+            "id": 16,
+            "name": "Currency Style",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Money/Finance bios",
+            "unicodeType": "Currency Unicode Symbols",
+            "worksOn": ["Instagram", "WhatsApp", "LinkedIn"]
+        },
+        {
+            "id": 17,
+            "name": "Cute Kawaii",
+            "style": "font-family: 'Comic Sans MS', cursive;",
+            "category": "Kawaii/cute bios",
+            "unicodeType": "Cutesy Unicode",
+            "worksOn": ["Instagram", "WhatsApp", "Snapchat"]
+        },
+        {
+            "id": 18,
+            "name": "Boxed Letters",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Gaming/fancy bios",
+            "unicodeType": "Box Drawing Unicode",
+            "worksOn": ["Instagram", "Discord"]
+        },
+        {
+            "id": 19,
+            "name": "Old Typewriter",
+            "style": "font-family: 'Lucida Console', monospace;",
+            "category": "Vintage bios",
+            "unicodeType": "Monospaced Unicode",
+            "worksOn": ["Instagram", "Facebook"]
+        },
+        {
+            "id": 20,
+            "name": "Cursive Romantic",
+            "style": "font-family: 'Dancing Script', cursive; font-size: 2rem;",
+            "category": "Romantic bios",
+            "unicodeType": "Cursive Unicode",
+            "worksOn": ["Instagram", "WhatsApp"]
+        },
+        {
+            "id": 21,
+            "name": "Underlined Text",
+            "style": "text-decoration: underline;",
+            "category": "Emphasis",
+            "unicodeType": "Combining Diacritics",
+            "worksOn": ["Instagram", "WhatsApp", "Twitter"]
+        },
+        {
+            "id": 22,
+            "name": "Strikethrough Text",
+            "style": "text-decoration: line-through;",
+            "category": "Correction/Deleted",
+            "unicodeType": "Combining Diacritics",
+            "worksOn": ["Instagram", "WhatsApp", "Twitter"]
+        },
+        {
+            "id": 23,
+            "name": "Small Caps",
+            "style": "font-variant: small-caps;",
+            "category": "Subtle Headings",
+            "unicodeType": "Small Capitals Unicode",
+            "worksOn": ["Instagram", "Twitter"]
+        },
+        {
+            "id": 24,
+            "name": "Parenthesized",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Informal/Lists",
+            "unicodeType": "Parenthesized Unicode",
+            "worksOn": ["Instagram", "Twitter"]
+        },
+        {
+            "id": 25,
+            "name": "Dot Above",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Scientific/Subtle",
+            "unicodeType": "Combining Dot Above",
+            "worksOn": ["Instagram", "Facebook"]
+        },
+        {
+            "id": 26,
+            "name": "Double Underline",
+            "style": "text-decoration: underline double;",
+            "category": "Emphasis/Formal",
+            "unicodeType": "Combining Double Underline",
+            "worksOn": ["Instagram", "LinkedIn"]
+        },
+        {
+            "id": 27,
+            "name": "Acute Accent",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Special Characters",
+            "unicodeType": "Combining Acute Accent",
+            "worksOn": ["Instagram", "WhatsApp"]
+        },
+        {
+            "id": 28,
+            "name": "Inverted Square",
+            "style": "font-family: 'Arial', sans-serif;",
+            "category": "Unique/Tech",
+            "unicodeType": "Negative Squared Unicode",
+            "worksOn": ["Instagram", "Discord"]
+        },
+        {
+            "id": 29,
+            "name": "Wavy Underline",
+            "style": "text-decoration: underline wavy;",
+            "category": "Decorative",
+            "unicodeType": "Combining Wavy Underline",
+            "worksOn": ["Instagram", "Twitter"]
+        },
+        {
+            "id": 30,
+            "name": "Superscript Small",
+            "style": "font-family: 'Arial', sans-serif; vertical-align: super; font-size: 0.7em;",
+            "category": "Tiny Text",
+            "unicodeType": "Superscript Unicode",
+            "worksOn": ["Instagram", "Twitter"]
+        }
+    ]
 }
