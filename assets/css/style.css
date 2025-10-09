@@ -1,0 +1,874 @@
+/* Enhanced CSS for UniqueBio.in */
+/* =========================== */
+
+/* Global Styles */
+:root {
+    --primary-color: #6c5ce7; /* Deep purple */
+    --secondary-color: #00cec9; /* Teal accent */
+    --dark-color: #2d3436;
+    --light-color: #f5f6fa; /* Default body background - used for header as well */
+    --accent-color: #fd79a8; /* Pink accent */
+    --gray-color: #636e72;
+    --success-color: #00b894;
+    --warning-color: #fdcb6e;
+    
+    /* Stronger shadow for cards - as requested */
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    --box-shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.12); 
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    /* Spacing variables for better consistency */
+    --spacing-xs: 0.5rem;   /* ~8px */
+    --spacing-sm: 1rem;    /* ~16px */
+    --spacing-md: 1.5rem;  /* ~24px */
+    --spacing-lg: 2rem;    /* ~32px */
+    --spacing-xl: 3rem;    /* ~48px */
+
+    /* Define dark background color for footer */
+    --dark-bg-color: #2d3436; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--dark-color);
+    background-color: var(--light-color); 
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-sm); 
+}
+
+h2 {
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: var(--spacing-md); 
+    color: var(--gray-color);
+}
+
+/* Links & Buttons */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+    color: white;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    z-index: -1;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.btn:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* === HEADER (NAVIGATION BAR) STYLES === */
+header {
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    min-height: 140px;
+}
+
+/* Header with gradient background for category pages AND index.html */
+.header-gradient-bg {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));
+    box-shadow: none; 
+}
+
+.header-gradient-bg .logo-text,
+.header-gradient-bg .header-tagline {
+    color: white !important; 
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color); 
+    text-decoration: none;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.header-tagline {
+    font-size: 0.9rem;
+    color: var(--gray-color); 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-tabs ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-tab {
+    background: rgba(0, 0, 0, 0.05); 
+    padding: 8px 16px;
+    border-radius: 25px;
+    color: var(--dark-color); 
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    transition: var(--transition);
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    display: block;
+    white-space: nowrap;
+}
+
+.hero-tab:hover,
+.hero-tab.active {
+    background: var(--primary-color); 
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color); 
+}
+
+/* Styles for hero-tabs within the gradient header (all pages now) */
+.header-gradient-bg .hero-tab {
+    background: white; 
+    color: var(--dark-color); 
+    border: 1px solid white; 
+}
+
+.header-gradient-bg .hero-tab:hover,
+.header-gradient-bg .hero-tab.active {
+    background: rgba(255, 255, 255, 0.8); 
+    color: var(--dark-color);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: none; 
+}
+
+.hero-tabs ul li a::after {
+    display: none;
+}
+
+
+/* === SECONDARY HERO SECTION === */
+.secondary-hero {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.vip-gradient-bg {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.9), rgba(0, 206, 201, 0.9));
+}
+
+.secondary-hero .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.secondary-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: white !important; 
+    background: none !important; 
+    -webkit-background-clip: initial !important; 
+    background-clip: initial !important; 
+    -webkit-text-fill-color: white !important; 
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.secondary-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: white !important; 
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+    color: var(--dark-color);
+}
+
+.search-box button {
+    padding: 0 20px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.search-box button:hover {
+    background: var(--primary-color);
+}
+
+
+/* About Intro Section */
+.about-intro {
+    padding: 60px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.about-intro h2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* --- Category Grid (Unified Card Design) --- */
+.categories {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.categories h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl); 
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: var(--spacing-lg); 
+}
+
+.category-card {
+    /* Unified Card Style */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Soft border for base */
+    border-left: 5px solid var(--primary-color); /* Colored side border */
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--primary-color); /* Highlight border on hover */
+    border-left-color: var(--secondary-color); /* Change side border color on hover */
+}
+
+.category-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-color); /* Match feature card text color */
+}
+
+.category-card p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+/* --- Features Section (Unified Card Design) --- */
+.features {
+    padding: 60px 0;
+    background-color: var(--light-color);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    /* Unified Card Style (Matching Category Card) */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Soft border for base */
+    border-left: 5px solid var(--secondary-color); /* Colored side border (using secondary for distinction) */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--secondary-color); /* Highlight border on hover */
+    border-left-color: var(--primary-color); /* Change side border color on hover */
+}
+
+.feature-card h3 {
+    color: var(--dark-color); /* Match category card text color */
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.feature-card i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Bio Cards */
+.bio-container {
+    padding: 60px 0;
+    background-color: white; /* Ensure background is defined */
+}
+
+.bio-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl); 
+}
+
+.bio-header p {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-md); 
+    font-size: 0.95rem;
+}
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: var(--spacing-lg); 
+}
+
+.bio-card {
+    background-color: var(--light-color); /* Lighter background for bio cards */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex; /* Flex for content and button separation */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bio-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.bio-text {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.copy-btn {
+    /* Adjusted size for compactness */
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Adjusted padding */
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    width: auto; /* Width auto to fit content */
+    align-self: flex-end; /* Align right */
+    font-size: 0.8rem; /* Smaller font size */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.copy-btn:hover {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-1px);
+}
+
+
+/* --- Footer Styles --- */
+footer {
+    background-color: var(--dark-bg-color);
+    color: var(--light-color);
+    padding: 40px 0 20px;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    text-align: center; 
+    padding: 0 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        text-align: left;
+    }
+}
+
+.footer-section {
+    background-color: transparent; 
+    padding: 0; 
+}
+
+.footer-section h3 {
+    color: var(--secondary-color); 
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+@media (min-width: 768px) {
+    .footer-section ul {
+        justify-content: flex-start; 
+        align-items: flex-start; 
+    }
+}
+
+.footer-section ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    background-color: transparent; 
+    display: block; 
+    padding: 2px 0; 
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color); 
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        justify-content: flex-start; 
+    }
+}
+
+.social-icons a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: transparent; 
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+/* Utility Classes */
+.mt-2 { margin-top: var(--spacing-sm); } 
+.mt-4 { margin-top: var(--spacing-lg); } 
+.mt-5 { margin-top: var(--spacing-xl); } 
+
+.text-center {
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.fade-in.animated {
+    opacity: 1;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        min-height: 120px;
+        padding: 10px 0;
+    }
+
+    .logo-text {
+        font-size: 1.8rem;
+    }
+
+    .header-tagline {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-tabs ul {
+        gap: 6px;
+    }
+
+    .hero-tab {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+
+    .secondary-hero {
+        padding: 70px 0;
+        min-height: 350px;
+    }
+    .secondary-hero h1 {
+        font-size: 2rem;
+    }
+    .secondary-hero p {
+        font-size: 1rem;
+    }
+
+    .search-box {
+        max-width: 90%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    .footer-section:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        min-height: 110px;
+        padding: 8px 0;
+    }
+    .logo-text {
+        font-size: 1.6rem;
+    }
+    .header-tagline {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+    .hero-tab {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
+    .secondary-hero h1 {
+        font-size: 1.6rem;
+    }
+    .secondary-hero p {
+        font-size: 0.85rem;
+    }
+
+    .category-grid,
+    .feature-grid,
+    .bio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box input, .search-box button {
+        padding: 8px 15px;
+    }
+}
+
+
+/* --- Contact Page Styles --- */
+.contact-content {
+    padding: 60px 0;
+    background-color: white;
+    text-align: center; 
+}
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: var(--spacing-xl);
+}
+.contact-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+.contact-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.contact-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+.contact-card p {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+}
+.contact-card .email-link {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+.contact-form-block {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+.contact-form-block h2 {
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+.contact-form-block p {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+.contact-form .form-group {
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    transition: border-color 0.3s ease;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.contact-form .btn {
+    width: auto;
+    display: block; 
+    margin: 20px auto 0; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-card {
+        padding: 20px;
+    }
+}
+
+
+/* --- Legal Pages Styles (for Disclaimer and Privacy Policy) --- */
+.legal-content {
+    padding: 60px 0;
+    background-color: white;
+}
+.legal-text-block {
+    margin-bottom: var(--spacing-xl); 
+    line-height: 1.8;
+}
+.legal-text-block:last-of-type {
+    margin-bottom: var(--spacing-lg); 
+}
+.legal-text-block h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+.legal-text-block p {
+    color: var(--dark-color);
+    font-size: 0.95rem;
+  }
