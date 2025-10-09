@@ -1,1 +1,128 @@
-document.addEventListener('DOMContentLoaded',()=>{const bioDisplayArea=document.getElementById('bio-display-area');function getCategoryFromurl(){// URL à¤ªà¤¾à¤¥ à¤•à¥‹ '/' à¤¸à¥‡ à¤¤à¥‹à¤¡à¤¼à¥‡à¤‚ const pathSegments=window.location.pathname.split('/');// à¤†à¤–à¤¿à¤°à¥€ à¤¸à¥‡à¤—à¤®à¥‡à¤‚à¤Ÿ à¤«à¤¾à¤‡à¤² à¤•à¤¾ à¤¨à¤¾à¤® à¤¹à¥‹à¤—à¤¾ (à¤œà¥ˆà¤¸à¥‡ 'vip.html') const fileName=pathSegments[pathSegments.length - 1];if (fileName && fileName.endsWith('.html')){// '.html' à¤à¤•à¥à¤¸à¤Ÿà¥‡à¤‚à¤¶à¤¨ à¤¹à¤Ÿà¤¾à¤•à¤° à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤•à¤¾ à¤¨à¤¾à¤® à¤¨à¤¿à¤•à¤¾à¤²à¥‡à¤‚ return fileName.replace('.html','')}return null}async function fetchBios(category){try{// à¤µà¤¿à¤¶à¤¿à¤·à¥à¤Ÿ à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤•à¥€ JSON à¤«à¤¼à¤¾à¤‡à¤² à¤•à¤¾ à¤ªà¤¾à¤¥ à¤¬à¤¨à¤¾à¤à¤‚ // à¤®à¤¾à¤¨ à¤²à¥‡à¤‚ à¤•à¤¿ JSON à¤«à¤¼à¤¾à¤‡à¤²à¥‡à¤‚ /data/ à¤«à¥‹à¤²à¥à¤¡à¤° à¤®à¥‡à¤‚ à¤¹à¥ˆà¤‚ const response=await fetch(`/data/${category}.json`);// à¤œà¤¾à¤‚à¤šà¥‡à¤‚ à¤•à¤¿ à¤°à¤¿à¤•à¥à¤µà¥‡à¤¸à¥à¤Ÿ à¤¸à¤«à¤² à¤¥à¥€ à¤¯à¤¾ à¤¨à¤¹à¥€à¤‚ if (!response.ok){throw new Error(`HTTP error! status:${response.status}for category:${category}. Check if /data/${category}.json exists.`)}const data=await response.json();// à¤®à¤¾à¤¨ à¤²à¥‡à¤‚ à¤•à¤¿ à¤¸à¤‚à¤°à¤šà¤¨à¤¾ à¤à¤• à¤‘à¤¬à¥à¤œà¥‡à¤•à¥à¤Ÿ à¤•à¥‡ à¤¸à¤¾à¤¥ à¤à¤• array à¤¹à¥ˆ:[{category:"...",bios:[...]}] if (data && data.length>0 && data[0].bios){return data[0].bios}else{console.warn(`'/data/${category}.json' à¤®à¥‡à¤‚ 'bios' array à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾ à¤¯à¤¾ à¤«à¤¼à¤¾à¤‡à¤² à¤–à¤¾à¤²à¥€ à¤¹à¥ˆà¥¤`);return []}}catch (error){console.error(`à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ '${category}' à¤•à¥‡ à¤¬à¤¾à¤¯à¥‹ fetch à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿:`,error);// à¤¤à¥à¤°à¥à¤Ÿà¤¿ à¤¹à¥‹à¤¨à¥‡ à¤ªà¤° à¤–à¤¾à¤²à¥€ array à¤²à¥Œà¤Ÿà¤¾à¤à¤‚ à¤¤à¤¾à¤•à¤¿ à¤à¤ª à¤•à¥à¤°à¥ˆà¤¶ à¤¨ à¤¹à¥‹ return []}}function displayBios(biosArray,currentCategory){if (!bioDisplayArea){console.error("à¤¬à¤¾à¤¯à¥‹ à¤¡à¤¿à¤¸à¥à¤ªà¥à¤²à¥‡ à¤à¤°à¤¿à¤¯à¤¾ à¤à¤²à¤¿à¤®à¥‡à¤‚à¤Ÿ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾à¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¸à¥à¤¨à¤¿à¤¶à¥à¤šà¤¿à¤¤ à¤•à¤°à¥‡à¤‚ à¤•à¤¿ 'bio-display-area' ID à¤µà¤¾à¤²à¤¾ à¤à¤• à¤à¤²à¤¿à¤®à¥‡à¤‚à¤Ÿ à¤®à¥Œà¤œà¥‚à¤¦ à¤¹à¥ˆà¥¤");return}// à¤ªà¤¹à¤²à¥‡ à¤¸à¥‡ à¤ªà¥à¤°à¤¦à¤°à¥à¤¶à¤¿à¤¤ à¤¬à¤¾à¤¯à¥‹ à¤•à¥‹ à¤¸à¤¾à¤« à¤•à¤°à¥‡à¤‚ bioDisplayArea.innerHTML='';if (biosArray.length===0){bioDisplayArea.innerHTML=`<p>"${currentCategory}" à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤•à¥‡ à¤²à¤¿à¤ à¤•à¥‹à¤ˆ à¤¬à¤¾à¤¯à¥‹ à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¥¤</p>`;return}// à¤µà¤°à¥à¤¤à¤®à¤¾à¤¨ à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¶à¥€à¤°à¥à¤·à¤• à¤œà¥‹à¤¡à¤¼à¥‡à¤‚ const categoryHeading=document.createElement('h2');categoryHeading.textContent=`${currentCategory.charAt(0).toUpperCase()+currentCategory.slice(1)}Bios`;bioDisplayArea.appendChild(categoryHeading);// à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• à¤¬à¤¾à¤¯à¥‹ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤¸à¥‚à¤šà¥€ à¤¯à¤¾ à¤µà¥à¤¯à¤•à¥à¤¤à¤¿à¤—à¤¤ à¤ªà¥ˆà¤°à¤¾à¤—à¥à¤°à¤¾à¤« à¤¬à¤¨à¤¾à¤à¤‚ const bioList=document.createElement('ul');// à¤¬à¥‡à¤¹à¤¤à¤° à¤¸à¤‚à¤°à¤šà¤¨à¤¾ à¤•à¥‡ à¤²à¤¿à¤ à¤à¤• à¤…à¤¨à¤‘à¤°à¥à¤¡à¤° à¤²à¤¿à¤¸à¥à¤Ÿ à¤•à¤¾ à¤‰à¤ªà¤¯à¥‹à¤— à¤•à¤°à¥‡à¤‚ biosArray.forEach(bioText=>{const listItem=document.createElement('li');listItem.textContent=bioText;bioList.appendChild(listItem)});bioDisplayArea.appendChild(bioList)}// à¤®à¥à¤–à¥à¤¯ à¤²à¥‰à¤œà¤¿à¤•:à¤ªà¥‡à¤œ à¤²à¥‹à¤¡ à¤¹à¥‹à¤¨à¥‡ à¤ªà¤° URL à¤¸à¥‡ à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤ªà¤¹à¤šà¤¾à¤¨à¥‡à¤‚ à¤”à¤° à¤¬à¤¾à¤¯à¥‹ à¤²à¥‹à¤¡ à¤•à¤°à¥‡à¤‚ const currentCategory=getCategoryFromurl();if (currentCategory){fetchBios(currentCategory).then(bios=>{displayBios(bios,currentCategory)})}else{// à¤¯à¤¹ à¤•à¥‹à¤¡ à¤¤à¤¬ à¤šà¤²à¥‡à¤—à¤¾ à¤œà¤¬ bios.js à¤à¤¸à¥‡ à¤ªà¥‡à¤œ à¤ªà¤° à¤²à¥‹à¤¡ à¤¹à¥‹ à¤œà¥‹ à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤ªà¥‡à¤œ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ (à¤œà¥ˆà¤¸à¥‡ index.html) // à¤¹à¤¾à¤²à¤¾à¤à¤•à¤¿,à¤‡à¤¸ à¤¨à¤ à¤¸à¥‡à¤Ÿà¤…à¤ª à¤®à¥‡à¤‚ bios.js à¤•à¥‡à¤µà¤² à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤ªà¥‡à¤œà¥‹à¤‚ à¤ªà¤° à¤¹à¥€ à¤²à¤¿à¤‚à¤• à¤•à¤¿à¤¯à¤¾ à¤œà¤¾à¤à¤—à¤¾à¥¤ console.warn("URL à¤¸à¥‡ à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤¨à¤¿à¤°à¥à¤§à¤¾à¤°à¤¿à¤¤ à¤¨à¤¹à¥€à¤‚ à¤•à¥€ à¤œà¤¾ à¤¸à¤•à¥€à¥¤ à¤•à¥‹à¤ˆ à¤¬à¤¾à¤¯à¥‹ à¤²à¥‹à¤¡ à¤¨à¤¹à¥€à¤‚ à¤¹à¥‹à¤—à¤¾à¥¤");if (bioDisplayArea){bioDisplayArea.innerHTML="<p>à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤¬à¤¾à¤¯à¥‹ à¤¦à¥‡à¤–à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤®à¥à¤–à¥à¤¯ à¤ªà¥‡à¤œ à¤¸à¥‡ à¤à¤• à¤•à¥ˆà¤Ÿà¥‡à¤—à¤°à¥€ à¤šà¥à¤¨à¥‡à¤‚à¥¤</p>"}}});
+/**
+ * bios.js
+ * Handles loading and display of bios from JSON data on category pages (e.g., vip.html, attitude.html).
+ */
+
+const bioLoaderModule = (() => {
+    // Determine the current bio category from the URL path.
+    // Example: /pages/bios/vip.html -> 'vip'
+    const getCurrentCategory = () => {
+        const path = window.location.pathname;
+        const match = path.match(/\/pages\/bios\/(\w+)\.html/);
+        if (match && match[1]) {
+            return match[1];
+        }
+        // If not a bio page, return null
+        return null;
+    };
+
+    /**
+     * Fetches bio data from the corresponding JSON file.
+     * @param {string} category - The category name (e.g., 'vip').
+     * @returns {Promise<Array>} - A promise that resolves to an array of bio objects.
+     */
+    const fetchBios = async (category) => {
+        const jsonUrl = `../../data/bios/${category}.json`;
+        try {
+            const response = await fetch(jsonUrl);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status} for ${jsonUrl}`);
+            }
+            const data = await response.json();
+            // Assuming the JSON structure is an array of strings or objects with a 'text' field
+            return data.bios || data; 
+        } catch (error) {
+            console.error(`Error loading bios for category ${category}:`, error);
+            // Return empty array on failure
+            return []; 
+        }
+    };
+
+    /**
+     * Creates the HTML structure for a single bio card.
+     * @param {string} bioText - The text of the bio.
+     * @returns {string} - The HTML string for the bio card.
+     */
+    const createBioCardHTML = (bioText) => {
+        // Replicate the structure from index.html for consistency
+        return `
+            <div class="bio-card fade-in">
+                <div class="bio-text">
+                    ${bioText}
+                </div>
+                <button class="copy-btn" onclick="copyBio(this)">Copy Bio</button>
+            </div>
+        `;
+    };
+
+    /**
+     * Renders the fetched bios into the designated container on the page.
+     * @param {Array} bios - The array of bios to display.
+     */
+    const renderBios = (bios) => {
+        const container = document.querySelector('.bio-grid');
+        const header = document.querySelector('.bio-header h2');
+        const category = getCurrentCategory();
+
+        if (!container) {
+            console.warn("Bio container '.bio-grid' not found.");
+            return;
+        }
+
+        // Clear existing content (if any)
+        container.innerHTML = '';
+
+        if (header && category) {
+            // Capitalize the first letter for display
+            const displayCategory = category.charAt(0).toUpperCase() + category.slice(1);
+            header.textContent = `${displayCategory} Instagram Bios`;
+        }
+
+        if (bios.length === 0) {
+            container.innerHTML = `<p class="text-center" style="grid-column: 1 / -1; font-style: italic;">No bios found for this category yet. Please check back later!</p>`;
+            return;
+        }
+
+        // Generate and insert HTML for each bio
+        const bioHTML = bios.map(bio => {
+            // If the JSON object has a 'text' property, use it. Otherwise, assume the item is the text itself.
+            const text = (typeof bio === 'object' && bio.text) ? bio.text : bio;
+            return createBioCardHTML(text);
+        }).join('');
+
+        container.innerHTML = bioHTML;
+        
+        // Trigger scroll animation for the newly loaded elements
+        if (window.scrollAnimationModule && window.scrollAnimationModule.animateOnScroll) {
+             window.scrollAnimationModule.animateOnScroll();
+        }
+    };
+
+    /**
+     * Main initialization function for bios.js
+     */
+    const init = async () => {
+        const category = getCurrentCategory();
+        
+        // Only proceed if we are on a bio category page
+        if (!category) {
+            // console.log("Not a bio category page, bios.js skipping content load.");
+            return;
+        }
+
+        const bios = await fetchBios(category);
+        renderBios(bios);
+        
+        console.log(`bios.js loaded and rendered ${bios.length} bios for category: ${category}`);
+    };
+
+    return {
+        init: init
+    };
+
+})();
+
+// Initialize the bio loader after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    bioLoaderModule.init();
+});
